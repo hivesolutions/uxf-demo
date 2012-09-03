@@ -25,7 +25,7 @@
 
 // the style to be used from the
 // begining of the page loading
-var INITIAL_STYLE = "base-style";
+var INITIAL_STYLE = "omni-style";
 
 jQuery(document).ready(function() {
             // runs the various component demos
