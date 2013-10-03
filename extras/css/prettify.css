@@ -33,7 +33,8 @@
     .prettyprint .atv {
         color: #080;
     }
-    .prettyprint .dec, .prettyprint .var {
+    .prettyprint .dec,
+    .prettyprint .var {
         color: #606;
     }
     .prettyprint .fun {
@@ -60,7 +61,9 @@
     .prettyprint .lit {
         color: #044
     }
-     .prettyprint .pun, .prettyprint .opn, .prettyprint.clo {
+     .prettyprint .pun,
+     .prettyprint .opn,
+     .prettyprint.clo {
         color: #440
     }
     .prettyprint .taa {
@@ -110,12 +113,6 @@
 .pln {
     color: #93a1a1;
 }
-
-
-/* TENHO DE MELHORAR ESTE CSS */
-
-
-
 
 ol.linenums {
     color: #aaaaaa;
