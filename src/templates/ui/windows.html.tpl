@@ -9,14 +9,14 @@
         <div id="button-window" class="button button-solid">Show Window</div>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;div id=&quot;window&quot; class=&quot;window&quot;&gt;
     &lt;h1&gt;Window Title&lt;/h1&gt;
     &lt;p&gt;Window text with goes under the window title&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 $("#window").uxwindow("show");
 </pre>
 </section>

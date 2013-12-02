@@ -10,7 +10,7 @@
         <div class="timestamp">1317118297</div>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;div class=&quot;timestamp&quot;&gt;1317118297&lt;/div&gt;
 </pre>
 

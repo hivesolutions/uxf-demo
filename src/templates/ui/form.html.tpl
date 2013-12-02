@@ -8,14 +8,11 @@
     the time is interpreted in the static <span class="highlight">UTC</span> timezone.</p>
 
     <div class="box box-white">
-        <!-- radio field -->
         <input type="radio" class="radio-field"/>
-
-        <!-- check field -->
         <input type="checkbox" class="check-field"/>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;input type=&quot;radio&quot; class=&quot;radio-field&quot;/&gt;
 &lt;input type=&quot;checkbox&quot; class=&quot;check-field&quot;/&gt;
 </pre>
@@ -31,7 +28,7 @@
         <input type="text" class="text-field field-margin" data-type="date" data-original_value="text field" style="display:block;" />
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-original_value=&quot;text field&quot; style=&quot;display:block;&quot; /&gt;
 &lt;textarea class=&quot;text-field&quot; data-original_value=&quot;text area&quot;&gt;&lt;/textarea&gt;
 &lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; /&gt;
@@ -55,7 +52,7 @@
         <input type="file" size="32" multiple="true" class="file-field" />
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;input type=&quot;file&quot; size=&quot;12&quot; multiple=&quot;true&quot; class=&quot;file-field&quot; /&gt
 </pre>
 

@@ -5,7 +5,7 @@
         <a class="link link-blue link-confirm" href="http://doe.com" data-message="It's correct ?">Confirm Link</a>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;a class=&quot;link link-blue link-confirm&quot; href=&quot;http://doe.com&quot; data-message=&quot;It's correct '?&quot;&gt;Confirm Link&lt;/a&gt;
 </pre>
 

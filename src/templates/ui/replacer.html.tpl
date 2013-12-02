@@ -6,7 +6,7 @@
         <div id="replacer-target" class="replacer-target">Replaced</div>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;div id=&quot;button&quot; class=&quot;button replacer&quot; data-target=&quot;#replacer-target&quot;&gt;Replace&lt;/div&gt;
 &lt;div id=&quot;replacer-target&quot; class=&quot;replacer-target&quot;&gt;Replaced&lt;/div&gt;
 </pre>
@@ -33,7 +33,7 @@
         <a class="link link-blue" href="#link" data-duration="500" data-offset="-42">Scroll Link</a>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;a class=&quot;link link-blue&quot; href=&quot;#link&quot; data-duration=&quot;500&quot; data-offset=&quot;-42&quot;&gt;Scroll Link&lt;/a&gt;
 </pre>
 

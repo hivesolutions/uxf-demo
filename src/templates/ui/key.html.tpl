@@ -10,7 +10,7 @@
         <div class="key" data-key="69" data-url="#key"></div>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;div class=&quot;key&quot; data-key=&quot;69&quot; data-url=&quot;#key&quot;&gt;&lt;/div&gt;
 </pre>
 

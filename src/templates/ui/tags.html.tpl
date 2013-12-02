@@ -13,7 +13,7 @@
         <span class="tag notice">Notice</span>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;span class=&quot;tag&quot;&gt;tag&lt;/span&gt;
 </pre>
 </section>

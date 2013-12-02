@@ -9,7 +9,7 @@
         <div class="enumeration" data-enum="['car', 'bike', 'bus']">2</div>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;div class=&quot;enumeration&quot; data-enum=&quot;['car', 'bike', 'bus'']&quot;&gt;2&lt;/div&gt;
 </pre>
 

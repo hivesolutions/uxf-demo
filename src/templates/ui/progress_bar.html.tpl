@@ -6,15 +6,15 @@
         <div id="button-progress" class="button button-solid">Start</div>
     </div>
 
-<pre class="prettyprint linenums">
+<pre class="code language-markup">
 &lt;div id=&quot;progress-bar&quot; class=&quot;progress-bar&quot; data-percentage=&quot;20&quot; data-right_bar=&quot;true&quot;&gt;&lt;/div&gt;
 </pre>
 
-<pre class="prettyprint linenums">
+<pre class="code language-javascript">
 $("#progress-bar").uxprogressbar("change", {
     percentage : 100
 });
-    </pre>
+</pre>
 
     <table>
         <tr>
