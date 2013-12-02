@@ -6,18 +6,15 @@
         <li class="template">
             <div>
                 <p class="entity-name">%[name]</p>
-                <p class="entity-details">%[details]</p>
             </div>
         </li>
         <ul class="data-source" data-type="local">
             <li>
                 <span name="name">Buttons</span>
-                <span name="details">quite important</span>
                 <span name="link">#buttons</span>
             </li>
             <li>
                 <span name="name">Form Elements</span>
-                <span name="details">submit them</span>
                 <span name="link">#form-elements</span>
             </li>
         </ul>

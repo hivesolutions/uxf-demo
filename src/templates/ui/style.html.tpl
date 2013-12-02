@@ -12,11 +12,6 @@
                 </li>
                 <ul class="data-source" data-type="local">
                     <li>
-                        <span name="name">Base Style</span>
-                        <span name="details">The base style for ux</span>
-                        <span name="identifier">base-style</span>
-                    </li>
-                    <li>
                         <span name="name">Omni Style</span>
                         <span name="details">The omni platform style</span>
                         <span name="identifier">omni-style</span>
