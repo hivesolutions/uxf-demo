@@ -15,6 +15,7 @@
         {% include "ui/table.html.tpl" %}
         {% include "ui/replacer.html.tpl" %}
         {% include "ui/link_confirm.html.tpl" %}
+        {% include "ui/windows.html.tpl" %}
         {% include "ui/key.html.tpl" %}
         {% include "ui/transform_flip.html.tpl" %}
         {% include "ui/timestamp.html.tpl" %}
