@@ -296,8 +296,8 @@ table tbody tr:last-child td:last-child {
 .tabs,
 .pills {
     list-style: none outside none;
-    margin: 0 0 20px;
-    padding: 0;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .tabs:before,
@@ -335,27 +335,24 @@ table tbody tr:last-child td:last-child {
 
 .tabs > li > a {
     border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
     line-height: 36px;
     margin-right: 2px;
-    padding: 0 15px;
+    padding: 0px 15px 0px 15px;
+    color: #666666;
 }
 
 .tabs > li > a:hover {
     background-color: #eeeeee;
-    border-color: #EEEEEE #EEEEEE #dddddd;
     text-decoration: none;
+    color: #3668c6;
 }
 
-.tabs > li.active > a {
+.tabs > li.active > a,
+.tabs > li > a:hover {
+	color: #3668c6;
     background-color: #ffffff;
-    border-color: #DDDDDD #dddddd transparent;
+    border-color: #dddddd #dddddd transparent #dddddd;
     border-style: solid;
     border-width: 1px;
-    color: #808080;
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
+    text-decoration: none;
 }
