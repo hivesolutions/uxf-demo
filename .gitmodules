@@ -1,6 +1,3 @@
-[submodule "bin"]
-	path = bin
-	url = git@github.com:hivesolutions/uxf_bin.git
 [submodule "src/static/libs/uxf"]
 	path = src/static/libs/uxf
 	url = git@github.com:hivesolutions/uxf_bin.git
