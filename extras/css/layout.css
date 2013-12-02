@@ -32,6 +32,18 @@ body {
     font-size: 13px;
 }
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
 .container-960 {
     margin: 0px auto 0px auto;
     width: 960px;
@@ -39,7 +51,6 @@ body {
 
 .button {
     display: inline-block;
-    margin-right: 12px;
 }
 
 .entity-name {
