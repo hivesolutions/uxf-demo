@@ -16,6 +16,10 @@
 &lt;/div&gt;
 </pre>
 
+<pre class="code language-markup">
+&lt;div class=&quot;button&quot; data-window_open=&quot;#window&quot;&gt;Show Window&lt;/div&gt;
+</pre>
+
 <pre class="code language-javascript">
 $("#window").uxwindow("show");
 </pre>
