@@ -38,7 +38,6 @@ body {
 }
 
 .button {
-	min-width: 100px;
-	margin-right: 12px;
-	display: inline-block;
+    display: inline-block;
+    margin-right: 12px;
 }
