@@ -16,7 +16,7 @@
 &lt;/div&gt;
 </pre>
 
-<pre class="code language-markup">
+<pre class="code language-javascript">
 $("#window").uxwindow("show");
 </pre>
 </section>
