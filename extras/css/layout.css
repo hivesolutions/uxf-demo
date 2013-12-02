@@ -41,3 +41,13 @@ body {
     display: inline-block;
     margin-right: 12px;
 }
+
+.entity-name {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 4px 0px 4px;
+}
+
+.entity-details {
+    margin: 0px 4px 4px 4px;
+}
