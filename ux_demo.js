@@ -55,9 +55,10 @@ var buttonDemo = function() {
                     // increments the percentage value
                     percentage += 1;
 
-                    // in case the percentage overflows
+                    // in case the percentage overflows returns
+                    // immediately as there's nothing else
+                    // remaining to be done in this function
                     if (percentage > 100) {
-                        // returns immediately
                         return;
                     }
 
