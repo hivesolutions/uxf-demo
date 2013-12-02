@@ -33,12 +33,12 @@ body {
 }
 
 #footer {
-	margin: 24px auto 12px auto;
-	text-align: center;
-	padding-top: 12px;
-	width: 960px;
-	font-size: 12px;
-	color: #666666;
+    color: #666666;
+    font-size: 12px;
+    margin: 24px auto 12px auto;
+    padding-top: 12px;
+    text-align: center;
+    width: 960px;
 }
 
 .left {
@@ -58,6 +58,11 @@ body {
     width: 960px;
 }
 
+
+
+.section-contents {
+    display: none;
+}
 
 
 
@@ -212,6 +217,7 @@ h1 .sub-title {
 
 h1.line {
     border-bottom: 1px solid #cccccc;
+    cursor: pointer;
     padding-bottom: 8px;
 }
 
