@@ -335,24 +335,22 @@ table tbody tr:last-child td:last-child {
 
 .tabs > li > a {
     border: 1px solid transparent;
+    color: #666666;
     line-height: 36px;
     margin-right: 2px;
     padding: 0px 15px 0px 15px;
-    color: #666666;
+    text-decoration: none;
 }
 
 .tabs > li > a:hover {
-    background-color: #eeeeee;
-    text-decoration: none;
     color: #3668c6;
 }
 
-.tabs > li.active > a,
-.tabs > li > a:hover {
-	color: #3668c6;
+.tabs > li.active > a {
     background-color: #ffffff;
     border-color: #dddddd #dddddd transparent #dddddd;
     border-style: solid;
     border-width: 1px;
+    color: #3668c6;
     text-decoration: none;
 }

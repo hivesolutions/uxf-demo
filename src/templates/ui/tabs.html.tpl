@@ -3,10 +3,10 @@
     <div class="section-contents">
         <ul class="tabs">
             <li class="active"><a href="#">Home</a></li>
-            <li><a class="link" href="#">Profile</a></li>
-            <li><a class="link" href="#">Messages</a></li>
-            <li><a class="link" href="#">Settings</a></li>
-            <li><a class="link" href="#">Contact</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </div>
 </section>
