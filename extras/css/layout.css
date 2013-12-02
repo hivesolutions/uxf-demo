@@ -36,3 +36,9 @@ body {
     margin: 0px auto 0px auto;
     width: 960px;
 }
+
+.button {
+	min-width: 100px;
+	margin-right: 12px;
+	display: inline-block;
+}
