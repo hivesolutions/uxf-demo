@@ -1,6 +1,5 @@
 {% extends "partials/layout.html.tpl" %}
 {% block content %}
-
     {% include "parts/bar.html.tpl" %}
     {% include "parts/search.html.tpl" %}
     {% include "parts/window.html.tpl" %}
