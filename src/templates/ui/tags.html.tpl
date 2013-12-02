@@ -1,5 +1,5 @@
 <section id="tags">
-    <h1 class="line">Tags <span class="sub-title">fancy stuff</span></h1>
+    <h1 class="line">Tags</h1>
     <div class="section-contents">
         <p>Tags are probable the simplest way to archive a good looking ui. Just use
         <span class="tag">this</span> and <span class="tag success">that</span> and your're done.</p>

@@ -1,5 +1,5 @@
 <section id="timestamp">
-    <h1 class="line">Timestamp <span class="sub-title">dates the easy way</span></h1>
+    <h1 class="line">Timestamp</h1>
     <div class="section-contents">
         <p>When communicating between the client side and the server side it's important
         to remaining dependent on the client's local data. The best way to do it is transferring

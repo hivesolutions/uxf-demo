@@ -1,5 +1,5 @@
 <section id="form-elements">
-    <h1 class="line">Form Elements <span class="sub-title">submit them</span></h1>
+    <h1 class="line">Form Elements</h1>
     <div class="section-contents">
         <p>One of the most important aspects of the text field component is that it allows
         the <span class="highlight">date</span> and <span class="highlight">datetime</span> types. One can configure

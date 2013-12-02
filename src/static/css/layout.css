@@ -58,12 +58,13 @@ body {
     width: 960px;
 }
 
-
-
-.section-contents {
-    display: none;
+.section-contents :first-child {
+    margin-top: 0px;
 }
 
+.section-contents :last-child {
+    margin-bottom: 0px;
+}
 
 
 
@@ -204,6 +205,7 @@ section {
 
 p {
     line-height: 20px;
+    margin: 13px 0px 13px 0px;
 }
 
 
@@ -218,6 +220,7 @@ h1 .sub-title {
 h1.line {
     border-bottom: 1px solid #cccccc;
     cursor: pointer;
+    margin: 16px 0px 16px 0px;
     padding-bottom: 8px;
 }
 

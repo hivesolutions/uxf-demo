@@ -1,5 +1,5 @@
 <section id="style">
-    <h1 class="line">Style <span class="sub-title">set your style</span></h1>
+    <h1 class="line">Style</h1>
     <div class="section-contents">
         <div class="box box-white">
             <div id="drop-field-style" class="drop-field entities-search" data-display_attribute="name" data-value_attribute="identifier" data-filter_attributes="name">

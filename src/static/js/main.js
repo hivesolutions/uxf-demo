@@ -103,6 +103,18 @@ var buttonDemo = function() {
     jQuery("#style-link").click(function() {
                 jQuery.scrollTo("#style", 600);
             });
+
+    jQuery("h1.line").click(function() {
+                var element = jQuery(this);
+                var section = element.parents("section");
+                var sectionContents = jQuery(".section-contents", section);
+                var isVisible = sectionContents.is(":visible");
+                if(isVisible) {
+                    sectionContents.slideUp(350);
+                } else {
+                    sectionContents.slideDown(500);
+                }
+            });
 }
 
 /**

@@ -1,5 +1,5 @@
 <section id="link">
-    <h1 class="line">Link <span class="sub-title">control the linking</span></h1>
+    <h1 class="line">Link</h1>
     <div class="section-contents">
         <p>This general link component does not perform much more than the default html
         <span class="highlight">a</span> element. The main feature is that is possible to use

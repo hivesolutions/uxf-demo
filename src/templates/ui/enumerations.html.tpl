@@ -1,5 +1,5 @@
 <section id="number-formatter">
-    <h1 class="line">Enumeration <span class="sub-title">convert numbers to text</span></h1>
+    <h1 class="line">Enumeration</h1>
     <div class="section-contents">
         <p>It's important to be able to convert a number base enumeration into a string that describes
         the value in the enumeration. For this a mapping mechanism is required, and that's exactly what this

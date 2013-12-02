@@ -1,5 +1,5 @@
 <section id="key">
-    <h1 class="line">Key <span class="sub-title">with your fingers</span></h1>
+    <h1 class="line">Key</h1>
     <div class="section-contents">
         <p>For the key shortcuts to be active a <span class="highlight">div</span> element under the
         <span class="highlight">body</span> must be set with the <span class="highlight">shortcuts</span>

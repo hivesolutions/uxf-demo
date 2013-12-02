@@ -1,5 +1,5 @@
 <section id="table">
-    <h1 class="line">Table <span class="sub-title">sort the numbers and letters</span></h1>
+    <h1 class="line">Table</h1>
     <div class="section-contents">
         <table class="table table-edit">
             <tr>

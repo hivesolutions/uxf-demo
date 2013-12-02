@@ -1,5 +1,5 @@
 <section id="progress-bar">
-    <h1 class="line">Progress Bar <span class="sub-title">check the progress</span></h1>
+    <h1 class="line">Progress Bar</h1>
         <div class="section-contents">
         <div class="box box-white">
             <div id="progress-bar" class="progress-bar field-margin" data-percentage="20" data-right_bar="true"></div>

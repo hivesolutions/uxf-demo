@@ -1,5 +1,5 @@
 <section id="replacer">
-    <h1 class="line">Replacer <span class="sub-title">must replace</span></h1>
+    <h1 class="line">Replacer</h1>
     <div class="section-contents">
         <div class="box box-white">
             <div id="button" class="button replacer" data-target="#replacer-target">Replace</div>

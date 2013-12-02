@@ -1,5 +1,5 @@
 <section id="password-meter">
-    <h1 class="line">Password Meter <span class="sub-title">for verified passwords</span></h1>
+    <h1 class="line">Password Meter</h1>
     <div class="section-contents">
         <p>If a password field requires some king of verification for strength there's the password
         meter component for that. Just use the normal <span class="highlight">text-field</span> component and associate

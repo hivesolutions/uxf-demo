@@ -1,5 +1,5 @@
 <section id="number-formatter">
-    <h1 class="line">Number Formatter <span class="sub-title">spread the number</span></h1>
+    <h1 class="line">Number Formatter</h1>
     <div class="section-contents">
         <p>Being able to format number in the client side is god dam important when you're
         building an enterprise grade information system. Using the number formatter is possible to control

@@ -1,5 +1,5 @@
 <section id="buttons">
-    <h1 class="line">Buttons <span class="sub-title">quite important</span></h1>
+    <h1 class="line">Buttons</h1>
     <div class="section-contents">
         <p>When developing web applications is mandatory to have a good set of buttons
         to control the application. The buttons provided allow you to raise events, submit

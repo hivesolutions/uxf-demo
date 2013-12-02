@@ -1,5 +1,5 @@
 <section id="drop-field">
-    <h1  class="line">Drop Field <span class="sub-title">for the auto complete thing</span></h1>
+    <h1  class="line">Drop Field</h1>
     <div class="section-contents">
         <p>For completing this out it's '</p>
 

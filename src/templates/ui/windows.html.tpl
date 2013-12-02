@@ -1,5 +1,5 @@
 <section id="windows">
-    <h1 class="line">Windows <span class="sub-title">up in the air</span></h1>
+    <h1 class="line">Windows</h1>
     <div class="section-contents">
         <div id="window" class="window">
             <h1>Window Title</h1>
