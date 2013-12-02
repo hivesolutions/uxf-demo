@@ -121,27 +121,8 @@
                 <p>For completing this out it's '</p>
 
                 <div class="box box-white">
-                    <div class="left drop-field entities-search" data-display_attribute="name" data-value_attribute="name" data-link_attribute="link" data-filter_attributes="name">
-                        <input type="text" class="left text-field" autocomplete="off" />
-                        <li class="template clear">
-                            <div class="left">
-                                <p class="entity-name">%[name]</p>
-                                <p class="entity-details">%[details]</p>
-                            </div>
-                            <div class="clear"></div>
-                        </li>
-                        <ul class="data-source" data-type="local">
-                            <li>
-                                <span name="name">John Doe</span>
-                                <span name="details">johndoe@doe.com</span>
-                                <span name="link">http://john.doe.com</span>
-                            </li>
-                            <li>
-                                <span name="name">Jane Doe</span>
-                                <span name="details">janedoe@doe.com</span>
-                                <span name="link">http://jane.doe.com</span>
-                            </li>
-                        </ul>
+                    <div class="left drop-field entities-search">
+                        <ul class="data-source" data-type="countries"></ul>
                     </div>
                 </div>
 
@@ -176,17 +157,17 @@
 
                 <div class="box box-white">
                     <!-- button normal event -->
-                    <div id="button" class="button">Button with Event</div>
+                    <div id="button" class="button button-solid">Button with Event</div>
 
                     <!-- button confirm event -->
-                    <div id="button-confirm" class="button">Button with Confirm Event</div>
+                    <div id="button-confirm" class="button button-solid">Button with Confirm Event</div>
 
                     <!-- button with link -->
-                    <div id="button-link" class="button" data-link="http://doe.com">Button with Link</div>
+                    <div id="button-link" class="button button-solid" data-link="http://doe.com">Button with Link</div>
 
                     <!-- button with submit form -->
                     <form action="http://doe.com" method="post" style="display:inline-block;">
-                        <div id="button-form" class="button" data-submit="true">Button submit Form</div>
+                        <div id="button-form" class="button button-solid" data-submit="true">Button submit Form</div>
                     </form>
 
                     <!-- button clear -->
@@ -199,6 +180,9 @@
 
                     <!-- button in green color -->
                     <div id="button-green" class="button button-green">Button in green color</div>
+
+                    <!-- button in blue color -->
+                    <div id="button-blue" class="button button-blue">Button in blue color</div>
 
                     <!-- button clear -->
                     <div class="clear"></div>
@@ -260,16 +244,12 @@
 
                     <!-- text field date -->
                     <input type="text" class="text-field field-margin" data-type="date" data-original_value="text field" style="display:block;" />
-
-                    <!-- text field datetime -->
-                    <input type="text" class="text-field field-margin" data-type="datetime" data-original_value="text field" style="display:block;" />
                 </div>
 
 <pre class="prettyprint linenums">
 &lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-original_value=&quot;text field&quot; style=&quot;display:block;&quot; /&gt;
 &lt;textarea class=&quot;text-field&quot; data-original_value=&quot;text area&quot;&gt;&lt;/textarea&gt;
 &lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; /&gt;
-&lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-type=&quot;datetime&quot; data-original_value=&quot;text field&quot; /&gt;
 </pre>
 
                 <table>
@@ -310,7 +290,7 @@
 
                 <div class="box box-white">
                     <div id="progress-bar" class="progress-bar field-margin" data-percentage="20" data-right_bar="true"></div>
-                    <div id="button-progress" class="button">Start</div>
+                    <div id="button-progress" class="button button-solid">Start</div>
                     <div class="clear"></div>
                 </div>
 
@@ -482,7 +462,7 @@ $("body").uxnotification({
                     <p>Window text with goes under the window title</p>
                 </div>
                 <div class="box box-white">
-                    <div id="button-window" class="button button-blue">Show Window</div>
+                    <div id="button-window" class="button button-solid">Show Window</div>
                     <div class="clear"></div>
                 </div>
 

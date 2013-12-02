@@ -53,14 +53,14 @@ body {
 }
 
 .progress-bar {
-	margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 .progress-bar .progress-bar-bar.bar-left {
-	background-color: #3668c6;
+    background-color: #3668c6;
 }
 
 .progress-bar .progress-bar-bar.bar-right {
-	background-color: #52a67c;
-	text-align: left;
+    background-color: #52a67c;
+    text-align: left;
 }
