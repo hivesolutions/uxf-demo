@@ -44,16 +44,15 @@
         <div class="overlay"></div>
 
         <div id="search" class="overlay-panel overlay-search" data-key="32" data-offset="0.20">
-            <div class="left drop-field entities-search" data-display_attribute="name"
+            <div class="drop-field entities-search" data-display_attribute="name"
                  data-value_attribute="name" data-link_attribute="link" data-filter_attributes="name"
                  data-duration="500" data-offset="-42">
-                <input type="text" class="left text-field" autocomplete="off" />
-                <li class="template clear">
-                    <div class="left">
+                <input type="text" class="text-field" autocomplete="off" />
+                <li class="template">
+                    <div>
                         <p class="entity-name">%[name]</p>
                         <p class="entity-details">%[details]</p>
                     </div>
-                    <div class="clear"></div>
                 </li>
                 <ul class="data-source" data-type="local">
                     <li>
@@ -89,14 +88,13 @@
                 <h1 class="line">Style <span class="sub-title">set your style</span></h1>
 
                 <div class="box box-white">
-                    <div id="drop-field-style" class="left drop-field entities-search" data-display_attribute="name" data-value_attribute="identifier" data-filter_attributes="name">
-                        <input type="text" class="left text-field" autocomplete="off" />
-                        <li class="template clear">
-                            <div class="left">
+                    <div id="drop-field-style" class="drop-field entities-search" data-display_attribute="name" data-value_attribute="identifier" data-filter_attributes="name">
+                        <input type="text" class="text-field" autocomplete="off" />
+                        <li class="template">
+                            <div>
                                 <p class="entity-name">%[name]</p>
                                 <p class="entity-details">%[details]</p>
                             </div>
-                            <div class="clear"></div>
                         </li>
                         <ul class="data-source" data-type="local">
                             <li>
@@ -121,7 +119,7 @@
                 <p>For completing this out it's '</p>
 
                 <div class="box box-white">
-                    <div class="left drop-field entities-search">
+                    <div class="drop-field entities-search">
                         <ul class="data-source" data-type="countries"></ul>
                     </div>
                 </div>
@@ -169,9 +167,6 @@
                     <form action="http://doe.com" method="post" style="display:inline-block;">
                         <div id="button-form" class="button button-solid" data-submit="true">Button submit Form</div>
                     </form>
-
-                    <!-- button clear -->
-                    <div class="clear"></div>
                 </div>
 
                 <div class="box box-white">
@@ -183,9 +178,6 @@
 
                     <!-- button in blue color -->
                     <div id="button-blue" class="button button-blue">Button in blue color</div>
-
-                    <!-- button clear -->
-                    <div class="clear"></div>
                 </div>
 
 <pre class="prettyprint linenums">
@@ -291,7 +283,6 @@
                 <div class="box box-white">
                     <div id="progress-bar" class="progress-bar field-margin" data-percentage="20" data-right_bar="true"></div>
                     <div id="button-progress" class="button button-solid">Start</div>
-                    <div class="clear"></div>
                 </div>
 
 <pre class="prettyprint linenums">
@@ -339,7 +330,6 @@ $("#progress-bar").uxprogressbar("change", {
                 <!-- notification -->
                 <div class="box box-white">
                     <div id="button-notification" class="button button-blue">Button with Notification Event</div>
-                    <div class="clear"></div>
                 </div>
 
 <pre class="prettyprint linenums">
@@ -358,7 +348,6 @@ $("body").uxnotification({
                 <div class="box box-white">
                     <div id="button" class="button replacer" data-target="#replacer-target">Replace</div>
                     <div id="replacer-target" class="replacer-target">Replaced</div>
-                    <div class="clear"></div>
                 </div>
 
 <pre class="prettyprint linenums">
@@ -463,7 +452,6 @@ $("body").uxnotification({
                 </div>
                 <div class="box box-white">
                     <div id="button-window" class="button button-solid">Show Window</div>
-                    <div class="clear"></div>
                 </div>
 
 <pre class="prettyprint linenums">
