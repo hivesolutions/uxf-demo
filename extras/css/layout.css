@@ -33,15 +33,15 @@ body {
 }
 
 .left {
-	float: left;
+    float: left;
 }
 
 .right {
-	float: right;
+    float: right;
 }
 
 .clear {
-	clear: both;
+    clear: both;
 }
 
 .container-960 {
