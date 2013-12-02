@@ -1,13 +1,13 @@
 <section id="windows">
     <h1 class="line">Windows <span class="sub-title">up in the air</span></h1>
-
-    <div id="window" class="window">
-        <h1>Window Title</h1>
-        <p>Window text with goes under the window title</p>
-    </div>
-    <div class="box box-white">
-        <div id="button-window" class="button button-solid">Show Window</div>
-    </div>
+    <div class="section-contents">
+        <div id="window" class="window">
+            <h1>Window Title</h1>
+            <p>Window text with goes under the window title</p>
+        </div>
+        <div class="box box-white">
+            <div id="button-window" class="button button-solid">Show Window</div>
+        </div>
 
 <pre class="code language-markup">
 &lt;div id=&quot;window&quot; class=&quot;window&quot;&gt;
@@ -19,4 +19,5 @@
 <pre class="code language-javascript">
 $("#window").uxwindow("show");
 </pre>
+    </div>
 </section>

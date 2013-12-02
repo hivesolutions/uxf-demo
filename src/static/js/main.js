@@ -30,9 +30,6 @@ var INITIAL_STYLE = "omni-style";
 jQuery(document).ready(function() {
             // runs the various component demos
             buttonDemo();
-
-            // runs the pretty print
-            prettyPrint();
         });
 
 var buttonDemo = function() {
