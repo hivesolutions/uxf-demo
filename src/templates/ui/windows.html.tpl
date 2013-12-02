@@ -6,7 +6,7 @@
             <p>Window text with goes under the window title</p>
         </div>
         <div class="box box-white">
-            <div id="button-window" class="button button-solid">Show Window</div>
+            <div id="button-window" class="button button-solid" data-window_open="#window">Show Window</div>
         </div>
 
 <pre class="code language-markup">

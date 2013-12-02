@@ -113,10 +113,6 @@ var buttonDemo = function() {
                 });
     });
 
-    jQuery("#button-window").click(function() {
-                jQuery("#window").uxwindow("show");
-            });
-
     jQuery("#drop-field-style").bind("value_select",
             function(event, value, valueLogic) {
                 alert("Changing value to <b>" + value + "</b>", function() {
