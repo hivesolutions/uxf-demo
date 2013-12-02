@@ -27,9 +27,41 @@
 // begining of the page loading
 var INITIAL_STYLE = "omni-style";
 
+(function(jQuery) {
+    jQuery.fn.udemo = function(options) {
+        // @TODO change this into a plugin
+        buttonDemo();
+    };
+})(jQuery);
+
+(function(jQuery) {
+    jQuery.fn.uapply = function(options) {
+        // sets the jquery matched object
+        var matchedObject = this;
+
+        // applies the global demo plugin to the currently
+        // matched object so that all the specific behaviour
+        // of the demo is applied to it as a consequence
+        matchedObject.udemo();
+    };
+})(jQuery);
+
 jQuery(document).ready(function() {
-            // runs the various component demos
-            buttonDemo();
+            // retrieves the reference to the top level
+            // body element to apply the components in it
+            var _body = jQuery("body");
+
+            // applies the various plugins to the body element
+            // this is considered the initial apply operation
+            // for the demo specific plugins
+            _body.uapply();
+
+            // registers for the applied event on the body to be
+            // notified of new apply operations and react to them
+            // in the sense of applying the specifics
+            _body.bind("applied", function(event, base) {
+                        base.uapply();
+                    });
         });
 
 var buttonDemo = function() {
@@ -109,7 +141,7 @@ var buttonDemo = function() {
                 var section = element.parents("section");
                 var sectionContents = jQuery(".section-contents", section);
                 var isVisible = sectionContents.is(":visible");
-                if(isVisible) {
+                if (isVisible) {
                     sectionContents.slideUp(350);
                 } else {
                     sectionContents.slideDown(500);
