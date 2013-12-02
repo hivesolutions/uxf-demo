@@ -1,7 +1,7 @@
 <section id="windows">
     <h1 class="line">Windows</h1>
     <div class="section-contents">
-        <div id="window" class="window">
+        <div id="window" class="window window-hide">
             <h1>Window Title</h1>
             <p>Window text with goes under the window title</p>
         </div>
