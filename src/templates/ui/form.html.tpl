@@ -19,14 +19,14 @@
 
         <div class="box box-white">
             <input type="text" class="text-field field-margin" data-original_value="text field" style="display:block;" />
-            <textarea class="text-area" data-original_value="text area"></textarea>
-            <input type="text" class="text-field field-margin" data-type="date" data-original_value="text field" style="display:block;" />
+            <textarea class="text-area field-margin" data-original_value="text area"></textarea>
+            <input type="text" class="text-field" data-type="date" data-original_value="text field" style="display:block;" />
         </div>
 
 <pre class="code language-markup">
-&lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-original_value=&quot;text field&quot; style=&quot;display:block;&quot; /&gt;
+&lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-original_value=&quot;text field&quot; style=&quot;display:block;&quot; /&gt;
 &lt;textarea class=&quot;text-field&quot; data-original_value=&quot;text area&quot;&gt;&lt;/textarea&gt;
-&lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; /&gt;
+&lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; /&gt;
 </pre>
 
         <table>
