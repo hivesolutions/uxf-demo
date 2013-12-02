@@ -9,11 +9,11 @@
         {% include "ui/style.html.tpl" %}
         {% include "ui/drop_field.html.tpl" %}
         {% include "ui/buttons.html.tpl" %}
-        {% include "ui/buttons.html.tpl" %}
         {% include "ui/form.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
         {% include "ui/table.html.tpl" %}
         {% include "ui/replacer.html.tpl" %}
+        {% include "ui/link.html.tpl" %}
         {% include "ui/link_confirm.html.tpl" %}
         {% include "ui/windows.html.tpl" %}
         {% include "ui/key.html.tpl" %}
