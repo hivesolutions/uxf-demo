@@ -1,0 +1,536 @@
+@charset "utf-8";
+
+/*
+ Hive Colony Framework
+ Copyright (C) 2008-2012 Hive Solutions Lda.
+
+ This file is part of Hive Colony Framework.
+
+ Hive Colony Framework is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ Hive Colony Framework is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Hive Colony Framework. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/*
+ __author__    = João Magalhães <joamag@hive.pt> & Marco Sousa <v-msousa@hive.pt>
+ __version__   = 1.0.0
+ __revision__  = $LastChangedRevision$
+ __date__      = $LastChangedDate$
+ __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
+ __license__   = GNU General Public License (GPL), Version 3
+*/
+
+
+
+/**
+ * TENHO DE SIMPLIFICAR E GENERALIZAR ISTO !!!!!
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.omni-style {
+    background-color: #ffffff;
+    color: #666666;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.omni-style h1 {
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.omni-style a {
+    cursor: pointer;
+}
+
+.omni-style a:hover {
+    border-bottom: 1px solid #666666;
+    padding-bottom: 2px;
+}
+
+.omni-style .clear {
+    clear: both;
+}
+
+.omni-style .container-960 {
+    margin: 0px auto 0px auto;
+    width: 960px;
+}
+
+.omni-style .link-blue {
+    color: #3668c6;
+}
+
+/* Overlay */
+.omni-style .overlay {
+    background-color: #dddddd;
+    opacity: 0.4;
+    z-index: 2;
+}
+
+/* Window */
+.omni-style .window {
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 5px #bbbbbb;
+    -moz-box-shadow: 0px 0px 5px #bbbbbb;
+    -webkit-box-shadow: 0px 0px 5px #bbbbbb;
+    color: #4d4d4d;
+    padding: 20px 20px 20px 20px;
+    width: 420px;
+    z-index: 2;
+}
+
+.omni-style .window .button {
+    border: 1px solid rgba(0,0,0,0.20) !important;
+}
+
+.omni-style .window h1 {
+    margin-top: 0px;
+}
+
+.omni-style .window p {
+    line-height: 26px;
+    min-height: 40px;
+}
+
+.omni-style .window-buttons {
+    border-top: 1px solid #efefef;
+    padding-top: 20px;
+}
+
+.omni-style .window-buttons > .button-cancel {
+    margin-left: 10px;
+}
+
+/* Alert Window */
+.omni-style .window-alert {
+}
+
+/* Buttons */
+.omni-style .button {
+    background: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    float: left;
+    line-height: 36px;
+    margin-right: 12px;
+    padding: 0px 16px 0px 16px;
+    text-align: center;
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.omni-style .button:hover {
+}
+
+.omni-style .button:active {
+}
+
+.omni-style .button-blue {
+    background: #596c8e url(../images/button-blue.png) repeat-x left top;
+    border: 1px solid #3a5070;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 36px;
+    padding: 0px 16px 0px 16px;
+    text-shadow: 0px -1px 0px #3a5070;
+}
+
+.omni-style .button-blue:hover {
+    background-position: left -36px;
+}
+
+.omni-style .button-blue:active {
+    background-position: left -72px;
+}
+
+.omni-style .button-green {
+    background: #598543 url(../images/button-green.png) repeat-x left top;
+    border: 1px solid #598543;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 36px;
+    padding: 0px 18px 0px 18px;
+    text-shadow: 0px -1px 0px #4a7b38;
+}
+
+.omni-style .button-green:hover {
+    background-position: left -36px;
+}
+
+.omni-style .button-green:active {
+    background-position: left -72px;
+}
+
+/* Forms */
+.omni-style .text-field {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0px 1px 0px #ffffff;
+    -moz-box-shadow: 0px 1px 0px #ffffff;
+    -webkit-box-shadow: 0px 1px 0px #ffffff;
+    color: #4d4d4d;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    height: 32px;
+    margin: 0px;
+    min-width: 300px;
+    padding: 2px 6px 2px 6px;
+    transition: 0.1s linear all;
+    -o-transition: 0.1s linear all;
+    -ms-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    -webkit-transition: 0.1s linear all;
+}
+
+.omni-style .text-field.active {
+    border: 1px solid #3668c6;
+    color: #444444;
+    outline: none;
+}
+
+.omni-style .text-field.lower {
+    color: #cccccc;
+}
+
+.omni-style .field-margin {
+    margin: 6px 0px 4px 0px;
+}
+
+/* DropField */
+.omni-style .drop-field-contents {
+    color: #444444;
+    list-style: none;
+    margin: 2px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    z-index: 1;
+}
+
+.omni-style .drop-field-contents li {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    color: #4d4d4d;
+    cursor: pointer;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 4px 6px 4px 6px;
+}
+
+.omni-style .drop-field-contents li.selected {
+    background-color: #fafafa;
+}
+
+.omni-style .drop-field-contents li:hover {
+    background-color: #fafafa;
+}
+
+.omni-style .drop-field-contents li:last-child {
+    border-bottom: 1px solid #dddddd;
+}
+
+.omni-style .drop-field-contents li:first-child {
+    border-top: 1px solid #dddddd;
+}
+
+.omni-style .entity-name {
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px 0px 0px 0px;
+}
+
+.omni-style .entity-details {
+    color: #b3b3b3;
+    margin: 2px 0px 0px 0px;
+}
+
+/* Tag */
+.omni-style .tag {
+    background-color: #bfbfbf;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 4px 2px 4px;
+    text-transform: uppercase;
+}
+
+.omni-style .tag.success {
+    background-color: #46a546;
+}
+
+.omni-style .tag.warning {
+    background-color: #f89406;
+}
+
+.omni-style .tag.important {
+    background-color: #c43c35;
+}
+
+.omni-style .tag.notice {
+    background-color: #62cffc;
+}
+
+/* Progress Bar */
+.omni-style .progress-bar {
+    background-color: #f2f2f2;
+    height: 26px;
+    margin: 0px 0px 12px 0px;
+    width: 100%;
+}
+
+.omni-style .progress-bar-bar {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    height: 100%;
+    line-height: 26px;
+}
+
+.omni-style .progress-bar-bar.bar-left {
+    background-color: #d3503f;
+    float: left;
+    text-align: right;
+}
+
+.omni-style .progress-bar-bar.bar-right {
+    background-color: #598543;
+    float: right;
+    text-align: left;
+}
+
+.omni-style .progress-bar-percentage {
+    margin: 0px 6px 0px 6px;
+}
+
+/* Notification */
+.omni-style .notification {
+    background-color: #fefefe;
+    border: 1px solid rgba(0,0,0, 0.25);
+    color: #444444;
+    min-width: 300px;
+    padding: 16px 16px 16px 16px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.omni-style .notification-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.omni-style .notification-text {
+    margin-bottom: 0px;
+}
+
+/* Table */
+.omni-style .table {
+    text-align: center;
+    width: 100%;
+}
+
+.omni-style .table tr {
+    height: 40px;
+}
+
+.omni-style .table.table-show tr {
+    height: 30px;
+}
+
+.omni-style .table tr th {
+    color: #999999;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.omni-style .table .text-field {
+    padding: 2px 0px 2px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.omni-style .table .drop-field {
+    width: 100%;
+}
+
+.omni-style .table-add,
+.omni-style .table-remove {
+    cursor: pointer;
+    height: 36px;
+    opacity: 0.0;
+    position: absolute;
+    width: 18px;
+}
+
+.omni-style .table-add.visible,
+.omni-style .table-remove.visible {
+    opacity: 1.0;
+}
+
+.omni-style .table-add .inline-add,
+.omni-style .table-remove .inline-remove {
+    background: transparent none no-repeat 0px 0px;
+    height: 10px;
+    margin-top: 14px;
+    width: 10px;
+}
+
+.omni-style .table-add:hover .inline-add,
+.omni-style .table-remove:hover .inline-remove {
+    background-position: 0px -10px;
+}
+
+.omni-style .table-add .inline-add {
+    background-image: url(../images/button-plus.png);
+    margin-left: -10px;
+}
+
+.omni-style .table-remove .inline-remove {
+    background-image: url(../images/button-star.png);
+    margin-left: 3px;
+}
+
+/* Radio and check field */
+.omni-style .radio-field {
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    color: #3366cc;
+    cursor: pointer;
+    cursor: pointer;
+    height: 18px;
+    margin: 0px 0px 0px 0px;
+    width: 18px;
+}
+
+.omni-style .radio-field:hover {
+    border: 1px solid #3668c6;
+}
+
+.omni-style .radio-field:checked {
+    background: transparent url(../images/radio.png) no-repeat center center;
+    border: 1px solid #3668c6;
+}
+
+.omni-style .check-field {
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    color: #3366cc;
+    cursor: pointer;
+    height: 18px;
+    margin: 0px 0px 0px 0px;
+    width: 18px;
+}
+
+.omni-style .check-field:hover {
+    border: 1px solid #3668c6;
+}
+
+.omni-style .check-field:checked {
+    background: transparent url(../images/checkbox.png) no-repeat center center;
+    border: 1px solid #3668c6;
+}
+
+.omni-style .password-meter {
+    background-color: #dddddd;
+    height: 4px;
+    width: 314px;
+}
+
+.omni-style .password-meter-contents {
+    height: 4px;
+}
+
+.omni-style .password-meter-contents.level-0 {
+    width: 0%;
+}
+
+.omni-style .password-meter-contents.level-1 {
+    background-color: #ed1f24;
+    width: 17%;
+}
+
+.omni-style .password-meter-contents.level-2 {
+    background-color: #f47621;
+    width: 34%;
+}
+
+.omni-style .password-meter-contents.level-3 {
+    background-color: #fdb913;
+    width: 51%;
+}
+
+.omni-style .password-meter-contents.level-4 {
+    background-color: #d4c628;
+    width: 68%;
+}
+
+.omni-style .password-meter-contents.level-5 {
+    background-color: #7db976;
+    width: 85%;
+}
+
+.omni-style .password-meter-contents.level-6 {
+    background-color: #57ba5c;
+    width: 100%;
+}
