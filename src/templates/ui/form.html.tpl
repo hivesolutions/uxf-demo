@@ -19,7 +19,7 @@
 
         <div class="box box-white">
             <input type="text" class="text-field field-margin" data-original_value="text field" style="display:block;" />
-            <textarea class="text-field" data-original_value="text area"></textarea>
+            <textarea class="text-area" data-original_value="text area"></textarea>
             <input type="text" class="text-field field-margin" data-type="date" data-original_value="text field" style="display:block;" />
         </div>
 
