@@ -51,3 +51,16 @@ body {
 .entity-details {
     margin: 0px 4px 4px 4px;
 }
+
+.progress-bar {
+	margin-bottom: 12px;
+}
+
+.progress-bar .progress-bar-bar.bar-left {
+	background-color: #3668c6;
+}
+
+.progress-bar .progress-bar-bar.bar-right {
+	background-color: #52a67c;
+	text-align: left;
+}
