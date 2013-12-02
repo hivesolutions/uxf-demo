@@ -53,6 +53,10 @@ body {
     clear: both;
 }
 
+.field-margin {
+    margin-bottom: 6px;
+}
+
 .container-960 {
     margin: 0px auto 0px auto;
     width: 960px;
