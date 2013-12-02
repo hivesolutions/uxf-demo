@@ -9,9 +9,9 @@
             <div class="number" data-places="2" data-separator="," data-magnitude_separator=".">12345.6</div>
         </div>
 
-        <pre class="code language-markup">
-        &lt;div class=&quot;number&quot; data-places=&quot;2&quot; data-separator=&quot;,&quot; data-magnitude_separator=&quot;.&quot;&gt;12345.6&lt;/div&gt;
-        </pre>
+<pre class="code language-markup">
+&lt;div class=&quot;number&quot; data-places=&quot;2&quot; data-separator=&quot;,&quot; data-magnitude_separator=&quot;.&quot;&gt;12345.6&lt;/div&gt;
+</pre>
 
         <table>
             <tr>
