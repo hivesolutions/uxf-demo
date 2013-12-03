@@ -16,7 +16,7 @@ $("#progress-bar").uxprogressbar("change", {
 });
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-percentage</span></td>
                 <td><span class="highlight">float</span></td>

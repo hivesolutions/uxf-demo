@@ -14,7 +14,7 @@
 &lt;a class=&quot;link link-blue&quot; href=&quot;#link&quot; data-duration=&quot;500&quot; data-offset=&quot;-42&quot;&gt;Scroll Link&lt;/a&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-duration</span></td>
                 <td><span class="highlight">integer</span></td>

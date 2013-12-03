@@ -17,7 +17,7 @@
 &lt;div class=&quot;video&quot;&gt;http://www.youtube.com/watch?v=5nt3gE9dGHQ&lt;/div&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-width</span></td>
                 <td><span class="highlight">integer</span></td>

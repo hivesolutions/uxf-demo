@@ -13,7 +13,7 @@
 &lt;div class=&quot;enumeration&quot; data-enum=&quot;['car', 'bike', 'bus'']&quot;&gt;2&lt;/div&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-enum</span></td>
                 <td><span class="highlight">string</span></td>

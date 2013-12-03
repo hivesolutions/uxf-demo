@@ -32,7 +32,7 @@
 &lt;/form&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-link</span></td>
                 <td><span class="highlight">string</span></td>

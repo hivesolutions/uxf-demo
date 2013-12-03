@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">value_select</span></td>
                 <td><span class="highlight">event</span></td>

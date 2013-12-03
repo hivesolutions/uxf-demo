@@ -15,7 +15,7 @@
 &lt;div class=&quot;password-meter&quot; data-target=&quot;#password&quot;&gt;&lt;/div&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-target</span></td>
                 <td><span class="highlight">string</span></td>

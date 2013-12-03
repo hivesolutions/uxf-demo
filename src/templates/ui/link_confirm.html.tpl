@@ -9,7 +9,7 @@
 &lt;a class=&quot;link link-blue link-confirm&quot; href=&quot;http://doe.com&quot; data-message=&quot;It's correct '?&quot;&gt;Confirm Link&lt;/a&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-message</span></td>
                 <td><span class="highlight">string</span></td>

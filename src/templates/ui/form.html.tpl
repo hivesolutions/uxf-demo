@@ -29,7 +29,7 @@
 &lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; /&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-type</span></td>
                 <td><span class="highlight">string {integer, float, regex}</span></td>
@@ -50,7 +50,7 @@
 &lt;input type=&quot;file&quot; size=&quot;12&quot; multiple=&quot;true&quot; class=&quot;file-field&quot; /&gt
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">multiple</span></td>
                 <td><span class="highlight">boolean</span></td>

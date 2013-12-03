@@ -14,7 +14,7 @@
 &lt;div class=&quot;key&quot; data-key=&quot;69&quot; data-url=&quot;#key&quot;&gt;&lt;/div&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-url</span></td>
                 <td><span class="highlight">string</span></td>

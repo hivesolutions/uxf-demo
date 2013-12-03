@@ -11,7 +11,7 @@
 &lt;div id=&quot;replacer-target&quot; class=&quot;replacer-target&quot;&gt;Replaced&lt;/div&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-target</span></td>
                 <td><span class="highlight">string</span></td>

@@ -13,7 +13,7 @@
 &lt;div class=&quot;number&quot; data-places=&quot;2&quot; data-separator=&quot;,&quot; data-magnitude_separator=&quot;.&quot;&gt;12345.6&lt;/div&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-places</span></td>
                 <td><span class="highlight">integer</span></td>

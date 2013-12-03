@@ -14,7 +14,7 @@
 &lt;div class=&quot;timestamp&quot;&gt;1317118297&lt;/div&gt;
 </pre>
 
-        <table>
+        <table class="table-data">
             <tr>
                 <td><span class="highlight">data-format</span></td>
                 <td><span class="highlight">string</span></td>
