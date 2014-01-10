@@ -1,4 +1,4 @@
-<section id="drop-field">
+<section id="data-source">
     <h1  class="line">Data Source</h1>
     <div class="section-contents">
         <p>
@@ -14,7 +14,7 @@
             <tr>
                 <td><span class="highlight">data-type</span></td>
                 <td><span class="highlight">string</span></td>
-                <td>The type of the data source to be used (eg: local, json, countries, etc.)</td>
+                <td>The type of the data source to be used (eg: local, json, countries, etc.).</td>
             </tr>
             <tr>
                 <td><span class="highlight">data-url</span></td>
