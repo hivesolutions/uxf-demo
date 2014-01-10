@@ -1,7 +1,7 @@
 <section id="drop-field">
     <h1  class="line">Drop Field</h1>
     <div class="section-contents">
-        <p>For completing this out it's '</p>
+        <p>This elememt may be used for relation where one element should use autocomplete.</p>
 
         <div class="box box-white">
             <div class="drop-field">
@@ -32,6 +32,10 @@
             <tr>
                 <td><span class="highlight">value_select( value, logic, item )</span></td>
                 <td class="description">Raised when a value is selected in the drop field.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">value_unselect( )</span></td>
+                <td class="description">Raised when a value is unselected from the drop field.</td>
             </tr>
         </table>
     </div>
