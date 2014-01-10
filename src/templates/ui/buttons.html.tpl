@@ -10,8 +10,8 @@
         <div class="box box-white">
             <div id="button" class="button button-solid">Button with Event</div>
             <div id="button-confirm" class="button button-solid">Button with Confirm Event</div>
-            <div id="button-link" class="button button-solid" data-link="http://doe.com">Button with Link</div>
-            <form action="http://doe.com" method="post" style="display:inline-block;">
+            <div id="button-link" class="button button-solid" data-link="http://hive.pt">Button with Link</div>
+            <form action="http://hive.pt" method="post" style="display:inline-block;">
                 <div id="button-form" class="button button-solid" data-submit="true">Button submit Form</div>
             </form>
         </div>
