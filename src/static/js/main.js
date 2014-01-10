@@ -155,8 +155,43 @@ var INITIAL_STYLE = "omni-style";
         // in the extension for event registration
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
+        var sections = jQuery("section", matchedObject);
         var search = jQuery("#search", matchedObject);
         var searchField = jQuery("> .drop-field", search);
+        var searchSource = jQuery(".data-source", search);
+        var searchItems = searchSource.data("items");
+
+        // iterates over the complete set of sections in order to be able
+        // to index them under the search items in the data source
+        sections.each(function(index, element) {
+                    // retrieves the current element (section) in iteration
+                    // and uses it to retrieve its title value
+                    var _element = jQuery(this);
+                    var title = jQuery("> h1", _element);
+
+                    // retrieves the identifier of the section from the
+                    // the id attribute of it and the name of it as the
+                    // text of the title
+                    var id = _element.attr("id");
+                    var name = title.text();
+
+                    // validates that both the id and the name of the section
+                    // are valid an in case they are not valid returns immediately
+                    // because there's nothing to be done in iteration
+                    if (!id || !name) {
+                        return;
+                    }
+
+                    // creats the link value be prepending the cardinal value to
+                    // the idetifier of the section and uses it together with the
+                    // name of the section to create the item map and adds it to
+                    // the list of search items in the data source
+                    var link = "#" + id;
+                    searchItems.push({
+                                link : link,
+                                name : name
+                            });
+                });
 
         // registers for the value selection changed in the style field
         // so that it's possible to change the style of the current page
