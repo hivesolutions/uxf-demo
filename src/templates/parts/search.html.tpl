@@ -8,6 +8,6 @@
                 <p class="entity-name">%[name]</p>
             </div>
         </li>
-        <ul class="data-source" data-type="local"></ul>
+        <ul class="data-source" data-type="local" data-insensitive="1"></ul>
     </div>
 </div>
