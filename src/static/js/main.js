@@ -28,9 +28,162 @@
 var INITIAL_STYLE = "omni-style";
 
 (function(jQuery) {
+    jQuery.fn.udemobutton = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the various elements that are going to be used
+        // in the extension for event registration
+        var button = jQuery("#button", matchedObject);
+        var buttonConfirm = jQuery("#button-confirm", matchedObject);
+
+        // registers for the click event on button
+        button.click(function() {
+                    alert("Button Clicked");
+                });
+
+        // registers for the click event on button confirm
+        buttonConfirm.click(function() {
+                    confirm("Button Confirm Clicked");
+                });
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
+    jQuery.fn.udemoprogress = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the various elements that are going to be used
+        // in the extension for event registration
+        var buttonProgress = jQuery("#button-progress", matchedObject);
+
+        // registers for the click event on button progress
+        buttonProgress.click(function() {
+                    // sets the initial percentage value
+                    var percentage = 0;
+
+                    var _updatePercentage = function() {
+                        // increments the percentage value
+                        percentage += 1;
+
+                        // in case the percentage overflows returns
+                        // immediately as there's nothing else
+                        // remaining to be done in this function
+                        if (percentage > 100) {
+                            return;
+                        }
+
+                        // sets the new percentage in the progress bar
+                        jQuery("#progress-bar").uxprogressbar("change", {
+                                    percentage : percentage
+                                });
+
+                        // sets a timeout to update the percentage
+                        setTimeout(_updatePercentage, 10);
+                    };
+
+                    // calls the initial update percentage
+                    _updatePercentage();
+                });
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
+    jQuery.fn.udemonotification = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the various elements that are going to be used
+        // in the extension for event registration
+        var buttonNotification = jQuery("#button-notification", matchedObject);
+
+        // registers for the click event on button notification
+        buttonNotification.click(function() {
+            jQuery("body").uxnotification({
+                title : "Notification Test",
+                message : "Don't read this dummy text, it's a waste of your time.",
+                timeout : 50000
+            });
+        });
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
     jQuery.fn.udemo = function(options) {
-        // @TODO change this into a plugin
-        buttonDemo();
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        /**
+         * Changes the current style to the style with the defined name.
+         *
+         * @param {String}
+         *            The name of the style to be used for the current document.
+         */
+        var changeStyle = function(style) {
+            // retrieves the body
+            var _body = jQuery("body");
+
+            // retrieves the currently used style
+            var currentStyle = _body.data("style");
+
+            // updates the style classes in the body
+            currentStyle && _body.removeClass(currentStyle);
+            _body.addClass(style);
+
+            // updates the style reference in the body
+            _body.data("style", style);
+        };
+
+        var headers = jQuery("h1.line", matchedObject);
+        var styleField = jQuery("#drop-field-style", matchedObject);
+        var searchField = jQuery("#search > .drop-field", matchedObject);
+
+        styleField.bind("value_select", function(event, value, valueLogic) {
+                    alert("Changing value to <b>" + value + "</b>", function() {
+                                changeStyle(valueLogic);
+                            });
+                });
+
+        searchField.bind("value_select", function() {
+                    jQuery("#search").fadeOut(250);
+                    jQuery(".overlay").fadeOut(250);
+                });
+
+        headers.click(function() {
+                    var element = jQuery(this);
+                    var section = element.parents("section");
+                    var sectionContents = jQuery(".section-contents", section);
+                    var isVisible = sectionContents.is(":visible");
+                    if (isVisible) {
+                        sectionContents.slideUp(350);
+                    } else {
+                        sectionContents.slideDown(500);
+                    }
+                });
+
+        // changes the style to the initial style so that the contents
+        // of the current page are changed accordingly
+        changeStyle(INITIAL_STYLE);
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
     };
 })(jQuery);
 
@@ -63,105 +216,3 @@ jQuery(document).ready(function() {
                         base.uapply();
                     });
         });
-
-var buttonDemo = function() {
-    // registers for the click event on button
-    jQuery("#button").click(function() {
-                alert("Button Clicked");
-            });
-
-    // registers for the click event on button confirm
-    jQuery("#button-confirm").click(function() {
-                confirm("Button Confirm Clicked");
-            });
-
-    // registers for the click event on button progress
-    jQuery("#button-progress").click(function() {
-                // sets the initial percentage value
-                var percentage = 0;
-
-                var _updatePercentage = function() {
-                    // increments the percentage value
-                    percentage += 1;
-
-                    // in case the percentage overflows returns
-                    // immediately as there's nothing else
-                    // remaining to be done in this function
-                    if (percentage > 100) {
-                        return;
-                    }
-
-                    // sets the new percentage in the progress bar
-                    jQuery("#progress-bar").uxprogressbar("change", {
-                                percentage : percentage
-                            });
-
-                    // sets a timeout to update the percentage
-                    setTimeout(_updatePercentage, 10);
-                };
-
-                // calls the initial update percentage
-                _updatePercentage();
-            });
-
-    // registers for the click event on button notification
-    jQuery("#button-notification").click(function() {
-        jQuery("body").uxnotification({
-                    title : "Notification Test",
-                    message : "Don't read this dummy text, it's a waste of your time.",
-                    timeout : 50000
-                });
-    });
-
-    jQuery("#drop-field-style").bind("value_select",
-            function(event, value, valueLogic) {
-                alert("Changing value to <b>" + value + "</b>", function() {
-                            changeStyle(valueLogic);
-                        });
-            });
-
-    jQuery("#search > .drop-field").bind("value_select", function() {
-                jQuery("#search").fadeOut(250);
-                jQuery(".overlay").fadeOut(250);
-            });
-
-    // changes the style to the initial style
-    changeStyle(INITIAL_STYLE);
-
-    jQuery("#style-link").click(function() {
-                jQuery.scrollTo("#style", 600);
-            });
-
-    jQuery("h1.line").click(function() {
-                var element = jQuery(this);
-                var section = element.parents("section");
-                var sectionContents = jQuery(".section-contents", section);
-                var isVisible = sectionContents.is(":visible");
-                if (isVisible) {
-                    sectionContents.slideUp(350);
-                } else {
-                    sectionContents.slideDown(500);
-                }
-            });
-}
-
-/**
- * Changes the current style to the style with the defined name.
- *
- * @param {String}
- *            The name of the style to be used for the current document.
- */
-var changeStyle = function(style) {
-    // retrieves the body
-    var _body = jQuery("body");
-
-    // retrieves the currently used style
-    var currentStyle = _body.data("style");
-
-    // updates the style classes in the body
-    currentStyle && _body.removeClass(currentStyle);
-    _body.addClass(style);
-
-    // updates the style reference in the body
-    _body.data("style", style);
-}
