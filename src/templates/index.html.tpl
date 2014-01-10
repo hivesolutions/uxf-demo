@@ -4,10 +4,11 @@
     {% include "parts/search.html.tpl" %}
     {% include "parts/window.html.tpl" %}
 
-    <div class="container-960 shortcuts">
+    <div class="container container-960 shortcuts">
         {% include "ui/overview.html.tpl" %}
         {% include "ui/style.html.tpl" %}
         {% include "ui/drop_field.html.tpl" %}
+        {% include "ui/data_source.html.tpl" %}
         {% include "ui/buttons.html.tpl" %}
         {% include "ui/form.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
