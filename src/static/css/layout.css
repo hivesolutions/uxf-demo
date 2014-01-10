@@ -244,9 +244,9 @@ h1.line {
 }
 
 .table-data tbody tr:last-child td:last-child {
-    border-radius: 0 0 4px 0;
-    -moz-border-radius: 0 0 4px 0;
-    -webkit-border-radius: 0 0 4px 0;
+    border-radius: 0px 0px 4px 0px;
+    -moz-border-radius: 0px 0px 4px 0px;
+    -webkit-border-radius: 0px 0px 4px 0px;
 }
 
 .tabs,
