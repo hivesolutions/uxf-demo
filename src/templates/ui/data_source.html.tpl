@@ -17,6 +17,11 @@
                 <td>The type of the data source to be used (eg: local, json, countries, etc.)</td>
             </tr>
             <tr>
+                <td><span class="highlight">data-url</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>For remote based data sources this field contains the url to gather data.</td>
+            </tr>
+            <tr>
                 <td><span class="highlight">data-insensitive</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>In case the current data source is local this is make the search case insensitive.</td>
