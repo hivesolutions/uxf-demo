@@ -155,7 +155,8 @@ var INITIAL_STYLE = "omni-style";
         // in the extension for event registration
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
-        var searchField = jQuery("#search > .drop-field", matchedObject);
+        var search = jQuery("#search", matchedObject);
+        var searchField = jQuery("> .drop-field", search);
 
         // registers for the value selection changed in the style field
         // so that it's possible to change the style of the current page
@@ -165,15 +166,20 @@ var INITIAL_STYLE = "omni-style";
                             });
                 });
 
+        // registers for the show event in the search overlay panel
+        // so that the text field is restored to the original value
+        search.bind("shown", function() {
+                    var element = jQuery(this);
+                    var textField = jQuery(".text-field", element);
+                    textField.uxreset();
+                });
+
         // registers for the value selection changed in the search field
         // in search field to be able to close the search field
         searchField.bind("value_select", function() {
-                    var search = jQuery("#search");
-                    var overlay = jQuery(".overlay");
-                    var searchField = jQuery(".text-field", search);
-                    search.fadeOut(250);
-                    overlay.fadeOut(250);
-                    searchField.uxreset();
+                    var element = jQuery(this);
+                    var search = element.parents("#search");
+                    search.triggerHandler("hide");
                 });
 
         // registers for the click event in the complete set of headers
@@ -189,6 +195,12 @@ var INITIAL_STYLE = "omni-style";
                         sectionContents.slideDown(500);
                     }
                 });
+
+        // runs the various domain specific extensions so that
+        // all of the demo logic is correctly loaded
+        matchedObject.udemobutton();
+        matchedObject.udemoprogress();
+        matchedObject.udemonotification();
 
         // changes the style to the initial style so that the contents
         // of the current page are changed accordingly
