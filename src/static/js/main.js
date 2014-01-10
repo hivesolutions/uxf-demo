@@ -153,6 +153,7 @@ var INITIAL_STYLE = "omni-style";
 
         // retrieves the various elements that are going to be used
         // in the extension for event registration
+        var links = jQuery(".container a",  matchedObject);
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
         var sections = jQuery("section", matchedObject);
@@ -160,6 +161,15 @@ var INITIAL_STYLE = "omni-style";
         var searchField = jQuery("> .drop-field", search);
         var searchSource = jQuery(".data-source", search);
         var searchItems = searchSource.data("items");
+
+        // converts the complete set of links present in the container
+        // into the appropriate layout and converts them into smooth
+        // based links that already respect the offset to the top
+        links.addClass("link");
+        links.addClass("link-blue");
+        links.attr("data-duration", "500");
+        links.attr("data-offset", "-42");
+        links.uxlink();
 
         // iterates over the complete set of sections in order to be able
         // to index them under the search items in the data source
