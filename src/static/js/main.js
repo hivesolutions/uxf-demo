@@ -136,35 +136,48 @@ var INITIAL_STYLE = "omni-style";
          *            The name of the style to be used for the current document.
          */
         var changeStyle = function(style) {
-            // retrieves the body
+            // retrieves the reference to the body element and
+            // uses it to retrieve the currently set style
             var _body = jQuery("body");
-
-            // retrieves the currently used style
             var currentStyle = _body.data("style");
 
-            // updates the style classes in the body
+            // updates the style classes by removing the current
+            // style's class and adding the new one
             currentStyle && _body.removeClass(currentStyle);
             _body.addClass(style);
 
-            // updates the style reference in the body
+            // updates the style reference in the body so that it
+            // may retrieved latter if that's required
             _body.data("style", style);
         };
 
+        // retrieves the various elements that are going to be used
+        // in the extension for event registration
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
         var searchField = jQuery("#search > .drop-field", matchedObject);
 
+        // registers for the value selection changed in the style field
+        // so that it's possible to change the style of the current page
         styleField.bind("value_select", function(event, value, valueLogic) {
                     alert("Changing value to <b>" + value + "</b>", function() {
                                 changeStyle(valueLogic);
                             });
                 });
 
+        // registers for the value selection changed in the search field
+        // in search field to be able to close the search field
         searchField.bind("value_select", function() {
-                    jQuery("#search").fadeOut(250);
-                    jQuery(".overlay").fadeOut(250);
+                    var search = jQuery("#search");
+                    var overlay = jQuery(".overlay");
+                    var searchField = jQuery(".text-field", search);
+                    search.fadeOut(250);
+                    overlay.fadeOut(250);
+                    searchField.uxreset();
                 });
 
+        // registers for the click event in the complete set of headers
+        // so that it's possible to toggle it's visibility
         headers.click(function() {
                     var element = jQuery(this);
                     var section = element.parents("section");
