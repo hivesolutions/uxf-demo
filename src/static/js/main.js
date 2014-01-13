@@ -153,7 +153,7 @@ var INITIAL_STYLE = "omni-style";
 
         // retrieves the various elements that are going to be used
         // in the extension for event registration
-        var links = jQuery(".container a",  matchedObject);
+        var links = jQuery(".container a", matchedObject);
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
         var sections = jQuery("section", matchedObject);
@@ -206,6 +206,13 @@ var INITIAL_STYLE = "omni-style";
         // registers for the value selection changed in the style field
         // so that it's possible to change the style of the current page
         styleField.bind("value_select", function(event, value, valueLogic) {
+                    // retrieves the current style field that has just been
+                    // triggered and resets it to the original value (as expected)
+                    var element = jQuery(this);
+                    element.uxreset();
+
+                    // triggers a new alert window indicating the chaning of the
+                    // style and changes the style on confirmation
                     alert("Changing value to <b>" + value + "</b>", function() {
                                 changeStyle(valueLogic);
                             });

@@ -4,7 +4,7 @@
         <p>May be used to list dynamic content in a table like environment.</p>
 
         <table class="table-data">
-        	<tr>
+            <tr>
                 <td><span class="highlight">selected( row )</span></td>
                 <td class="description">Raised for each of the elements (lines) once they are selected.</td>
             </tr>
