@@ -43,6 +43,11 @@
                 <td><span class="highlight">boolean</span></td>
                 <td>If set the parent form is submitted upon clicking the button.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-window_open</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>Opens the window selected with the provided selector on click.</td>
+            </tr>
         </table>
     </div>
 </section>
