@@ -23,11 +23,11 @@
         </div>
 
 <pre class="code language-markup">
-&lt;div id=&quot;button-link&quot; class=&quot;button&quot; data-link=&quot;http://doe.com&quot;&gt;Button with Link&lt;/div&gt;
+&lt;div id=&quot;button-link&quot; class=&quot;button&quot; data-link=&quot;http://hive.pt&quot;&gt;Button with Link&lt;/div&gt;
 </pre>
 
 <pre class="code language-markup">
-&lt;form action=&quot;http://doe.com&quot; method=&quot;post&quot; style=&quot;display:inline-block;&quot;&gt;
+&lt;form action=&quot;http://hive.pt&quot; method=&quot;post&quot; style=&quot;display:inline-block;&quot;&gt;
     &lt;div id=&quot;button-form&quot; class=&quot;button&quot; data-submit=&quot;true&quot;&gt;Button submit Form&lt;/div&gt;
 &lt;/form&gt;
 </pre>
