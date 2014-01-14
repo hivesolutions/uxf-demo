@@ -7,7 +7,7 @@
             <tr>
                 <td><span class="highlight">data-number_records</span></td>
                 <td><span class="highlight">integer</span></td>
-                <td>If set overrides the default number of records to be present per each load.</td>
+                <td>If set overrides the default number of records to be present per each load (set to minus one for infite).</td>
             </tr>
         </table>
 
