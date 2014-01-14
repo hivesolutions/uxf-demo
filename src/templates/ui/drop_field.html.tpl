@@ -26,6 +26,11 @@
                 <td><span class="highlight">integer</span></td>
                 <td>The offset to the target element in pixels, the value may be positive or negative.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-number_records</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>If set overrides the default number of records to be present per each load.</td>
+            </tr>
         </table>
 
         <table class="table-data">
