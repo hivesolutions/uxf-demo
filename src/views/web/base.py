@@ -38,12 +38,12 @@ __license__ = "GNU General Public License (GPL), Version 3"
 """ The license for the module """
 
 from uxf_demo import app
-from uxf_demo import flask
+from uxf_demo import quorum
 
 @app.route("/", methods = ("GET",))
 @app.route("/index", methods = ("GET",))
 def index():
-    return flask.render_template(
+    return quorum.render_template(
         "index.html.tpl",
         link = "home"
     )
