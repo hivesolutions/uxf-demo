@@ -1,6 +1,7 @@
 <!-- css inclusion -->
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'libs/uxf/css/ux-min.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'libs/uxf/styles/omni/css/ux-min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'libs/uxf/styles/ulite/css/ux-min.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/layout.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/ux.css') }}" />
 
