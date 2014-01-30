@@ -153,7 +153,8 @@ var INITIAL_STYLE = "omni-style";
 
         // retrieves the various elements that are going to be used
         // in the extension for event registration
-        var links = jQuery(".container a", matchedObject);
+        var contents = matchedObject.filter("body");
+        var links = jQuery(".container a:not(.tab-selector)", matchedObject);
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
         var sections = jQuery("section", matchedObject);
@@ -256,7 +257,7 @@ var INITIAL_STYLE = "omni-style";
 
         // changes the style to the initial style so that the contents
         // of the current page are changed accordingly
-        changeStyle(INITIAL_STYLE);
+        contents.length > 0 && changeStyle(INITIAL_STYLE);
 
         // returns the matched object to the caller function so
         // that it may be used in chained actions
