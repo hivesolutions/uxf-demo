@@ -16,6 +16,11 @@
                         <span name="details">The omni platform style</span>
                         <span name="identifier">omni-style</span>
                     </li>
+                    <li>
+                        <span name="name">Ulite</span>
+                        <span name="details">The ulite platform style</span>
+                        <span name="identifier">ulite-style</span>
+                    </li>
                 </ul>
             </div>
         </div>
