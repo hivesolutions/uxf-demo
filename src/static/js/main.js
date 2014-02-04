@@ -36,16 +36,10 @@ var INITIAL_STYLE = "omni-style";
         // retrieves the various elements that are going to be used
         // in the extension for event registration
         var button = jQuery("#button", matchedObject);
-        var buttonConfirm = jQuery("#button-confirm", matchedObject);
 
         // registers for the click event on button
         button.click(function() {
                     alert("Button Clicked");
-                });
-
-        // registers for the click event on button confirm
-        buttonConfirm.click(function() {
-                    confirm("Button Confirm Clicked");
                 });
 
         // returns the matched object to the caller function so

@@ -9,7 +9,8 @@
 
         <div class="box box-white">
             <div id="button" class="button button-solid">Button with Event</div>
-            <div id="button-confirm" class="button button-solid">Button with Confirm Event</div>
+            <div id="button-confirm" class="button button-confirm button-solid"
+                 data-message="Confirmation message">Button with Confirm Event</div>
             <div id="button-link" class="button button-solid" data-link="http://hive.pt">Button with Link</div>
             <form action="http://hive.pt" method="post" style="display:inline-block;">
                 <div id="button-form" class="button button-solid" data-submit="true">Button submit Form</div>
@@ -42,6 +43,11 @@
                 <td><span class="highlight">data-submit</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>If set the parent form is submitted upon clicking the button.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-message</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>Message to be display when the button is under confirm mode.</td>
             </tr>
             <tr>
                 <td><span class="highlight">data-window_open</span></td>
