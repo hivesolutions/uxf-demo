@@ -148,7 +148,8 @@ var INITIAL_STYLE = "omni-style";
         // retrieves the various elements that are going to be used
         // in the extension for event registration
         var contents = matchedObject.filter("body");
-        var links = jQuery(".container a:not(.tab-selector)", matchedObject);
+        var links = jQuery(".container a:not(.tab-selector, .calendar-arrow)",
+                matchedObject);
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
         var sections = jQuery("section", matchedObject);
