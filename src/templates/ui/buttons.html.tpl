@@ -50,6 +50,11 @@
                 <td>Message to be display when the button is under confirm mode.</td>
             </tr>
             <tr>
+                <td><span class="highlight">data-show</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>Shows the element selected with the provided selector on click (uses "show" event).</td>
+            </tr>
+            <tr>
                 <td><span class="highlight">data-window_open</span></td>
                 <td><span class="highlight">string</span></td>
                 <td>Opens the window selected with the provided selector on click.</td>
