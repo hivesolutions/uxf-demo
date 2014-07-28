@@ -17,6 +17,11 @@
 
         <table class="table-data">
             <tr>
+                <td><span class="highlight">data-submit</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If the parent form of the drop field should be submitted uppon action.</td>
+            </tr>
+            <tr>
                 <td><span class="highlight">data-duration</span></td>
                 <td><span class="highlight">integer</span></td>
                 <td>The duration for the scrolling effect in milliseconds. If set the link value in the item must be internal.</td>
