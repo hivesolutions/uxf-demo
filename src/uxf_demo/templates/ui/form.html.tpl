@@ -57,5 +57,36 @@
                 <td>If multiple files may be selected for upload.</td>
             </tr>
         </table>
+
+        <div class="box box-white">
+            <a class="link link-blue uploader">Upload image</a>
+        </div>
+
+<pre class="code language-markup">
+&lt;a class=&quot;link link-blue uploader&quot;&gt;Upload image&lt;/a&gt;
+</pre>
+
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">data-name</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>Name value to be used in a possible enclosing form object.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-action</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>The URL to be used in the POST action to be create by a created enclsoing form.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-no_text</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If the name of the selected file should be the text to be displayed.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-multiple</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If multiple file uploading should be enabled.</td>
+            </tr>
+        </table>
     </div>
 </section>
