@@ -9,6 +9,11 @@
                 <td><span class="highlight">integer</span></td>
                 <td>If set overrides the default number of records to be present per each load (set to minus one for infinite).</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-no_input</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If the search input field should not be displayed and used for the filter.</td>
+            </tr>
         </table>
 
         <table class="table-data">
