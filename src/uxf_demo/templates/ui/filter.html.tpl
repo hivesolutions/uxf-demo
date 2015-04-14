@@ -5,6 +5,11 @@
 
         <table class="table-data">
             <tr>
+                <td><span class="highlight">data-sort</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>Textual valu that respectes fild:direction structure to define the default and initial sorting.</td>
+            </tr>
+            <tr>
                 <td><span class="highlight">data-number_records</span></td>
                 <td><span class="highlight">integer</span></td>
                 <td>If set overrides the default number of records to be present per each load (set to minus one for infinite).</td>
