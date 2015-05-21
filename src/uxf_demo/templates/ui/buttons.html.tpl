@@ -55,6 +55,11 @@
                 <td>Shows the element selected with the provided selector on click (uses "show" event).</td>
             </tr>
             <tr>
+                <td><span class="highlight">data-window</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If a new browser window/tab should be created for the link (equivalent to _blank).</td>
+            </tr>
+            <tr>
                 <td><span class="highlight">data-window_open</span></td>
                 <td><span class="highlight">string</span></td>
                 <td>Opens the window selected with the provided selector on click.</td>
