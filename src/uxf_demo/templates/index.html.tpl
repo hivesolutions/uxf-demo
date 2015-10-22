@@ -6,6 +6,7 @@
 
     <div class="container container-960 shortcuts">
         {% include "ui/overview.html.tpl" %}
+        {% include "ui/base.html.tpl" %}
         {% include "ui/style.html.tpl" %}
         {% include "ui/drop_field.html.tpl" %}
         {% include "ui/filter.html.tpl" %}
