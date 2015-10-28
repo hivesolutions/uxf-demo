@@ -23,5 +23,13 @@
 <pre class="code language-javascript">
 $("#window").uxwindow("show");
 </pre>
+
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">data-padding</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>The size in pixels to be used as the padding for the maximum window dimensions.</td>
+            </tr>
+        </table>
     </div>
 </section>
