@@ -180,6 +180,10 @@ h1.line {
     margin-bottom: 0px;
 }
 
+.section-function {
+    margin-top: 20px;
+}
+
 .overlay-search {
     background-color: #fefefe;
     border: 1px solid #cccccc;
