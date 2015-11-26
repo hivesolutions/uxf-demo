@@ -28,10 +28,12 @@ jQuery.uxdecimal(38.55 * 3.5);
             <h2>uxcountry</h2>
             <p>
                 Converts a standard representation of a country (ISO) into a visual
-                locale base representation.
+                locale base representation. Possible values for the format field are:
+                <span class="highlight">iso</span>, <span class="highlight">iso2</span>
+                and <span class="highlight">iso3</span>.
             </p>
 <pre class="code language-javascript">
-jQuery.uxcountry("PT");
+jQuery.uxcountry("PT", "iso2");
 </pre>
         </div>
     </div>
