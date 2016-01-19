@@ -49,19 +49,19 @@
                 <td><span class="highlight">data-error</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>if the text field has an invalid value.</td>
-            </tr> 
+            </tr>
             <tr>
                 <td><span class="highlight">data-regex</span></td>
                 <td><span class="highlight">string</span></td>
                 <td>The regular expression to be used to filter values. Only valid in case the data type is set to regex.</td>
-            </tr>        
+            </tr>
             <tr>
                 <td><span class="highlight">data-no_process</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>if the text field's value should be processed before submiting the form. Only valid in case the data type is set to date or datetime.</td>
             </tr>
         </table>
-                
+
         <div class="box box-white">
             <input type="text" class="text-field" data-type="float" data-decimal_places="2"/>
         </div>
@@ -124,7 +124,7 @@
                 <td>If multiple file uploading should be enabled.</td>
             </tr>
         </table>
-        
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">_focus( )</span></td>
