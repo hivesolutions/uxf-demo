@@ -19,16 +19,14 @@
 
         <div class="box box-white">
             <input type="text" class="text-field field-margin" data-original_value="text field" style="display:block;" />
-            <textarea class="text-area field-margin" data-original_value="text area"></textarea>
-            <input type="text" class="text-field field-margin" data-type="date" data-original_value="text field" style="display:block;" />
-            <input type="text" class="text-field" data-type="float" data-decimal_places="2" data-error="true"/>
+            <textarea class="text-area field-margin" data-original_value="text area" data-maximum_length="100"></textarea>
+            <input type="text" class="text-field field-margin" data-type="date" data-original_value="text field" data-error="true" style="display:block;" />
         </div>
 
 <pre class="code language-markup">
-&lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-original_value=&quot;text field&quot; style=&quot;display:block;&quot; /&gt;
-&lt;textarea class=&quot;text-field&quot; data-original_value=&quot;text area&quot;&gt;&lt;/textarea&gt;
-&lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; /&gt;
-&lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;float&quot; data-orginal_value=&quot;233.1&quot; data-decimal_places=&quot;2&quot; data-error=&quot;true&quot; /&gt;
+&lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-original_value=&quot;text field&quot; /&gt;
+&lt;textarea class=&quot;text-area field-margin&quot; data-original_value=&quot;text area&quot; data-maximum_length=&quot;100&quot;&gt;&lt;/textarea&gt;
+&lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; data-error=&quot;true&quot; /&gt;
 </pre>
 
         <table class="table-data">
@@ -56,16 +54,27 @@
                 <td><span class="highlight">data-regex</span></td>
                 <td><span class="highlight">string</span></td>
                 <td>The regular expression to be used to filter values. Only valid in case the data type is set to regex.</td>
-            </tr>
-            <tr>
-                <td><span class="highlight">data-decimal_places</span></td>
-                <td><span class="highlight">integer</span></td>
-                <td>The maximum number of decimal cases allowed for the text field's value. Only valid in case the data type is set to float.</td>
-            </tr>           
+            </tr>        
             <tr>
                 <td><span class="highlight">data-no_process</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>if the text field's value should be processed before submiting the form. Only valid in case the data type is set to date or datetime.</td>
+            </tr>
+        </table>
+                
+        <div class="box box-white">
+            <input type="text" class="text-field" data-type="float" data-decimal_places="2"/>
+        </div>
+
+<pre class="code language-markup">
+&lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;float&quot; data-orginal_value=&quot;233.1&quot; data-decimal_places=&quot;2&quot; /&gt;
+</pre>
+
+        <table class="table-data">
+             <tr>
+                <td><span class="highlight">data-decimal_places</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>The maximum number of decimal cases allowed for the text field's value. Only valid in case the data type is set to float.</td>
             </tr>
         </table>
 
@@ -113,6 +122,29 @@
                 <td><span class="highlight">data-multiple</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>If multiple file uploading should be enabled.</td>
+            </tr>
+        </table>
+        
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">_focus( )</span></td>
+                <td>Triggered when the text field receives focus.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">_blur( )</span></td>
+                <td>Triggered when the text field loses focus.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">value_change( value )</span></td>
+                <td>Raised when the text field's value changes.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">invalid_set( )</span></td>
+                <td>Raised when an invalid value is set.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">invalid_unset( )</span></td>
+                <td>Raised when an invalid value is unset.</td>
             </tr>
         </table>
     </div>
