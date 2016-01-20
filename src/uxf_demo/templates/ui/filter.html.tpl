@@ -7,7 +7,7 @@
             <tr>
                 <td><span class="highlight">data-sort</span></td>
                 <td><span class="highlight">string</span></td>
-                <td>Textual value that respectes fild:direction structure to define the default and initial sorting.</td>
+                <td>Textual value that respects field:direction structure to define the default and initial sorting.</td>
             </tr>
             <tr>
                 <td><span class="highlight">data-number_records</span></td>

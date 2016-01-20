@@ -4,16 +4,16 @@
         <div class="box box-white">
             <div id="changer-trigger" class="changer" data-section_count="2" data-timeout="2000">Change</div>
             <div class="content-changer" data-trigger="#changer-trigger">
-                <div class="changer-panel">Change 1</div>
-                <div class="changer-panel">Change 2</div>
+                <div class="changer-panel">Section 1</div>
+                <div class="changer-panel">Section 2</div>
             </div>
         </div>
 
 <pre class="code language-markup">
 &lt;div id=&quot;changer-trigger&quot; class=&quot;changer&quot; data-section_count=&quot;2&quot; data-timeout=&quot;2000&quot;&gt;Change&lt;/div&gt;
 &lt;div class=&quot;content-changer&quot; data-trigger=&quot;#changer-triggerr&quot;&gt;
-    &lt;div class=&quot;changer-panel&quot;&gt;Change 1&lt;/div&gt;
-    &lt;div class=&quot;changer-panel&quot;&gt;Change 2&lt;/div&gt;
+    &lt;div class=&quot;changer-panel&quot;&gt;Section 1&lt;/div&gt;
+    &lt;div class=&quot;changer-panel&quot;&gt;Section 2&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 

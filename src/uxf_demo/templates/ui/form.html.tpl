@@ -34,13 +34,13 @@
         <div class="box box-white">
             <input type="text" class="text-field field-margin" data-original_value="text field" style="display:block;" />
             <textarea class="text-area field-margin" data-original_value="text area" data-maximum_length="100"></textarea>
-            <input type="text" class="text-field field-margin" data-type="date" data-original_value="text field" data-error="true" style="display:block;" />
+            <input type="text" class="text-field" data-type="date" data-original_value="text field" data-error="true" style="display:block;" />
         </div>
 
 <pre class="code language-markup">
 &lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-original_value=&quot;text field&quot; /&gt;
 &lt;textarea class=&quot;text-area field-margin&quot; data-original_value=&quot;text area&quot; data-maximum_length=&quot;100&quot;&gt;&lt;/textarea&gt;
-&lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; data-error=&quot;true&quot; /&gt;
+&lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; data-error=&quot;true&quot; /&gt;
 </pre>
 
         <table class="table-data">
@@ -166,6 +166,21 @@
             <tr>
                 <td><span class="highlight">files_change( files )</span></td>
                 <td>Raised when the input's files change.</td>
+            </tr>
+        </table>
+
+        <div class="box box-white">
+            <div class="file-drop">Drop your files here</div>
+        </div>
+
+<pre class="code language-markup">
+&lt;div class=&quot;file-drop&quot;&gt;Drop your files here&lt;/div&gt;
+</pre>
+
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">file_drop( event, files )</span></td>
+                <td class="description">Raised when one or more files are dropped in the element.</td>
             </tr>
         </table>
     </div>

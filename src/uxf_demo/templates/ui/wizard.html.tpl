@@ -26,9 +26,9 @@
 <pre class="code language-markup">
 &lt;div class=&quot;wizard&quot;&gt;
     &lt;ul class=&quot;breadcrumbs&quot;&gt;
-            &lt;li&gt;First&lt;/li&gt;
-            &lt;li&gt;Second&lt;/li&gt;
-            &lt;li&gt;Third&lt;/li&gt;
+        &lt;li&gt;First&lt;/li&gt;
+        &lt;li&gt;Second&lt;/li&gt;
+        &lt;li&gt;Third&lt;/li&gt;
     &lt;/ul&gt;
     &lt;div class=&quot;panel-stack&quot;&gt;
         &lt;div class=&quot;panel&quot;&gt;&lt;h3&gt;First Step&lt;/h3&gt;&lt;/div&gt;
