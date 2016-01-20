@@ -17,6 +17,7 @@
         {% include "ui/table.html.tpl" %}
         {% include "ui/notification.html.tpl" %}
         {% include "ui/replacer.html.tpl" %}
+        {% include "ui/changer.html.tpl" %}
         {% include "ui/link.html.tpl" %}
         {% include "ui/link_confirm.html.tpl" %}
         {% include "ui/windows.html.tpl" %}

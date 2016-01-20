@@ -253,6 +253,10 @@ h1.line {
     -webkit-border-radius: 0px 0px 4px 0px;
 }
 
-.wizard .panel-stack {
+#wizard .wizard .panel-stack {
     padding: 10px 0px 10px 0px;
+}
+
+#changer .changer.section-2 {
+    font-weight: bold;
 }
