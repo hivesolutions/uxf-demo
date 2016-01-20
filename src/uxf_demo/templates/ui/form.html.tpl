@@ -16,7 +16,7 @@
 &lt;input type=&quot;radio&quot; class=&quot;radio-field&quot; /&gt;
 &lt;input type=&quot;checkbox&quot; class=&quot;check-field&quot; data-checked=&quot;on&quot; /&gt;
 </pre>
-        
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">data-checked</span></td>
@@ -75,7 +75,7 @@
                 <td>if the text field's value should be processed before submiting the form. Only valid in case the data type is set to date or datetime.</td>
             </tr>
         </table>
-        
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">_focus( )</span></td>
@@ -98,7 +98,7 @@
                 <td>Raised when an invalid value is unset.</td>
             </tr>
         </table>
-        
+
         <div class="box box-white">
             <input type="text" class="text-field" data-type="float" data-decimal_places="2"/>
         </div>
@@ -159,6 +159,13 @@
                 <td><span class="highlight">data-multiple</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>If multiple file uploading should be enabled.</td>
+            </tr>
+        </table>
+
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">files_change( files )</span></td>
+                <td>Raised when the input's files change.</td>
             </tr>
         </table>
     </div>

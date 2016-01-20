@@ -2,7 +2,7 @@
 <section id="wizard">
     <h1 class="line">Wizard</h1>
     <div class="section-contents">
-        <p>If you need to guide the user through a process with multiple steps 
+        <p>If you need to guide the user through a process with multiple steps
         you can easily add a stack of panels with navigation and breadcrumbs.</p>
         <div class="wizard box box-white">
             <ul class="breadcrumbs">
@@ -66,5 +66,5 @@
             <td>Triggered when the wizard's index changes.</td>
         </tr>
     </table>
-    
+
 </section>
