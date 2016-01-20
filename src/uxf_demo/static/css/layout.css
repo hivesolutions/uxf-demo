@@ -252,3 +252,7 @@ h1.line {
     -moz-border-radius: 0px 0px 4px 0px;
     -webkit-border-radius: 0px 0px 4px 0px;
 }
+
+.wizard .panel-stack {
+    padding: 10px 0px 10px 0px;
+}
