@@ -10,6 +10,7 @@
         {% include "ui/style.html.tpl" %}
         {% include "ui/drop_field.html.tpl" %}
         {% include "ui/filter.html.tpl" %}
+        {% include "ui/cross_list.html.tpl" %}
         {% include "ui/data_source.html.tpl" %}
         {% include "ui/buttons.html.tpl" %}
         {% include "ui/form.html.tpl" %}

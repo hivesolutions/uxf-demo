@@ -4,7 +4,7 @@
         <p>This element may be used for relation where one element should use autocomplete. It supports all text field data attributes.</p>
 
         <div class="box box-white">
-            <div class="drop-field" data-display_attribute="teste">
+            <div class="drop-field">
                 <ul class="data-source" data-type="countries"></ul>
             </div>
         </div>
@@ -19,7 +19,7 @@
             <tr>
                 <td><span class="highlight">data-submit</span></td>
                 <td><span class="highlight">boolean</span></td>
-                <td>If the parent form of the drop field should be submitted uppon action.</td>
+                <td>If the parent form of the drop field should be submitted upon action.</td>
             </tr>
             <tr>
                 <td><span class="highlight">data-duration</span></td>
