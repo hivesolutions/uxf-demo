@@ -28,6 +28,7 @@
         {% include "ui/enumerations.html.tpl" %}
         {% include "ui/number_formatter.html.tpl" %}
         {% include "ui/password_meter.html.tpl" %}
+        {% include "ui/rating.html.tpl" %}
         {% include "ui/tags.html.tpl" %}
         {% include "ui/list.html.tpl" %}
         {% include "ui/tabs.html.tpl" %}
