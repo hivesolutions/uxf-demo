@@ -12,5 +12,18 @@ $("body").uxnotification({
     timeout : 5000
 });
 </pre>
+
+    <div class="box box-white">
+        <div class="header-notification">
+            <p class="link-close">Click to close this Header Notification</p>
+        </div>
+    </div>
+
+<pre class="code language-markup">
+&lt;div class=&quot;header-notification&quot;&gt;
+    &lt;p class=&quot;link-close&quot;&gt;Click to close this Header Notification&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
     </div>
 </section>

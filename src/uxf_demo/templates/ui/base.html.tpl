@@ -36,5 +36,20 @@ jQuery.uxdecimal(38.55 * 3.5);
 jQuery.uxcountry("PT", "iso2");
 </pre>
         </div>
+        <div class="section-function">
+            <h2>uxalert</h2>
+            <p>Presents an alert box with the specified message and a confirm button.
+            The <span class="highlight">callback</span> is called when the user confirms.</p>
+<pre class="code language-javascript">
+alert("Hello World", callback);
+</pre>
+        </div>
+        <div class="section-function">
+            <h2>uxinfo</h2>
+            <p>Presents an info box with the specified message, title and type (which will be added to the title element as a class).
+<pre class="code language-javascript">
+jQuery("body").uxinfo("There was an error.", "Warning", "warning");
+</pre>
+        </div>
     </div>
 </section>

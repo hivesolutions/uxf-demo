@@ -25,6 +25,38 @@
                 <td><span class="highlight">integer</span></td>
                 <td>The offset to the target element in pixels, the value may be positive or negative.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-hash</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>The offset to the target element in pixels, the value may be positive or negative.</td>
+            </tr>
+        </table>
+
+        <p>This component can also be used to make an AJAX request by setting
+        <span class="highlight">data-ajax</span> to true. The response handler should bind to this element's
+        <span class="highlight">success</span> and <span class="highlight">error</span> events.</p>
+
+<pre class="code language-markup">
+&lt;a class=&quot;link link-blue&quot; href=&quot;#link&quot; data-ajax=&quot;true&quot;&gt;AJAX Request&lt;/a&gt;
+</pre>
+
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">data-ajax</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If an AJAX request should be made instead of the default link behaviour.</td>
+            </tr>
+        </table>
+
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">success( data )</span></td>
+                <td>Called if the request succeeds.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">error( request, status, error )</span></td>
+                <td>Called if the request fails.</td>
+            </tr>
         </table>
     </div>
 </section>
