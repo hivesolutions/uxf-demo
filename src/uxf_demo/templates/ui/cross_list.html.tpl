@@ -1,7 +1,8 @@
 <section id="cross-list">
     <h1  class="line">Cross List</h1>
     <div class="section-contents">
-        <p>This element may be used to move or select elements from one list to other.</p>
+        <p>This element may be used to move or select elements from one list to other.
+        Uses <a href="#source-list">Source Lists</a> as child elements.</p>
         <div class="box box-white">
             <div class="cross-list" data-source="From" data-target="To" data-order="true">
                 <ul class="data-source" data-type="countries"></ul>
@@ -28,20 +29,11 @@
             <tr>
                 <td><span class="highlight">data-duplicates</span></td>
                 <td><span class="highlight">boolean</span></td>
-                <td>If it is possible to add one item multiple times.</td>
-            </tr>
-            <tr>
-                <td><span class="highlight">data-order</span></td>
-                <td><span class="highlight">boolean</span></td>
-                <td>If the items of the target list can be manually ordered.</td>
+                <td>If it is possible to add the same item multiple times.</td>
             </tr>
         </table>
 
         <table class="table-data">
-            <tr>
-                <td><span class="highlight">order_changed( )</span></td>
-                <td class="description">Triggered when the target list's order is changed.</td>
-            </tr>
             <tr>
                 <td><span class="highlight">items_changed( )</span></td>
                 <td class="description">Called by both the source and the target list when a change occurs.</td>

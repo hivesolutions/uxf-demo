@@ -4,7 +4,7 @@
         <p>When developing web applications is mandatory to have a good set of buttons
         to control the application. The buttons provided allow you to raise events, submit
         forms, follow links, etc.</p>
-        <p>The main areas to be explorer in the button involve <span class="highlight">data-link</span>
+        <p>The main areas to be explored in the button involve <span class="highlight">data-link</span>
         and the <span class="highlight">data-submit</span> attributes.</p>
 
         <div class="box box-white">
