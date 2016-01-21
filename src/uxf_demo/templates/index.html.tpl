@@ -14,6 +14,7 @@
         {% include "ui/data_source.html.tpl" %}
         {% include "ui/buttons.html.tpl" %}
         {% include "ui/form.html.tpl" %}
+        {% include "ui/toogle_field.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
         {% include "ui/table.html.tpl" %}
         {% include "ui/notification.html.tpl" %}
