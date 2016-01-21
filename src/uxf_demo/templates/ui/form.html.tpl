@@ -100,11 +100,13 @@
         </table>
 
         <div class="box box-white">
-            <input type="text" class="text-field" data-type="float" data-decimal_places="2"/>
+            <input type="text" class="text-field  field-margin" data-type="float" data-decimal_places="2"/>
+            <input type="text" class="incremental-field" data-type="integer"/>
         </div>
 
 <pre class="code language-markup">
 &lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;float&quot; data-decimal_places=&quot;2&quot; /&gt;
+&lt;input type=&quot;text&quot; class=&quot;incremental-field&quot; data-type=&quot;integer&quot;    /&gt;
 </pre>
 
         <table class="table-data">

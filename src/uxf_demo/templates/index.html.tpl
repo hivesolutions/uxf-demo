@@ -29,8 +29,10 @@
         {% include "ui/number_formatter.html.tpl" %}
         {% include "ui/password_meter.html.tpl" %}
         {% include "ui/tags.html.tpl" %}
+        {% include "ui/list.html.tpl" %}
         {% include "ui/tabs.html.tpl" %}
         {% include "ui/wizard.html.tpl" %}
+        {% include "ui/image.html.tpl" %}
         {% include "ui/video.html.tpl" %}
     </div>
 {% endblock %}

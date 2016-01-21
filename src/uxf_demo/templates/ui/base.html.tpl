@@ -44,5 +44,12 @@ jQuery.uxcountry("PT", "iso2");
 alert("Hello World", callback);
 </pre>
         </div>
+        <div class="section-function">
+            <h2>uxinfo</h2>
+            <p>Presents an info box with the specified message, title and type (which will be added to the title element as a class).
+<pre class="code language-javascript">
+jQuery("body").uxinfo("There was an error.", "Warning", "warning");
+</pre>
+        </div>
     </div>
 </section>

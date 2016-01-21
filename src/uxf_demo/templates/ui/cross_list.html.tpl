@@ -2,7 +2,6 @@
     <h1  class="line">Cross List</h1>
     <div class="section-contents">
         <p>This element may be used to move or select elements from one list to other.</p>
-
         <div class="box box-white">
             <div class="cross-list" data-source="From" data-target="To" data-order="true">
                 <ul class="data-source" data-type="countries"></ul>
