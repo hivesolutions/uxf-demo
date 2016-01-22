@@ -106,7 +106,7 @@
 
 <pre class="code language-markup">
 &lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;float&quot; data-decimal_places=&quot;2&quot; /&gt;
-&lt;input type=&quot;text&quot; class=&quot;incremental-field&quot; data-type=&quot;integer&quot;    /&gt;
+&lt;input type=&quot;text&quot; class=&quot;incremental-field&quot; data-type=&quot;integer&quot; /&gt;
 </pre>
 
         <table class="table-data">
