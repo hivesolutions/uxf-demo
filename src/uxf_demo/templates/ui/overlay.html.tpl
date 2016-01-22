@@ -4,22 +4,16 @@
         <p>This component provides a window level overlay that responds to a specific key press.
         The following example makes use of a <a href="#drop-field">Drop Field</a> to search the componentes on this page.</p>
         <div class="box box-white">
-            Press Ctrl + Space key to trigger the overlay.
+            <p>Press Ctrl + Enter key to trigger the overlay.</p>
+        </div>
+        
+        <div class="overlay-panel overlay-search" data-key="13" data-offset="0.20">
+            <h1>Overlay Content</h1>
         </div>
 
 <pre class="code language-markup">
-&lt;div id=&quot;search&quot; class=&quot;overlay-panel overlay-search&quot; data-key=&quot;32&quot; data-offset=&quot;0.20&quot;&gt;
-    &lt;div class=&quot;drop-field entities-search&quot; data-display_attribute=&quot;name&quot;
-         data-value_attribute=&quot;name&quot; data-link_attribute=&quot;link&quot; data-filter_attributes=&quot;name&quot;
-         data-duration=&quot;500&quot; data-offset=&quot;-42&quot;&gt;
-        &lt;input type=&quot;text&quot; class=&quot;text-field&quot; autocomplete=&quot;off&quot; /&gt;
-        &lt;li class=&quot;template&quot;&gt;
-            &lt;div&gt;
-                &lt;p class=&quot;entity-name&quot;&gt;%[name]&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;ul class=&quot;data-source&quot; data-type=&quot;local&quot; data-insensitive=&quot;1&quot;&gt;&lt;/ul&gt;
-    &lt;/div&gt;
+&lt;div id=&quot;panel&quot; class=&quot;overlay-panel overlay-search&quot; data-key=&quot;13&quot; data-offset=&quot;0.20&quot;&gt;
+    &lt;h1&gt;Overlay Content&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
 
