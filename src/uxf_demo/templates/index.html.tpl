@@ -11,6 +11,7 @@
         {% include "ui/drop_field.html.tpl" %}
         {% include "ui/drop_down.html.tpl" %}
         {% include "ui/drop_tag.html.tpl" %}
+        {% include "ui/drop_list.html.tpl" %}
         {% include "ui/tag_field.html.tpl" %}
         {% include "ui/filter.html.tpl" %}
         {% include "ui/select_list.html.tpl" %}
@@ -38,8 +39,10 @@
         {% include "ui/tags.html.tpl" %}
         {% include "ui/chart.html.tpl" %}
         {% include "ui/list.html.tpl" %}
+        {% include "ui/panel_more.html.tpl" %}
         {% include "ui/tabs.html.tpl" %}
         {% include "ui/wizard.html.tpl" %}
+        {% include "ui/overlay.html.tpl" %}
         {% include "ui/image.html.tpl" %}
         {% include "ui/video.html.tpl" %}
     </div>

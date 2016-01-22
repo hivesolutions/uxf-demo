@@ -1,5 +1,5 @@
 <section id="drop-down">
-    <h1  class="line">Drop Down</h1>
+    <h1  class="line">Dropdown</h1>
     <div class="section-contents">
         <div class="box box-white">
             <ul class="drop-down drop-down-form" data-name="Select one">

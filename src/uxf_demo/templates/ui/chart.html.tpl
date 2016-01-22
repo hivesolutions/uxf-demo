@@ -9,14 +9,6 @@
             </div>
         </div>
 
-        <div class="box box-white">
-            <div class="overlay-panel overlay-search" data-key="121" data-offset="0.20">
-                <div class="bar" data-percentage="11.3" data-linear="1"></div>
-                <div class="bar" data-percentage="57.0" data-linear="1"></div>
-                <div class="bar" data-percentage="84.6" data-linear="1"></div>
-            </div>
-        </div>
-
 <pre class="code language-markup">
 &lt;div class=&quot;chart&quot;&gt;
     &lt;div class=&quot;bar&quot; data-percentage=&quot;11.3&quot; data-linear=&quot;1&quot;&gt;&lt;/div&gt;

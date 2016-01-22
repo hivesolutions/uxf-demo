@@ -41,9 +41,9 @@
 
         <table class="table-data">
             <tr>
-                <td><span class="highlight">data-title</span></td>
+                <td><span class="highlight">data-name</span></td>
                 <td><span class="highlight">string</span></td>
-                <td>The title of the drop tag.</td>
+                <td>The correspondent data value for the item's text.</td>
             </tr>
         </table>
 
