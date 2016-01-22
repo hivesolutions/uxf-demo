@@ -9,6 +9,8 @@
         {% include "ui/base.html.tpl" %}
         {% include "ui/style.html.tpl" %}
         {% include "ui/drop_field.html.tpl" %}
+        {% include "ui/drop_down.html.tpl" %}
+        {% include "ui/drop_tag.html.tpl" %}
         {% include "ui/tag_field.html.tpl" %}
         {% include "ui/filter.html.tpl" %}
         {% include "ui/select_list.html.tpl" %}
