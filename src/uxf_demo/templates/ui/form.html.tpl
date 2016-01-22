@@ -1,20 +1,19 @@
 <section id="form-elements">
     <h1 class="line">Form Elements</h1>
     <div class="section-contents">
-        <p>One of the most important aspects of the text field component is that it allows
-        the <span class="highlight">date</span> and <span class="highlight">datetime</span> types. One can configure
-        the date type by adding the <span class="highlight">no-calendar</span> class to the input and no calendar
-        will appear. Another configuration possibility is to add the <span class="highlight">utc</span> class to the datetime text field and
-        the time is interpreted in the static <span class="highlight">UTC</span> timezone.</p>
-
+        <h2 id="radio-field">Radio Field</h2>
         <div class="box box-white">
-            <input type="radio" class="radio-field"/>
-            <input type="checkbox" class="check-field" data-checked="on"/>
+            <label class="radio-label" for="male">Male</label>
+            <input type="radio" class="radio-field" name="gender" id="male" data-checked="on"/>
+            <label class="radio-label" for="female">Female</label>
+            <input type="radio" class="radio-field" name="gender" id="female"/>
         </div>
 
 <pre class="code language-markup">
-&lt;input type=&quot;radio&quot; class=&quot;radio-field&quot; /&gt;
-&lt;input type=&quot;checkbox&quot; class=&quot;check-field&quot; data-checked=&quot;on&quot; /&gt;
+&lt;label class=&quot;radio-label&quot; for=&quot;male&quot;&gt;Male&lt;/label&gt;
+&lt;input type=&quot;radio&quot; class=&quot;radio-field&quot; name=&quot;gender&quot; id=&quot;male&quot; data-checked=&quot;on&quot;/&gt;
+&lt;label class=&quot;radio-label&quot; for=&quot;female&quot;&gt;Female&lt;/label&gt;
+&lt;input type=&quot;radio&quot; class=&quot;radio-field&quot; name=&quot;gender&quot; id=&quot;female&quot;/&gt;
 </pre>
 
         <table class="table-data">
@@ -31,15 +30,44 @@
             </tr>
         </table>
 
+        <h2 id="check-field">Checkbox Field</h2>
+        <div class="box box-white">
+            <input type="checkbox" class="check-field" data-checked="on"/>
+            <input type="checkbox" class="check-field"/>
+        </div>
+
+<pre class="code language-markup">
+&lt;input type=&quot;checkbox&quot; class=&quot;check-field&quot; data-checked=&quot;on&quot;/&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;check-field&quot;/&gt;
+</pre>
+
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">data-checked</span></td>
+                <td><span class="highlight">string { "on" / "off" }</span></td>
+                <td>The checked state of the input.</td>
+            </tr>
+        </table>
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">change( )</span></td>
+                <td>Raised when the checked state of the input changes.</td>
+            </tr>
+        </table>
+
+        <h2 id="text-field">Text Field</h2>
+        <p>One of the most important aspects of the text field component is that it allows
+        the <span class="highlight">date</span> and <span class="highlight">datetime</span> types. One can configure
+        the date type by adding the <span class="highlight">no-calendar</span> class to the input and no calendar
+        will appear. Another configuration possibility is to add the <span class="highlight">utc</span> class to the datetime text field and
+        the time is interpreted in the static <span class="highlight">UTC</span> timezone.</p>
         <div class="box box-white">
             <input type="text" class="text-field field-margin" data-original_value="text field" style="display:block;" />
-            <textarea class="text-area field-margin" data-original_value="text area" data-maximum_length="100"></textarea>
             <input type="text" class="text-field" data-type="date" data-original_value="text field" data-error="true" style="display:block;" />
         </div>
 
 <pre class="code language-markup">
 &lt;input type=&quot;text&quot; class=&quot;text-field field-margin&quot; data-original_value=&quot;text field&quot; /&gt;
-&lt;textarea class=&quot;text-area field-margin&quot; data-original_value=&quot;text area&quot; data-maximum_length=&quot;100&quot;&gt;&lt;/textarea&gt;
 &lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;date&quot; data-original_value=&quot;text field&quot; data-error=&quot;true&quot; /&gt;
 </pre>
 
@@ -117,6 +145,16 @@
             </tr>
         </table>
 
+        <h2 id="text-area">Text Area</h2>
+        <div class="box box-white">
+            <textarea class="text-area field-margin" data-original_value="text area" data-maximum_length="100"></textarea>
+        </div>
+
+<pre class="code language-markup">
+&lt;textarea class=&quot;text-area field-margin&quot; data-original_value=&quot;text area&quot; data-maximum_length=&quot;100&quot;&gt;&lt;/textarea&gt;
+</pre>
+
+        <h2 id="file-field">File Field</h2>
         <div class="box box-white">
             <input type="file" size="32" multiple="true" class="file-field" />
         </div>
@@ -133,6 +171,7 @@
             </tr>
         </table>
 
+        <h2 id="uploader">Uploader</h2>
         <div class="box box-white">
             <a class="link link-blue uploader">Upload image</a>
         </div>
@@ -171,6 +210,7 @@
             </tr>
         </table>
 
+        <h2 id="file-drop">File Drop</h2>
         <div class="box box-white">
             <div class="file-drop">Drop your files here</div>
         </div>

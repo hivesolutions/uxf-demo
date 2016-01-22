@@ -6,7 +6,7 @@
         <div class="box box-white">
             <p>Press Ctrl + Enter key to trigger the overlay.</p>
         </div>
-        
+
         <div class="overlay-panel overlay-search" data-key="13" data-offset="0.20">
             <h1>Overlay Content</h1>
         </div>
