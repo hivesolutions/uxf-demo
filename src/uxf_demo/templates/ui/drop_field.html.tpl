@@ -4,7 +4,7 @@
         <p>This element may be used for relation where one element should use autocomplete. It supports all text field data attributes.</p>
 
         <div class="box box-white">
-            <div class="drop-field">
+            <div class="drop-field" data-display_attribute="id">
                 <ul class="data-source" data-type="countries"></ul>
             </div>
         </div>
@@ -35,6 +35,26 @@
                 <td><span class="highlight">data-number_options</span></td>
                 <td><span class="highlight">integer</span></td>
                 <td>If set overrides the default number of options to be present per each load (set to minus one for infinite).</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-display_attribute</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>The attribute of the item's object that contains the text to present to the user.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-extra_attribute</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>An extra attribute of the item's object that may be necessary to retrieve.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-value_attribute</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>The attribute of the item's object that contains it's data value.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-link_attribute</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>The attribute of the item's object that contains the link to open.</td>
             </tr>
         </table>
 

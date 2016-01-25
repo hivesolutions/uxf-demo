@@ -2,6 +2,54 @@
     <h1  class="line">Filter</h1>
     <div class="section-contents">
         <p>May be used to list dynamic content in a table like environment.</p>
+        <div class="box box-white">
+            <ul class="filter" data-number_records="2">
+                <ul class="data-source" data-type="local">
+                    <li><span name="name">User 1</span></li>
+                    <li><span name="name">User 2</span></li>
+                    <li><span name="name">User 3</span></li>
+                    <li><span name="name">User 4</span></li>
+                    <li><span name="name">User 5</span></li>
+                    <li><span name="name">User 6</span></li>
+                </ul>
+                <li class="template">
+                    <div class="name">
+                        <a>%[name]</a>
+                    </div>
+                </li>
+                <div class="filter-no-results quote">
+                    No results found
+                </div>
+                <div class="filter-more">
+                    <span class="button more">Load more</span>
+                    <span class="button load">Loading</span>
+                </div>
+            </ul>
+        </div>
+<pre class="code language-markup">
+&lt;ul class=&quot;filter&quot; data-number_records=&quot;2&quot;&gt;
+    &lt;ul class=&quot;data-source&quot; data-type=&quot;local&quot;&gt;
+        &lt;li&gt;&lt;span name=&quot;name&quot;&gt;User 1&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span name=&quot;name&quot;&gt;User 2&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span name=&quot;name&quot;&gt;User 3&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span name=&quot;name&quot;&gt;User 4&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span name=&quot;name&quot;&gt;User 5&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span name=&quot;name&quot;&gt;User 6&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;li class=&quot;template&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;
+            &lt;a&gt;%[name]&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;div class=&quot;filter-no-results quote&quot;&gt;
+        No results found
+    &lt;/div&gt;
+    &lt;div class=&quot;filter-more&quot;&gt;
+        &lt;span class=&quot;button more&quot;&gt;Load more&lt;/span&gt;
+        &lt;span class=&quot;button load&quot;&gt;Loading&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ul&gt;
+</pre>
 
         <table class="table-data">
             <tr>
@@ -18,6 +66,11 @@
                 <td><span class="highlight">data-no_input</span></td>
                 <td><span class="highlight">boolean</span></td>
                 <td>If the search input field should not be displayed and used for the filter.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-infinite</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If infinite scrolling should be used.</td>
             </tr>
         </table>
 
