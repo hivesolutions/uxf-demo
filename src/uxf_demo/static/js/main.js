@@ -39,8 +39,8 @@ var INITIAL_STYLE = "omni-style";
 
         // registers for the click event on button
         button.click(function() {
-                    alert("Button Clicked");
-                });
+            alert("Button Clicked");
+        });
 
         // returns the matched object to the caller function so
         // that it may be used in chained actions
@@ -60,32 +60,32 @@ var INITIAL_STYLE = "omni-style";
 
         // registers for the click event on button progress
         buttonProgress.click(function() {
-                    // sets the initial percentage value
-                    var percentage = 0;
+            // sets the initial percentage value
+            var percentage = 0;
 
-                    var _updatePercentage = function() {
-                        // increments the percentage value
-                        percentage += 1;
+            var _updatePercentage = function() {
+                // increments the percentage value
+                percentage += 1;
 
-                        // in case the percentage overflows returns
-                        // immediately as there's nothing else
-                        // remaining to be done in this function
-                        if (percentage > 100) {
-                            return;
-                        }
+                // in case the percentage overflows returns
+                // immediately as there's nothing else
+                // remaining to be done in this function
+                if (percentage > 100) {
+                    return;
+                }
 
-                        // sets the new percentage in the progress bar
-                        jQuery("#progress-bar").uxprogressbar("change", {
-                                    percentage : percentage
-                                });
-
-                        // sets a timeout to update the percentage
-                        setTimeout(_updatePercentage, 10);
-                    };
-
-                    // calls the initial update percentage
-                    _updatePercentage();
+                // sets the new percentage in the progress bar
+                jQuery("#progress-bar").uxprogressbar("change", {
+                    percentage: percentage
                 });
+
+                // sets a timeout to update the percentage
+                setTimeout(_updatePercentage, 10);
+            };
+
+            // calls the initial update percentage
+            _updatePercentage();
+        });
         // returns the matched object to the caller function so
         // that it may be used in chained actions
         return matchedObject;
@@ -105,9 +105,9 @@ var INITIAL_STYLE = "omni-style";
         // registers for the click event on button notification
         buttonNotification.click(function() {
             jQuery("body").uxnotification({
-                title : "Notification Test",
-                message : "Don't read this dummy text, it's a waste of your time.",
-                timeout : 50000
+                title: "Notification Test",
+                message: "Don't read this dummy text, it's a waste of your time.",
+                timeout: 50000
             });
         });
 
@@ -149,7 +149,7 @@ var INITIAL_STYLE = "omni-style";
         // in the extension for event registration
         var contents = matchedObject.filter("body");
         var links = jQuery(".container a:not(.tab-selector, .calendar-arrow)",
-                matchedObject);
+            matchedObject);
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
         var sections = jQuery("section", matchedObject);
@@ -170,79 +170,79 @@ var INITIAL_STYLE = "omni-style";
         // iterates over the complete set of sections in order to be able
         // to index them under the search items in the data source
         sections.each(function(index, element) {
-                    // retrieves the current element (section) in iteration
-                    // and uses it to retrieve its title value
-                    var _element = jQuery(this);
-                    var title = jQuery("> h1", _element);
+            // retrieves the current element (section) in iteration
+            // and uses it to retrieve its title value
+            var _element = jQuery(this);
+            var title = jQuery("> h1", _element);
 
-                    // retrieves the identifier of the section from the
-                    // the id attribute of it and the name of it as the
-                    // text of the title
-                    var id = _element.attr("id");
-                    var name = title.text();
+            // retrieves the identifier of the section from the
+            // the id attribute of it and the name of it as the
+            // text of the title
+            var id = _element.attr("id");
+            var name = title.text();
 
-                    // validates that both the id and the name of the section
-                    // are valid an in case they are not valid returns immediately
-                    // because there's nothing to be done in iteration
-                    if (!id || !name) {
-                        return;
-                    }
+            // validates that both the id and the name of the section
+            // are valid an in case they are not valid returns immediately
+            // because there's nothing to be done in iteration
+            if (!id || !name) {
+                return;
+            }
 
-                    // creats the link value be prepending the cardinal value to
-                    // the idetifier of the section and uses it together with the
-                    // name of the section to create the item map and adds it to
-                    // the list of search items in the data source
-                    var link = "#" + id;
-                    searchItems.push({
-                                link : link,
-                                name : name
-                            });
-                });
+            // creats the link value be prepending the cardinal value to
+            // the idetifier of the section and uses it together with the
+            // name of the section to create the item map and adds it to
+            // the list of search items in the data source
+            var link = "#" + id;
+            searchItems.push({
+                link: link,
+                name: name
+            });
+        });
 
         // registers for the value selection changed in the style field
         // so that it's possible to change the style of the current page
         styleField.bind("value_select", function(event, value, valueLogic) {
-                    // retrieves the current style field that has just been
-                    // triggered and resets it to the original value (as expected)
-                    var element = jQuery(this);
-                    element.uxreset();
+            // retrieves the current style field that has just been
+            // triggered and resets it to the original value (as expected)
+            var element = jQuery(this);
+            element.uxreset();
 
-                    // triggers a new alert window indicating the chaning of the
-                    // style and changes the style on confirmation
-                    alert("Changing value to <b>" + value + "</b>", function() {
-                                changeStyle(valueLogic);
-                            });
-                });
+            // triggers a new alert window indicating the chaning of the
+            // style and changes the style on confirmation
+            alert("Changing value to <b>" + value + "</b>", function() {
+                changeStyle(valueLogic);
+            });
+        });
 
         // registers for the show event in the search overlay panel
         // so that the text field is restored to the original value
         search.bind("shown", function() {
-                    var element = jQuery(this);
-                    var textField = jQuery(".text-field", element);
-                    textField.uxreset();
-                });
+            var element = jQuery(this);
+            var textField = jQuery(".text-field", element);
+            textField.uxreset();
+        });
 
         // registers for the value selection changed in the search field
         // in search field to be able to close the search field
         searchField.bind("value_select", function() {
-                    var element = jQuery(this);
-                    var search = element.parents("#search");
-                    search.triggerHandler("hide");
-                });
+            var element = jQuery(this);
+            var search = element.parents("#search");
+            search.triggerHandler("hide");
+        });
 
         // registers for the click event in the complete set of headers
         // so that it's possible to toggle it's visibility
         headers.click(function() {
-                    var element = jQuery(this);
-                    var section = element.parents("section");
-                    var sectionContents = jQuery(".section-contents", section);
-                    var isVisible = sectionContents.is(":visible");
-                    if (isVisible) {
-                        sectionContents.slideUp(350);
-                    } else {
-                        sectionContents.slideDown(500);
-                    }
-                });
+            var element = jQuery(this);
+            var section = element.parents("section");
+            var sectionContents = jQuery(".section-contents", section);
+            var isVisible = sectionContents.is(":visible");
+            if (isVisible) {
+                sectionContents.slideUp(350);
+            } else {
+                sectionContents.slideDown(500);
+            }
+        });
 
         // runs the various domain specific extensions so that
         // all of the demo logic is correctly loaded
@@ -273,8 +273,8 @@ var INITIAL_STYLE = "omni-style";
 })(jQuery);
 
 jQuery(document).ready(function() {
-            var _body = jQuery("body");
-            _body.bind("applied", function(event, base) {
-                        base.uapply();
-                    });
-        });
+    var _body = jQuery("body");
+    _body.bind("applied", function(event, base) {
+        base.uapply();
+    });
+});
