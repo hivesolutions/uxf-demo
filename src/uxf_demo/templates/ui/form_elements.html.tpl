@@ -225,5 +225,15 @@
                 <td class="description">Raised when one or more files are dropped in the element.</td>
             </tr>
         </table>
+
+        <h2 id="image-upload">Upload Image</h2>
+        <div class="box box-white">
+            <p>Drop image here</p>
+            <div class="image-upload"></div>
+        </div>
+<pre class="code language-markup">
+&lt;p&gt;Drop image here&lt;/p&gt;
+&lt;div class=&quot;image-upload&quot;&gt;&lt;/div&gt;
+</pre>
     </div>
 </section>
