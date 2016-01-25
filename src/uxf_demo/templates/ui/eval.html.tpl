@@ -28,7 +28,7 @@
             <tr>
                 <td><span class="highlight">data-selector</span></td>
                 <td><span class="highlight">string</span></td>
-                <td>Selector for an element that will trigger the evaluation when it's value changes.</td>
+                <td>Selector for an element that will trigger the evaluation when its value changes.</td>
             </tr>
         </table>
     </div>

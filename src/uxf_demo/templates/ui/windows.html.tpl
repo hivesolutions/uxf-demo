@@ -50,7 +50,7 @@ $("#window").uxwindow("show");
                 <td>Triggered when the window is dismissed by clicking the accept button.</td>
             </tr>
             <tr>
-                <td><span class="highlight">cancel  ( )</span></td>
+                <td><span class="highlight">cancel( )</span></td>
                 <td>Triggered when the window is dismissed by clicking the cancel button.</td>
             </tr>
         </table>

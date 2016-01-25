@@ -49,7 +49,7 @@
             <tr>
                 <td><span class="highlight">data-value_attribute</span></td>
                 <td><span class="highlight">string</span></td>
-                <td>The attribute of the item's object that contains it's data value.</td>
+                <td>The attribute of the item's object that contains its data value.</td>
             </tr>
             <tr>
                 <td><span class="highlight">data-link_attribute</span></td>
