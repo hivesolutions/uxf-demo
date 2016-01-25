@@ -1,4 +1,4 @@
-﻿// Hive Colony Framework
+// Hive Colony Framework
 // Copyright (c) 2008-2015 Hive Solutions Lda.
 //
 // This file is part of Hive Colony Framework.
