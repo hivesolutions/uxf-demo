@@ -46,7 +46,6 @@
         {% include "ui/chart.html.tpl" %}
         {% include "ui/highlight_box.html.tpl" %}
         {% include "ui/list.html.tpl" %}
-        {% include "ui/scroll_list.html.tpl" %}
         {% include "ui/panel_more.html.tpl" %}
         {% include "ui/tabs.html.tpl" %}
         {% include "ui/menu.html.tpl" %}
