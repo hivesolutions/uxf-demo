@@ -9,11 +9,11 @@
 &lt;div class=&quot;calendar&quot;&gt;&lt;/div&gt;
 </pre>
 
-<table class="table-data">
-    <tr>
-        <td><span class="highlight">current_change( date )</span></td>
-        <td>Triggered when a day is selected.</td>
-    </tr>
-</table>
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">current_change( date )</span></td>
+                <td>Triggered when a day is selected.</td>
+            </tr>
+        </table>
     </div>
 </section>

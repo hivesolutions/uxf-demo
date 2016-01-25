@@ -1,5 +1,5 @@
 <section id="drop-list">
-    <h1  class="line">Drop List</h1>
+    <h1 class="line">Drop List</h1>
     <div class="section-contents">
          <div class="box box-white">
             <div class="drop-list">
@@ -68,6 +68,7 @@
             <tr>
                 <td><span class="highlight">value_change( element, value )</span></td>
                 <td>Triggered when an item is selected.</td>
+            </tr>
         </table>
     </div>
 </section>
