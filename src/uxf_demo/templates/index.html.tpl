@@ -20,7 +20,6 @@
         {% include "ui/cross_list.html.tpl" %}
         {% include "ui/data_source.html.tpl" %}
         {% include "ui/buttons.html.tpl" %}
-        {% include "ui/form.html.tpl" %}
         {% include "ui/form_elements.html.tpl" %}
         {% include "ui/toogle_field.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
