@@ -56,6 +56,7 @@
         {% include "ui/wizard.html.tpl" %}
         {% include "ui/overlay.html.tpl" %}
         {% include "ui/image.html.tpl" %}
+        {% include "ui/slideshow.html.tpl" %}
         {% include "ui/video.html.tpl" %}
     </div>
 {% endblock %}

@@ -8,7 +8,7 @@
                     <label>Name</label>
                 </div>
                 <div class="input field-margin">
-                    <input name="name" class="text-field focus" placeholder="eg: John Doe"
+                    <input name="name" class="text-field" placeholder="eg: John Doe"
                            value="{{ form.name }}" data-error="{{ errors.name }}" />
                 </div>
                 <div class="label field-margin">
