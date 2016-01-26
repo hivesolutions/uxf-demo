@@ -1,7 +1,6 @@
 <section id="form">
     <h1 class="line">Form</h1>
     <div class="section-contents">
-        <p>Add the class <span class="highlight">form-ajax</span> to submit the form in AJAX.</p>
         <div class="box box-white">
             <form action="/form" method="post" class="form form-ajax form-refresh" data-message="Submit Form">
                 <div class="label field-margin">

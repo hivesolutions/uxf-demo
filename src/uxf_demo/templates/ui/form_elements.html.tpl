@@ -1,6 +1,7 @@
 <section id="form-elements">
     <h1 class="line">Form Elements</h1>
     <div class="section-contents">
+        <p>To give focus to a specific element when the page loads add the class <span class="highlight">focus</span>.</p>
         <h2 id="radio-field">Radio Field</h2>
         <div class="box box-white">
             <label class="radio-label" for="male">Male</label>
