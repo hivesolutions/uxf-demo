@@ -45,5 +45,18 @@ from uxf_demo.main import flask
 def index():
     return flask.render_template(
         "index.html.tpl",
-        link = "home"
+        link = "home",
+        form = {},
+        errors = {}
+    )
+
+@app.route("/form", methods = ("POST",))
+def form_action():
+    return flask.render_template(
+        "index.html.tpl",
+        link = "form",
+        form = {},
+        errors = {
+            "name" : ["Invalid name"]
+        }
     )
