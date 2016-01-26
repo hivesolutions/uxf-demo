@@ -57,6 +57,7 @@ def form_action():
         link = "form",
         form = {},
         errors = {
-            "name" : ["Invalid name"]
+            "name" : ["Invalid name"],
+            "age" : ["Invalid age"]
         }
     )
