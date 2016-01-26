@@ -9,6 +9,11 @@
         {% include "ui/base.html.tpl" %}
         {% include "ui/style.html.tpl" %}
         {% include "ui/drop_field.html.tpl" %}
+        {% include "ui/drop_down.html.tpl" %}
+        {% include "ui/drop_tag.html.tpl" %}
+        {% include "ui/drop_list.html.tpl" %}
+        {% include "ui/tag_field.html.tpl" %}
+        {% include "ui/select_field.html.tpl" %}
         {% include "ui/filter.html.tpl" %}
         {% include "ui/select_list.html.tpl" %}
         {% include "ui/source_list.html.tpl" %}
@@ -16,8 +21,13 @@
         {% include "ui/data_source.html.tpl" %}
         {% include "ui/buttons.html.tpl" %}
         {% include "ui/form.html.tpl" %}
+        {% include "ui/form_elements.html.tpl" %}
         {% include "ui/toogle_field.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
+        {% include "ui/eval.html.tpl" %}
+        {% include "ui/datetime.html.tpl" %}
+        {% include "ui/calendar.html.tpl" %}
+        {% include "ui/calendar_range.html.tpl" %}
         {% include "ui/table.html.tpl" %}
         {% include "ui/notification.html.tpl" %}
         {% include "ui/replacer.html.tpl" %}
@@ -33,9 +43,14 @@
         {% include "ui/password_meter.html.tpl" %}
         {% include "ui/rating.html.tpl" %}
         {% include "ui/tags.html.tpl" %}
+        {% include "ui/chart.html.tpl" %}
+        {% include "ui/highlight_box.html.tpl" %}
         {% include "ui/list.html.tpl" %}
+        {% include "ui/panel_more.html.tpl" %}
         {% include "ui/tabs.html.tpl" %}
+        {% include "ui/menu.html.tpl" %}
         {% include "ui/wizard.html.tpl" %}
+        {% include "ui/overlay.html.tpl" %}
         {% include "ui/image.html.tpl" %}
         {% include "ui/video.html.tpl" %}
     </div>
