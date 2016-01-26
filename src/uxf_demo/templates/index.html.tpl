@@ -2,6 +2,7 @@
 {% block content %}
     {% include "parts/bar.html.tpl" %}
     {% include "parts/search.html.tpl" %}
+    {% include "parts/side_panel.html.tpl" %}
     {% include "parts/window.html.tpl" %}
 
     <div class="container container-960 shortcuts">
@@ -20,6 +21,7 @@
         {% include "ui/cross_list.html.tpl" %}
         {% include "ui/data_source.html.tpl" %}
         {% include "ui/buttons.html.tpl" %}
+        {% include "ui/button_group.html.tpl" %}
         {% include "ui/form.html.tpl" %}
         {% include "ui/form_elements.html.tpl" %}
         {% include "ui/toogle_field.html.tpl" %}
@@ -47,6 +49,7 @@
         {% include "ui/highlight_box.html.tpl" %}
         {% include "ui/list.html.tpl" %}
         {% include "ui/panel_more.html.tpl" %}
+        {% include "ui/side_panel.html.tpl" %}
         {% include "ui/tabs.html.tpl" %}
         {% include "ui/menu.html.tpl" %}
         {% include "ui/wizard.html.tpl" %}
