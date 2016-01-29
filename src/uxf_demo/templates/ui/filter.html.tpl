@@ -73,15 +73,33 @@
                 <td>If infinite scrolling should be used.</td>
             </tr>
         </table>
-
         <table class="table-data">
             <tr>
                 <td><span class="highlight">selected( row )</span></td>
                 <td class="description">Raised for each of the elements (lines) once they are selected.</td>
             </tr>
             <tr>
+                <td><span class="highlight">update_start( )</span></td>
+                <td class="description">Triggered when a new remote query is started.</td>
+            </tr>
+            <tr>
                 <td><span class="highlight">update_complete( )</span></td>
                 <td class="description">Called at the end of each refresh operation (remote data received).</td>
+            </tr>
+        </table>
+        <p>The following classes are added to the component during it's lifecycle:</p>
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">no-contents</span></td>
+                <td>When there are no children in the filter.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">no-input</span></td>
+                <td>If the filter has no text field associated.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">loading</span></td>
+                <td>While the filter is making a remote request.</td>
             </tr>
         </table>
     </div>

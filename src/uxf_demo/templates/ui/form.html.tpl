@@ -35,29 +35,6 @@
 &lt;/form&gt;
 </pre>
 
-        <p>Add the following classes to include different behaviours:</p>
-        <table class="table-data">
-            <tr>
-                <td><span class="highlight">form-confirm</span></td>
-                <td>A confirmation message is shown when the form is submited.</td>
-            </tr>
-            <tr>
-                <td><span class="highlight">form-ajax</span></td>
-                <td>The form is submitted in AJAX</td>
-            </tr>
-            <tr>
-                <td><span class="highlight">form-refresh</span></td>
-                <td>The page is refreshed after submitting the form.</td>
-            </tr>
-            <tr>
-                <td><span class="highlight">no-async</span></td>
-                <td>The form submission is not made asynchronously.</td>
-            </tr>
-            <tr>
-                <td><span class="highlight">no-keyboard</span></td>
-                <td>The confirmation message to show when the form is confirmed. Shown if the form has the class <span class="highlight">form-confirm</span></td>
-            </tr>
-        </table>
         <table class="table-data">
             <tr>
                 <td><span class="highlight">data-error</span></td>
@@ -97,6 +74,28 @@
                 <td>Raised when there is an error submitting the form.</td>
             </tr>
         </table>
-
+        <p>Add the following classes to include different behaviours:</p>
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">form-confirm</span></td>
+                <td>A confirmation message is shown when the form is submited.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">form-ajax</span></td>
+                <td>The form is submitted in AJAX</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">form-refresh</span></td>
+                <td>The page is refreshed after submitting the form.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">no-async</span></td>
+                <td>The form submission is not made asynchronously.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">no-keyboard</span></td>
+                <td>The confirmation message to show when the form is confirmed. Shown if the form has the class <span class="highlight">form-confirm</span></td>
+            </tr>
+        </table>
     </div>
 </section>
