@@ -1,5 +1,5 @@
 <section id="select-field">
-    <h1  class="line">Select Field</h1>
+    <h1 class="line">Select Field</h1>
     <div class="section-contents">
         <div class="box box-white">
             <div class="select-field" data-value="name">
