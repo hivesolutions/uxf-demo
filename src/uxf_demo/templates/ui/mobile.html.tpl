@@ -2,8 +2,8 @@
     <h1 class="line">Mobile</h1>
     <div class="section-contents">
         <table class="table-data">
-        <tr>
-            <td><span class="highlight">mobile</span></td>
+            <tr>
+                <td><span class="highlight">mobile</span></td>
                 <td>If the user is using a mobile device.</td>
             </tr>
             <tr>
