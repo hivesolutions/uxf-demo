@@ -17,8 +17,7 @@
             <tr>
                 <td><span class="highlight">useMargin</span></td>
                 <td><span class="highlight">boolean</span></td>
-                <td>If the <span class="highlight">margin-top</span> and <span class="highlight">margin-left</span> attributes
-                should be used insted of <span class="highlight">top</span> and <span class="highlight">left</span>.</td>
+                <td>If the <span class="highlight">margin-top</span> and <span class="highlight">margin-left</span> attributes should be used insted of <span class="highlight">top</span> and <span class="highlight">left</span>.</td>
             </tr>
             <tr>
                 <td><span class="highlight">avoidTop</span></td>

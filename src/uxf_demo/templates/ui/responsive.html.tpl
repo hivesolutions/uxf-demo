@@ -52,8 +52,7 @@
             </tr>
         </table>
         <p>
-            The classes <span class="highlight">portrait-s</span> or
-            <span class="highlight">landscape-s</span> are based on the device's ratio.
+            The classes <span class="highlight">portrait-s</span> or <span class="highlight">landscape-s</span> are based on the device's ratio.
         </p>
         <table class="table-data">
             <tr>

@@ -9,7 +9,7 @@
                 </div>
                 <div class="input field-margin">
                     <input name="name" class="text-field name-change"
-                    placeholder="eg: John Doe" data-name_empty="no_name" data-width="200" />
+                    placeholder="eg: John Doe" data-name_empty="no_name" data-width="200"/>
                 </div>
             </form>
         </div>
