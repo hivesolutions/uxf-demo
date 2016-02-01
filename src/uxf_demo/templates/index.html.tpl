@@ -10,6 +10,7 @@
         {% include "ui/base.html.tpl" %}
         {% include "ui/mobile.html.tpl" %}
         {% include "ui/responsive.html.tpl" %}
+        {% include "ui/browser.html.tpl" %}
         {% include "ui/style.html.tpl" %}
         {% include "ui/drop_field.html.tpl" %}
         {% include "ui/drop_down.html.tpl" %}
