@@ -44,12 +44,14 @@
         {% include "ui/key.html.tpl" %}
         {% include "ui/data_width.html.tpl" %}
         {% include "ui/transform_flip.html.tpl" %}
+        {% include "ui/center.html.tpl" %}
         {% include "ui/timestamp.html.tpl" %}
         {% include "ui/enumerations.html.tpl" %}
         {% include "ui/number_formatter.html.tpl" %}
         {% include "ui/password_meter.html.tpl" %}
         {% include "ui/rating.html.tpl" %}
         {% include "ui/tags.html.tpl" %}
+        {% include "ui/code.html.tpl" %}
         {% include "ui/chart.html.tpl" %}
         {% include "ui/highlight_box.html.tpl" %}
         {% include "ui/list.html.tpl" %}

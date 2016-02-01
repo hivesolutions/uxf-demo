@@ -11,18 +11,3 @@
         <ul class="data-source" data-type="local" data-insensitive="1"></ul>
     </div>
 </div>
-
-<div class="slider">
-    <div class="slider-panel">
-        <img src="http://phandroid.s3.amazonaws.com/wp-content/uploads/2015/01/field-5.jpg" width="2000" height="500">
-        <div class="slider-panel-arrow"></div>
-    </div>
-    <div class="slider-panel">
-        <img src="http://phandroid.s3.amazonaws.com/wp-content/uploads/2015/01/field-5.jpg">
-    </div>
-    <div class="slider-panel">
-        <img src="http://phandroid.s3.amazonaws.com/wp-content/uploads/2015/01/field-5.jpg">
-    </div>
-    <div class="slider-panel-arrow-previous"></div>
-    <div class="slider-panel-arrow-next"></div>
-</div>

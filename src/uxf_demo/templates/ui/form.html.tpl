@@ -19,7 +19,6 @@
                 </div>
                 <div class="error-message"></div>
                 <div class="form-success item">Form submitted with success!</div>
-
             </form>
         </div>
 

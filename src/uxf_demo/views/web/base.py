@@ -46,8 +46,8 @@ def index():
     return flask.render_template(
         "index.html.tpl",
         link = "home",
-        form = {},
-        errors = {}
+        form = dict(),
+        errors = dict()
     )
 
 @app.route("/form", methods = ("POST",))
@@ -55,9 +55,9 @@ def form_action():
     return flask.render_template(
         "index.html.tpl",
         link = "form",
-        form = {},
-        errors = {
+        form = dict(),
+        errors = dict(
             "name" : ["Invalid name"],
             "age" : ["Invalid age"]
-        }
+        )
     )
