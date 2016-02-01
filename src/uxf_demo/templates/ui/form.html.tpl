@@ -2,7 +2,7 @@
     <h1 class="line">Form</h1>
     <div class="section-contents">
         <div class="box box-white">
-            <form action="/form" method="post" class="form form-ajax form-refresh" data-message="Submit Form">
+            <form action="/form" method="post" class="form form-refresh" data-message="Submit Form">
                 <div class="label field-margin">
                     <label>Name</label>
                 </div>

@@ -24,6 +24,7 @@
         {% include "ui/button_group.html.tpl" %}
         {% include "ui/form.html.tpl" %}
         {% include "ui/form_elements.html.tpl" %}
+        {% include "ui/name_change.html.tpl" %}
         {% include "ui/toogle_field.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
         {% include "ui/eval.html.tpl" %}
@@ -38,6 +39,7 @@
         {% include "ui/link_confirm.html.tpl" %}
         {% include "ui/windows.html.tpl" %}
         {% include "ui/key.html.tpl" %}
+        {% include "ui/data_width.html.tpl" %}
         {% include "ui/transform_flip.html.tpl" %}
         {% include "ui/timestamp.html.tpl" %}
         {% include "ui/enumerations.html.tpl" %}
