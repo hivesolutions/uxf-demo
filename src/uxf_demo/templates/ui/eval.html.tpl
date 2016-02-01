@@ -1,7 +1,7 @@
 <section id="eval">
     <h1 class="line">Eval</h1>
     <div class="section-contents">
-        <div class="box box-white">
+        <div class="box">
             <p class="eval">2+2</p>
         </div>
 
