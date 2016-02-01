@@ -57,8 +57,7 @@
         <table class="table-data">
             <tr>
                 <td><span class="highlight">device_change( device )</span></td>
-                <td>Triggered when the device changes. Can be <span class="highlight">desktop</span>,
-                <span class="highlight">mobile</span> or <span class="highlight">tablet</span></td>
+                <td>Triggered when the device changes. Can be <span class="highlight">desktop</span>, <span class="highlight">mobile</span> or <span class="highlight">tablet</span></td>
             </tr>
         </table>
     </div>

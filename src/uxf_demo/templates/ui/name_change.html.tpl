@@ -1,7 +1,7 @@
 <section id="name-change">
     <h1 class="line">Name Change</h1>
     <div class="section-contents">
-        <p> Add the class <span class="highlight">name-change</span> to an input to change its name if it is submitted without a value</p>
+        <p>Add the class <span class="highlight">name-change</span> to an input to change its name if it is submitted without a value</p>
         <div class="box box-white">
             <form class="form" action="/form" method="POST">
                 <div class="label field-margin">
