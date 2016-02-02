@@ -62,7 +62,7 @@ var INITIAL_STYLE = "omni-style";
         // button so that the slidder can be triggered
         sliderButton.click(function() {
             var element = jQuery(this);
-            var _body = element.parent("body");
+            var _body = element.parents("body");
             var slider = jQuery("#slider", _body);
             slider.uxslider("show");
         });
