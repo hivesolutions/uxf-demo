@@ -2,7 +2,7 @@
     <h1 class="line">Animation</h1>
     <div class="section-contents">
         <p>
-        	To have an animated background image add the <span class="highlight">animation</span>
+            To have an animated background image add the <span class="highlight">animation</span>
             class and set a background image and the animation duration.
             The idea is that a sprite based background may be used as a key frame based animation
             source, note that the animation is controlled by <span class="highlight">animation-duration</span>.
