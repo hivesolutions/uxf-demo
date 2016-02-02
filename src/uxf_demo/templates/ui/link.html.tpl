@@ -5,12 +5,12 @@
         <p>
             This general link component does not perform much more than the
             default html <span class="highlight">a</span> element. The main
-            feature is that is possible to use smooth scrolling for internal
-            link. To use it youmust set the <span class="highlight">data-duration</span>
-            attribute with the amount of milliseconds from the scrolling.
+            feature is that is possible to use smooth scrolling for an internal
+            link. To use it you must set the <span class="highlight">data-duration</span>
+            attribute with the amount of milliseconds for the scrolling.
         </p>
 
-        <div class="box">
+        <div class="box box-white">
             <a class="link link-blue" href="#link" data-duration="500" data-offset="-42">Scroll Link</a>
         </div>
 

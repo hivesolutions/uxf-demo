@@ -1,4 +1,3 @@
-
 <section id="wizard">
     <h1 class="line">Wizard</h1>
     <div class="section-contents">
