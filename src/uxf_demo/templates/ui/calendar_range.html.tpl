@@ -36,5 +36,6 @@
                 <td>The data format. It's<span class="highlight">%y/%m/%d</span> by default.</td>
             </tr>
         </table>
+
     </div>
 </section>

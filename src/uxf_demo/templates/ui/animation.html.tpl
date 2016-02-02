@@ -7,6 +7,7 @@
             The idea is that a sprite based background may be used as a key frame based animation
             source, note that the animation is controlled by <span class="highlight">animation-duration</span>.
         </p>
+
         <div class="box box-white">
             <div class="animation"
                  style="height: 200px; animation-duration: 1000ms; background-image: url(../static/images/banner.jpg);">

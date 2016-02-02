@@ -6,7 +6,7 @@
         <title>uxFramework</title>
     {% endblock %}
 </head>
-<body class="ux">
+<body class="ux wait-load">
     {% block content %}{% endblock %}
     {% include "partials/footer.html.tpl" %}
 </body>

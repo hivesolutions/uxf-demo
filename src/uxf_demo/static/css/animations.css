@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*
+ Hive UX Framework
+ Copyright (c) 2008-2016 Hive Solutions Lda.
+
+ This file is part of Hive UX Framework.
+
+ Hive UX Framework is confidential and property of Hive Solutions Lda.,
+ its usage is constrained by the terms of the Hive Solutions
+ Confidential Usage License.
+
+ Hive UX Framework should not be distributed under any circumstances,
+ violation of this may imply legal action.
+
+ If you have any questions regarding the terms of this license please
+ refer to <http://www.hive.pt/licenses/>.
+*/
+
+/*
+ __author__    = Francisco Castro <v-fcastro@hive.pt> & João Magalhães <joamag@hive.pt>
+ __version__   = 1.0.0
+ __revision__  = $LastChangedRevision$
+ __date__      = $LastChangedDate$
+ __copyright__ = Copyright (c) 2008-2016 Hive Solutions Lda.
+ __license__   = Hive Solutions Confidential Usage License (HSCUL)
+*/
+
+@-webkit-keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

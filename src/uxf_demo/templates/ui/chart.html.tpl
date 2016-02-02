@@ -29,5 +29,6 @@
                 <td>If the bar should have a linear scale.</td>
             </tr>
         </table>
+
     </div>
 </section>

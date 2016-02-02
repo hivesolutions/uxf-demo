@@ -6,6 +6,7 @@
             to control the application. The buttons provided allow you to raise events, submit
             forms, follow links, etc.
         </p>
+
         <p>
             The main areas to be explored in the button involve <span class="highlight">data-link</span>
             and the <span class="highlight">data-submit</span> attributes.
@@ -69,5 +70,6 @@
                 <td>Opens the window selected with the provided selector on click.</td>
             </tr>
         </table>
+
     </div>
 </section>

@@ -6,6 +6,7 @@
             When the form is submitted, an input is created with the name of the button
             group and the value of the selected button.
         </p>
+
         <div class="box box-white">
             <div class="button-group" name="option">
                 <div class="button button-solid" data-value="a">Option A</div>
@@ -39,5 +40,6 @@
                 <td>Triggered when one of the buttons is selected.</td>
             </tr>
         </table>
+
     </div>
 </section>

@@ -5,6 +5,7 @@
             To center an element on the current viewport you can use the <span class="highlight">uxcenter</span> function.
             The function accepts the following parameters:
         </p>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">topOffset</span></td>
@@ -47,5 +48,6 @@
                 <td>The target position. <span class="highlight">center</span> by default.</td>
             </tr>
         </table>
+
     </div>
 </section>

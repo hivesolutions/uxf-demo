@@ -6,6 +6,7 @@
             This information is added to the <span class="highlight">body</span> element both as
             classes and as data attributes.
         </p>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">data-browser</span></td>
@@ -25,5 +26,6 @@
                 or <span class="highlight">iPhone/iPod</span>.</td>
             </tr>
         </table>
+
     </div>
 </section>
