@@ -57,11 +57,13 @@ var INITIAL_STYLE = "omni-style";
         // retrieves the various elements that are going to be used
         // in the extension for event registration
         var buttonProgress = jQuery("#button-progress", matchedObject);
+        var progressBar = jQuery("#progress-bar-row", matchedObject);
 
         // registers for the click event on button progress
         buttonProgress.click(function() {
             // sets the initial percentage value
-            var percentage = 0;
+            var percentage = progressBar.attr("data-percentage") || "0";
+            percentage = parseInt(percentage);
 
             var _updatePercentage = function() {
                 // increments the percentage value
@@ -75,7 +77,7 @@ var INITIAL_STYLE = "omni-style";
                 }
 
                 // sets the new percentage in the progress bar
-                jQuery("#progress-bar").uxprogressbar("change", {
+                progressBar.uxprogressbar("change", {
                     percentage: percentage
                 });
 

@@ -5,19 +5,24 @@
         <div id="window" class="window window-hide">
             <h1>Window Title</h1>
             <p>Window text with goes under the window title</p>
-            <div class="button close-button">Close</div>
-            <div class="button accept-button right">Accept</div>
+            <div class="window-buttons">
+                <div class="right button button-red button-cancel close-button">Cancel</div>
+                <div class="right button button-green button-confirm accept-button">Confirm</div>
+            </div>
         </div>
+
         <div class="box box-white">
             <div id="button-window" class="button button-solid" data-window_open="#window">Show Window</div>
         </div>
 
 <pre class="code language-markup">
- &lt;div id=&quot;window&quot; class=&quot;window window-hide&quot;&gt;
+&lt;div id=&quot;window&quot; class=&quot;window window-hide&quot;&gt;
     &lt;h1&gt;Window Title&lt;/h1&gt;
     &lt;p&gt;Window text with goes under the window title&lt;/p&gt;
-    &lt;div class=&quot;button close-button&quot;&gt;Close&lt;/div&gt;
-    &lt;div class=&quot;button accept-button right&quot;&gt;Accept&lt;/div&gt;
+    &lt;div class=&quot;window-buttons&quot;&gt;
+        &lt;div class=&quot;right button button-red button-cancel close-button&quot;&gt;Cancel&lt;/div&gt;
+        &lt;div class=&quot;right button button-green button-confirm accept-button&quot;&gt;Confirm&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 

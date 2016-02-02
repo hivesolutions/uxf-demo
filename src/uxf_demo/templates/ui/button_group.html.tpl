@@ -8,7 +8,7 @@
         </p>
 
         <div class="box box-white">
-            <div class="button-group" name="option">
+            <div class="button-group button-group-left" name="option">
                 <div class="button button-solid" data-value="a">Option A</div>
                 <div class="button button-solid" data-value="b">Option B</div>
                 <div class="button button-solid" data-value="c">Option C</div>
@@ -18,7 +18,7 @@
         </div>
 
 <pre class="code language-markup">
-&lt;div class=&quot;button-group&quot; name=&quot;option&quot;&gt;
+&lt;div class=&quot;button-group button-group-left&quot; name=&quot;option&quot;&gt;
     &lt;div class=&quot;button button-solid&quot; data-value=&quot;a&quot;&gt;Option A&lt;/div&gt;
     &lt;div class=&quot;button button-solid&quot; data-value=&quot;b&quot;&gt;Option B&lt;/div&gt;
     &lt;div class=&quot;button button-solid&quot; data-value=&quot;c&quot;&gt;Option C&lt;/div&gt;

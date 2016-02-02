@@ -31,7 +31,7 @@
         {% include "ui/toogle_field.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
         {% include "ui/eval.html.tpl" %}
-        {% include "ui/datetime.html.tpl" %}
+        {% include "ui/date_time.html.tpl" %}
         {% include "ui/calendar.html.tpl" %}
         {% include "ui/calendar_range.html.tpl" %}
         {% include "ui/table.html.tpl" %}

@@ -1,5 +1,5 @@
 <section id="drop-down">
-    <h1  class="line">Dropdown</h1>
+    <h1  class="line">Drop Down</h1>
     <div class="section-contents">
         <p>
             This component allows the user to select a value from several options.
