@@ -29,14 +29,14 @@
 @import url(animations.css);
 
 body {
-    color: #444444;
-    font-family: Arial, "Lucida Grande", sans-serif;
-    font-size: 13px;
     animation: fade-in 0.25s ease-in-out;
     -o-animation: fade-in 0.25s ease-in-out;
     -ms-animation: fade-in 0.25s ease-in-out;
     -moz-animation: fade-in 0.25s ease-in-out;
     -webkit-animation: fade-in 0.25s ease-in-out;
+    color: #444444;
+    font-family: Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
 }
 
 body.opensans {

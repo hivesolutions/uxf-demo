@@ -11,7 +11,8 @@
         </p>
         <table class="table-data">
             <tr>
-                <th>Attribute</th><th>Default</th>
+                <th>Attribute</th>
+                <th>Default</th>
             </tr>
             <tr>
                 <td><span class="highlight">data-tablet</span></td>
@@ -33,7 +34,10 @@
             <span class="highlight">tall-s</span>
         </p>
         <table class="table-data">
-            <tr><th>Attribute</th><th>Default</th></tr>
+            <tr>
+            	<th>Attribute</th>
+            	<th>Default</th>
+            </tr>
             <tr>
                 <td><span class="highlight">data-minimal</span></td>
                 <td>200</td>
