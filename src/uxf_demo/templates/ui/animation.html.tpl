@@ -1,8 +1,10 @@
 <section id="animation">
     <h1 class="line">Animation</h1>
     <div class="section-contents">
-        <p>To have an animated background image add the <span class="highlight">animation</span>
-        class and set a background image and the animation duration.</p>
+        <p>
+        	To have an animated background image add the <span class="highlight">animation</span>
+            class and set a background image and the animation duration.
+        </p>
         <div class="box box-white">
             <div class="animation"
                  style="height: 200px; animation-duration: 1000ms; background-image: url(../static/images/banner.jpg);">

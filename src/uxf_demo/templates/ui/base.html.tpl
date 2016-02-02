@@ -3,8 +3,10 @@
     <div class="section-contents">
         <div class="section-function">
             <h2>uxcontent</h2>
-            <p>Changes the text contents of an element without changing
-               any of its child elements (only textual part).</p>
+            <p>
+            	Changes the text contents of an element without changing
+               any of its child elements (only textual part).
+            </p>
 <pre class="code language-javascript">
 jQuery("div.target").uxcontent("Hello World");
 </pre>
