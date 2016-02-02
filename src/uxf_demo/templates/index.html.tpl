@@ -42,6 +42,7 @@
         {% include "ui/link.html.tpl" %}
         {% include "ui/link_confirm.html.tpl" %}
         {% include "ui/windows.html.tpl" %}
+        {% include "ui/slider.html.tpl" %}
         {% include "ui/key.html.tpl" %}
         {% include "ui/data_width.html.tpl" %}
         {% include "ui/transform_flip.html.tpl" %}

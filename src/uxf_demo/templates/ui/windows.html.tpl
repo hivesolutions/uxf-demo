@@ -1,6 +1,5 @@
 <section id="windows">
     <h1 class="line">Window</h1>
-
     <div class="section-contents">
         <div id="window" class="window window-hide">
             <h1>Window Title</h1>

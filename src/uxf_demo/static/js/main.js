@@ -159,6 +159,7 @@ var INITIAL_STYLE = "omni-style";
         var searchField = jQuery("> .drop-field", search);
         var searchSource = jQuery(".data-source", search);
         var searchItems = searchSource.data("items");
+        var sliderButton = jQuery("#button-slider", matchedObject);
 
         // converts the complete set of links present in the container
         // into the appropriate layout and converts them into smooth
@@ -244,6 +245,15 @@ var INITIAL_STYLE = "omni-style";
             } else {
                 sectionContents.slideDown(500);
             }
+        });
+
+        // registers for the click event for the slider
+        // button so that the slidder can be triggered
+        sliderButton.click(function() {
+            var element = jQuery(this);
+            var body = element.parent("body");
+            var slider = jQuery("#slider", body);
+            slider.uxslider("show");
         });
 
         // runs the various domain specific extensions so that
