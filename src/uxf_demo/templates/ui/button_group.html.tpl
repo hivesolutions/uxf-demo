@@ -10,6 +10,7 @@
                 <div class="button button-solid" data-value="c">Option C</div>
                 <div class="button button-solid" data-value="d">Option D</div>
             </div>
+            <div class="clear"></div>
         </div>
 
 <pre class="code language-markup">
@@ -19,6 +20,7 @@
     &lt;div class=&quot;button button-solid&quot; data-value=&quot;c&quot;&gt;Option C&lt;/div&gt;
     &lt;div class=&quot;button button-solid&quot; data-value=&quot;d&quot;&gt;Option D&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
 </pre>
 
         <table class="table-data">
