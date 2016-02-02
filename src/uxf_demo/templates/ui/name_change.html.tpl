@@ -21,7 +21,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;input field-margin&quot;&gt;
         &lt;input name=&quot;name&quot; class=&quot;text-field name-change&quot;
-        placeholder=&quot;eg: John Doe&quot; data-name_empty=&quot;no_name&quot; /&gt;
+               placeholder=&quot;eg: John Doe&quot; data-name_empty=&quot;no_name&quot; /&gt;
     &lt;/div&gt;
 &lt;/form&gt;
 </pre>

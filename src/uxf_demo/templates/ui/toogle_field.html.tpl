@@ -1,5 +1,5 @@
-<section id="toogle-field">
-    <h1 class="line">Toogle Field</h1>
+<section id="toggle-field">
+    <h1 class="line">Toggle Field</h1>
     <div class="section-contents">
         <p>This component allows changing an input's mode. The button can be styled accordingly
         by using the <span class="highlight">.toggle-field .button.{mode_name}</span> selector.</p>
