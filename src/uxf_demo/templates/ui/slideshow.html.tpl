@@ -1,6 +1,7 @@
 <section id="slideshow">
     <h1 class="line">Slideshow</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div class="slideshow" data-window="true">
                 <ul class="items">
@@ -79,5 +80,6 @@
                 <td>Selector for an element that will trigger the evaluation when its value changes.</td>
             </tr>
         </table>
+
     </div>
 </section>

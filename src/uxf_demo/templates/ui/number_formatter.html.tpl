@@ -1,9 +1,13 @@
 <section id="number-formatter">
     <h1 class="line">Number Formatter</h1>
     <div class="section-contents">
-        <p>Being able to format number in the client side is god dam important when you're
-        building an enterprise grade information system. Using the number formatter is possible to control
-        the number of decimal places the separator for the decimal part the maginute separtor.</p>
+
+        <p>
+            Being able to format number in the client side is god dam important
+            when you're building an enterprise grade information system. Using
+            the number formatter is possible to control the number of decimal
+            places the separator for the decimal part the maginute separtor.
+        </p>
 
         <div class="box">
             <div class="number" data-places="2" data-separator="," data-magnitude_separator=".">12345.6</div>
@@ -30,5 +34,6 @@
                 <td>The separator to be used in magnitude order change.</td>
             </tr>
         </table>
+
     </div>
 </section>

@@ -2,8 +2,12 @@
 <section id="wizard">
     <h1 class="line">Wizard</h1>
     <div class="section-contents">
-        <p>If you need to guide the user through a process with multiple steps
-        you can easily add a stack of panels with navigation and breadcrumbs.</p>
+
+        <p>
+            If you need to guide the user through a process with multiple steps
+            you can easily add a stack of panels with navigation and breadcrumbs.
+        </p>
+
         <div class="wizard box box-white">
             <ul class="breadcrumbs">
                     <li>First</li>
@@ -21,7 +25,6 @@
                 <a class="button-finish">Finish</a>
             </div>
         </div>
-    </div>
 
 <pre class="code language-markup">
 &lt;div class=&quot;wizard&quot;&gt;
@@ -43,28 +46,30 @@
 &lt;/div&gt;
 </pre>
 
-    <table class="table-data">
-        <tr>
-            <td><span class="highlight">data-index</span></td>
-            <td><span class="highlight">integer</span></td>
-            <td>The wizard's starting index. Set to 0 by default.</td>
-        </tr>
-        <tr>
-            <td><span class="highlight">data-first_index</span></td>
-            <td><span class="highlight">integer</span></td>
-            <td>The wizard's first index. Set to 0 by default.</td>
-        </tr>
-        <tr>
-            <td><span class="highlight">data-last_index</span></td>
-            <td><span class="highlight">integer</span></td>
-            <td>The wizard's last index. If not set is equal to the number of panels.</td>
-        </tr>
-    </table>
-    <table class="table-data">
-        <tr>
-            <td><span class="highlight">index_changed( index )</span></td>
-            <td>Triggered when the wizard's index changes.</td>
-        </tr>
-    </table>
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">data-index</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>The wizard's starting index. Set to 0 by default.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-first_index</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>The wizard's first index. Set to 0 by default.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data-last_index</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>The wizard's last index. If not set is equal to the number of panels.</td>
+            </tr>
+        </table>
 
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">index_changed( index )</span></td>
+                <td>Triggered when the wizard's index changes.</td>
+            </tr>
+        </table>
+
+    </div>
 </section>

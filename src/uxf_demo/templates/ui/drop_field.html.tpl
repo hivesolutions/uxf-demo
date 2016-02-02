@@ -1,7 +1,11 @@
 <section id="drop-field">
     <h1  class="line">Drop Field</h1>
     <div class="section-contents">
-        <p>This element adds autocomplete to a text field using a data source. It supports all text field data attributes.</p>
+
+        <p>
+            This element adds autocomplete to a text field using a
+            data source. It supports all text field data attributes.
+        </p>
 
         <div class="box box-white">
             <div class="drop-field" data-display_attribute="id">
@@ -68,5 +72,6 @@
                 <td class="description">Raised when a value is unselected from the drop field.</td>
             </tr>
         </table>
+
     </div>
 </section>

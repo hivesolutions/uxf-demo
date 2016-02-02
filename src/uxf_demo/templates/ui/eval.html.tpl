@@ -1,8 +1,13 @@
 <section id="eval">
     <h1 class="line">Eval</h1>
     <div class="section-contents">
-        <p>If you add the <span class="highlight">eval</span> class to an element its <span class="highlight">data-eval</span>
-        attribute (or html content) will be evaluated as a Javascript expression and replace its content.</p>
+
+        <p>
+            If you add the <span class="highlight">eval</span> class to an element its
+            <span class="highlight">data-eval</span> attribute (or html content) will
+            be evaluated as a Javascript expression and replace its content.
+        </p>
+
         <div class="box box-white">
             <p class="eval">2+2</p>
         </div>
@@ -33,5 +38,6 @@
                 <td>Selector for an element that will trigger the evaluation when its value changes.</td>
             </tr>
         </table>
+
     </div>
 </section>

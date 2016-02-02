@@ -1,6 +1,7 @@
 <section id="calendar">
     <h1 class="line">Calendar</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div class="calendar"></div>
         </div>

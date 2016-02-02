@@ -1,6 +1,7 @@
 <section id="panel-more">
     <h1 class="line">Panel More</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div class="panel-more" data-more="more" data-less="less">
                 <h3>Content</h3>
@@ -25,5 +26,6 @@
                 <td>The name to be given to the collapse operation.</td>
             </tr>
         </table>
+
     </div>
 </section>

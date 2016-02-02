@@ -1,10 +1,14 @@
 <section id="link">
     <h1 class="line">Link</h1>
     <div class="section-contents">
-        <p>This general link component does not perform much more than the default html
-        <span class="highlight">a</span> element. The main feature is that is possible to use
-        smooth scrolling for internal link. To use it you must set the <span class="highlight">data-duration</span>
-        attribute with the amount of milliseconds from the scrolling.</p>
+
+        <p>
+            This general link component does not perform much more than the
+            default html <span class="highlight">a</span> element. The main
+            feature is that is possible to use smooth scrolling for internal
+            link. To use it youmust set the <span class="highlight">data-duration</span>
+            attribute with the amount of milliseconds from the scrolling.
+        </p>
 
         <div class="box">
             <a class="link link-blue" href="#link" data-duration="500" data-offset="-42">Scroll Link</a>
@@ -32,9 +36,12 @@
             </tr>
         </table>
 
-        <p>This component can also be used to make an AJAX request by setting
-        <span class="highlight">data-ajax</span> to true. The response handler should bind to this element's
-        <span class="highlight">success</span> and <span class="highlight">error</span> events.</p>
+        <p>
+            This component can also be used to make an AJAX request by setting
+            <span class="highlight">data-ajax</span> to true. The response handler
+            should bind to this element's <span class="highlight">success</span>
+            and <span class="highlight">error</span> events.
+        </p>
 
 <pre class="code language-markup">
 &lt;a class=&quot;link link-blue&quot; href=&quot;#link&quot; data-ajax=&quot;true&quot;&gt;AJAX Request&lt;/a&gt;
@@ -58,5 +65,6 @@
                 <td>Called if the request fails.</td>
             </tr>
         </table>
+
     </div>
 </section>

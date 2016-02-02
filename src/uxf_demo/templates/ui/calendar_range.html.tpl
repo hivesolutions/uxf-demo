@@ -1,6 +1,7 @@
 <section id="calendar_range">
     <h1 class="line">Calendar Range</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div class="calendar-range"></div>
         </div>

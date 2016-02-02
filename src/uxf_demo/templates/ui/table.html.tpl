@@ -1,7 +1,9 @@
 <section id="table">
     <h1 class="line">Table</h1>
     <div class="section-contents">
+
         <p>A table can be made editable by adding the class <span class="highlight">table-edit</span> and a row as a template.</p>
+
         <table class="table table-data table-edit" data-maximum_rows="5">
             <tbody>
                 <tr class="template">
@@ -45,6 +47,7 @@
                 <td>The maximum number of rows of the table.</td>
             </tr>
         </table>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">created_line( line )</span></td>
@@ -59,5 +62,6 @@
                 <td>Called whenever a change occured in the table (eg: line removed, line added).</td>
             </tr>
         </table>
+
     </div>
 </section>

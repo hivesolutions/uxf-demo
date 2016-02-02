@@ -1,9 +1,13 @@
 <section id="password-meter">
     <h1 class="line">Password Meter</h1>
     <div class="section-contents">
-        <p>If a password field requires some king of verification for strength there's the password
-        meter component for that. Just use the normal <span class="highlight">text-field</span> component and associate
-        the password meter using the <span class="highlight">data-target</span> attribute.</p>
+
+        <p>
+            If a password field requires some king of verification for strength
+            there's the password meter component for that. Just use the normal
+            <span class="highlight">text-field</span> component and associate the
+            password meter using the <span class="highlight">data-target</span> attribute.
+        </p>
 
         <div class="box box-white">
             <input id="password" type="password" class="text-field field-margin" name="" value="" />
@@ -22,5 +26,6 @@
                 <td>Selector string for the target text-field.</td>
             </tr>
         </table>
+
     </div>
 </section>

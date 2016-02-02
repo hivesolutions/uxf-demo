@@ -1,6 +1,7 @@
 <section id="hightlight-box">
     <h1 class="line">Hightlight Box</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <ul class="hightlight-box">
                 <li class="hightlight-box-item">

@@ -1,6 +1,6 @@
 <section id="windows">
     <h1 class="line">Window</h1>
-    <p></p>
+
     <div class="section-contents">
         <div id="window" class="window window-hide">
             <h1>Window Title</h1>
@@ -41,6 +41,7 @@ $("#window").uxwindow("show");
                 <td>The size in pixels to be used as the padding for the maximum window dimensions.</td>
             </tr>
         </table>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">show( )</span></td>
@@ -59,5 +60,6 @@ $("#window").uxwindow("show");
                 <td>Triggered when the window is dismissed by clicking the cancel button.</td>
             </tr>
         </table>
+
     </div>
 </section>

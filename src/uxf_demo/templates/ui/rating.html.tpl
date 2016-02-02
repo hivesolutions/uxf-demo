@@ -1,6 +1,7 @@
 <section id="rating">
     <h1 class="line">Rating</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div class="rating" data-count="5" data-value="3"></div>
         </div>
@@ -22,5 +23,6 @@
                 <td>The original rating value.</td>
             </tr>
         </table>
+
     </div>
 </section>

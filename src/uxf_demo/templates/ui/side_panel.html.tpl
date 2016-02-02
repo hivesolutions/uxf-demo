@@ -1,6 +1,7 @@
 <section id="side-panel">
     <h1 class="line">Side Panel</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <a class="button" data-show=".side-panel">Show Side Panel</a>
         </div>
@@ -22,5 +23,6 @@
                 <td>Called when the panel is dismissed</td>
             </tr>
         </table>
+
     </div>
 </section>

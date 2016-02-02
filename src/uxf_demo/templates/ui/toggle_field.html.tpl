@@ -1,8 +1,10 @@
 <section id="toggle-field">
     <h1 class="line">Toggle Field</h1>
     <div class="section-contents">
-        <p>This component allows changing an input's mode. The button can be styled accordingly
-        by using the <span class="highlight">.toggle-field .button.{mode_name}</span> selector.</p>
+        <p>
+            This component allows changing an input's mode. The button can be styled accordingly
+            by using the <span class="highlight">.toggle-field .button.{mode_name}</span> selector.
+        </p>
         <div class="box box-white">
             <input class="toggle-field toggle-left" data-modes="currency, percent"/>
         </div>

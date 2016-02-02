@@ -1,6 +1,7 @@
 <section id="drop-down">
     <h1  class="line">Drop Down</h1>
     <div class="section-contents">
+
         <p>
             This component allows the user to select a value from several options.
             It can be used as a menu as when expanded it will trigger the <span class="highlight">hide</span>
@@ -50,5 +51,6 @@
                 <td>Triggered when an item is selected.</td>
             </tr>
         </table>
+
     </div>
 </section>

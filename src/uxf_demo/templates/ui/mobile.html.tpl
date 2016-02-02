@@ -1,8 +1,12 @@
 <section id="mobile">
     <h1 class="line">Mobile</h1>
     <div class="section-contents">
-        <p>The following classes are added to the <span class="highlight">body</span> element so
-        that you can easily add conditional code to provide a better user experience in all devices.</p>
+
+        <p>
+            The following classes are added to the <span class="highlight">body</span> element so
+            that you can easily add conditional code to provide a better user experience in all devices.
+        </p>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">mobile</span></td>
@@ -29,5 +33,6 @@
                 <td>If the user is browsing with a mouse.</td>
             </tr>
         </table>
+
     </div>
 </section>

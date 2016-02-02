@@ -1,9 +1,13 @@
 <section id="filter">
     <h1  class="line">Filter</h1>
     <div class="section-contents">
-        <p>May be used to list dynamic content in a table like environment.
-        Queries a data source and has support for filtering with a text field and drop fields.
-        You can also trigger the <span class="highlight">update</span> event to refresh the filter.</p>
+
+        <p>
+            May be used to list dynamic content in a table like environment. Queries a data
+            source and has support for filtering with a text field and drop fields. You can
+             also trigger the <span class="highlight">update</span> event to refresh the filter.
+        </p>
+
         <div class="box box-white">
             <ul class="filter" data-number_records="2">
                 <ul class="data-source" data-type="local">
@@ -28,6 +32,7 @@
                 </div>
             </ul>
         </div>
+
 <pre class="code language-markup">
 &lt;ul class=&quot;filter&quot; data-number_records=&quot;2&quot;&gt;
     &lt;ul class=&quot;data-source&quot; data-type=&quot;local&quot;&gt;
@@ -75,6 +80,7 @@
                 <td>If infinite scrolling should be used.</td>
             </tr>
         </table>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">selected( row )</span></td>
@@ -89,7 +95,9 @@
                 <td class="description">Called at the end of each refresh operation (remote data received).</td>
             </tr>
         </table>
+
         <p>The following classes are added to the component during it's lifecycle:</p>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">no-contents</span></td>
@@ -104,5 +112,6 @@
                 <td>While the filter is making a remote request.</td>
             </tr>
         </table>
+
     </div>
 </section>

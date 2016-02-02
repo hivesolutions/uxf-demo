@@ -1,6 +1,7 @@
 <section id="drop-list">
     <h1 class="line">Drop List</h1>
     <div class="section-contents">
+
          <div class="box box-white">
             <div class="drop-list">
                 <div class="drop-item">Select One</div>
@@ -39,5 +40,6 @@
                 <td>Triggered when an item is selected.</td>
             </tr>
         </table>
+
     </div>
 </section>
