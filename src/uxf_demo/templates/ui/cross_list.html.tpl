@@ -1,8 +1,11 @@
 <section id="cross-list">
     <h1  class="line">Cross List</h1>
     <div class="section-contents">
-        <p>This element may be used to move or select elements from one list to other.
-        Uses <a href="#source-list">Source Lists</a> as child elements.</p>
+        <p>
+            This element may be used to move or select elements from one list to other.
+            Uses <a href="#source-list">Source Lists</a> as child elements.
+        </p>
+
         <div class="box box-white">
             <div class="cross-list" data-source="From" data-target="To" data-order="true">
                 <ul class="data-source" data-type="countries"></ul>
@@ -39,5 +42,6 @@
                 <td class="description">Called by both the source and the target list when a change occurs.</td>
             </tr>
         </table>
+
     </div>
 </section>

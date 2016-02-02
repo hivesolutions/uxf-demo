@@ -40,5 +40,6 @@
                 <td>Raised when a new section is shown.</td>
             </tr>
         </table>
+
     </div>
 </section>

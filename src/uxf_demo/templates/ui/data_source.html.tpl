@@ -27,11 +27,13 @@
                 <td>In case the current data source is local this is make the search case insensitive.</td>
             </tr>
         </table>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">data_ready( )</span></td>
                 <td>Notifies that the data is ready for queries.</td>
             </tr>
         </table>
+
     </div>
 </section>

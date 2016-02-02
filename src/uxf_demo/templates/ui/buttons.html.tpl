@@ -1,11 +1,16 @@
 <section id="buttons">
     <h1 class="line">Buttons</h1>
     <div class="section-contents">
-        <p>When developing web applications is mandatory to have a good set of buttons
-        to control the application. The buttons provided allow you to raise events, submit
-        forms, follow links, etc.</p>
-        <p>The main areas to be explored in the button involve <span class="highlight">data-link</span>
-        and the <span class="highlight">data-submit</span> attributes.</p>
+        <p>
+            When developing web applications is mandatory to have a good set of buttons
+            to control the application. The buttons provided allow you to raise events, submit
+            forms, follow links, etc.
+        </p>
+
+        <p>
+            The main areas to be explored in the button involve <span class="highlight">data-link</span>
+            and the <span class="highlight">data-submit</span> attributes.
+        </p>
 
         <div class="box box-white">
             <div id="button" class="button button-solid">Button with Event</div>
@@ -65,5 +70,6 @@
                 <td>Opens the window selected with the provided selector on click.</td>
             </tr>
         </table>
+
     </div>
 </section>

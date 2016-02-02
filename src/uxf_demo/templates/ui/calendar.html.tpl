@@ -15,5 +15,6 @@
                 <td>Triggered when a day is selected.</td>
             </tr>
         </table>
+
     </div>
 </section>
