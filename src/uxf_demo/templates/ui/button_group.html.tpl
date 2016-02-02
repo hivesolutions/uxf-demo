@@ -1,8 +1,11 @@
 <section id="button-group">
     <h1 class="line">Button Group</h1>
     <div class="section-contents">
-        <p>This component allows the selection of an option in a form using buttons.
-        When the form is submitted, an input is created with the name of the button group and the value of the selected button.</p>
+        <p>
+            This component allows the selection of an option in a form using buttons.
+            When the form is submitted, an input is created with the name of the button
+            group and the value of the selected button.
+        </p>
         <div class="box box-white">
             <div class="button-group" name="option">
                 <div class="button button-solid" data-value="a">Option A</div>
