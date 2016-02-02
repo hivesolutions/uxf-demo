@@ -8,7 +8,7 @@
         </p>
 
         <div class="box box-white">
-            <a id="button-slider" class="link link-blue" href="#slider">Show Slider</a>
+            <a id="button-slider" class="link link-blue">Show Slider</a>
         </div>
 
 <pre class="code language-markup">
