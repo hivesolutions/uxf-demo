@@ -3,35 +3,19 @@
     <div class="section-contents">
         <div class="box box-white">
             <ul class="drop-down drop-down-form" data-name="Select one">
-                <li data-value="student">
-                    <span>Student</span>
-                </li>
-                <li data-value="software-developer">
-                    <span>Software Developer</span>
-                </li>
-                <li data-value="mechanical-engineer">
-                    <span>Mechanical Engineer</span>
-                </li>
-                <li data-value="doctor">
-                    <span>Doctor</span>
-                </li>
+                <li data-value="student">Student</li>
+                <li data-value="software-developer">Software Developer</li>
+                <li data-value="mechanical-engineer">Mechanical Engineer</li>
+                <li data-value="doctor">Doctor</li>
             </ul>
         </div>
 
 <pre class="code language-markup">
 &lt;ul class=&quot;drop-down drop-down-form&quot; data-name=&quot;Select one&quot;&gt;
-    &lt;li data-value=&quot;student&quot;&gt;
-        &lt;span&gt;Student&lt;/span&gt;
-    &lt;/li&gt;
-    &lt;li data-value=&quot;software-developer&quot;&gt;
-        &lt;span&gt;Software Developer&lt;/span&gt;
-    &lt;/li&gt;
-    &lt;li data-value=&quot;mechanical-engineer&quot;&gt;
-        &lt;span&gt;Mechanical Engineer&lt;/span&gt;
-    &lt;/li&gt;
-    &lt;li data-value=&quot;doctor&quot;&gt;
-        &lt;span&gt;Doctor&lt;/span&gt;
-    &lt;/li&gt;
+    &lt;li data-value=&quot;student&quot;&gt;Student&lt;/li&gt;
+    &lt;li data-value=&quot;software-developer&quot;&gt;Software Developer&lt;/li&gt;
+    &lt;li data-value=&quot;mechanical-engineer&quot;&gt;Mechanical Engineer&lt;/li&gt;
+    &lt;li data-value=&quot;doctor&quot;&gt;Doctor&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 

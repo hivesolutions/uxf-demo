@@ -57,7 +57,7 @@ def form_action():
         link = "form",
         form = dict(),
         errors = dict(
-            "name" = ["Invalid name"],
-            "age" = ["Invalid age"]
+            name = ["Invalid name"],
+            age = ["Invalid age"]
         )
     )
