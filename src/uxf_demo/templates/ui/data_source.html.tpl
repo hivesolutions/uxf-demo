@@ -1,6 +1,7 @@
 <section id="data-source">
     <h1  class="line">Data Source</h1>
     <div class="section-contents">
+
         <p>
             This is the basic structure for providing information for the various element including
             <a href="#drop-field">drop field</a> and <a href="#filter">filter</a>.

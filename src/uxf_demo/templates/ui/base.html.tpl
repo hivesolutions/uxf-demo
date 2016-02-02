@@ -1,6 +1,7 @@
 <section id="style">
     <h1 class="line">Base</h1>
     <div class="section-contents">
+
         <div class="section-function">
             <h2>uxcontent</h2>
             <p>
@@ -11,6 +12,7 @@
 jQuery("div.target").uxcontent("Hello World");
 </pre>
         </div>
+
         <div class="section-function">
             <h2>uxdecimal</h2>
             <p>
@@ -26,6 +28,7 @@ jQuery("div.target").uxcontent("Hello World");
 jQuery.uxdecimal(38.55 * 3.5);
 </pre>
         </div>
+
         <div class="section-function">
             <h2>uxcountry</h2>
             <p>
@@ -38,6 +41,7 @@ jQuery.uxdecimal(38.55 * 3.5);
 jQuery.uxcountry("PT", "iso2");
 </pre>
         </div>
+
         <div class="section-function">
             <h2>uxalert</h2>
             <p>
@@ -48,6 +52,7 @@ jQuery.uxcountry("PT", "iso2");
 alert("Hello World", callback);
 </pre>
         </div>
+
         <div class="section-function">
             <h2>uxinfo</h2>
             <p>
@@ -58,5 +63,6 @@ alert("Hello World", callback);
 jQuery("body").uxinfo("There was an error.", "Warning", "warning");
 </pre>
         </div>
+
     </div>
 </section>

@@ -1,9 +1,13 @@
 <section id="key">
     <h1 class="line">Key</h1>
     <div class="section-contents">
-        <p>For the key shortcuts to be active a <span class="highlight">div</span> element under the
-        <span class="highlight">body</span> must be set with the <span class="highlight">shortcuts</span>
-        class. Only this way the keyboard shortcuts will be active.</p>
+
+        <p>
+            For the key shortcuts to be active a <span class="highlight">div</span>
+            element under the <span class="highlight">body</span> must be
+            set with the <span class="highlight">shortcuts</span> class.
+            Only this way the keyboard shortcuts will be active.
+        </p>
 
         <div class="box">
             <div>Press the <span class="highlight">e</span> key to activate the link.</div>
@@ -21,5 +25,6 @@
                 <td>The url string to be used to set in the document.</td>
             </tr>
         </table>
+
     </div>
 </section>

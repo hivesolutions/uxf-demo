@@ -1,7 +1,9 @@
 <section id="select-list">
     <h1  class="line">Select List</h1>
     <div class="section-contents">
+
         <p>Component to list items with support for ordering and selection.</p>
+
         <div class="box box-white">
             <ul class="select-list" data-order="true">
                 <li>Item 1</li>
@@ -40,5 +42,6 @@
                 <td class="description">Triggered by a list's item when it's double clicked.</td>
             </tr>
         </table>
+
     </div>
 </section>

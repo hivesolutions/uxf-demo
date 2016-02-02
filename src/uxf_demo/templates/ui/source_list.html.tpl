@@ -1,7 +1,9 @@
 <section id="source-list">
     <h1  class="line">Source List</h1>
     <div class="section-contents">
+
         <p>This component adds <a href="#select-list">Data Source</a> support to <a href="#select-list">Select List</a>.</p>
+
         <div class="box box-white">
             <div class="source-list" data-order="true">
                 <ul class="data-source" data-type="countries"></ul>
@@ -21,5 +23,6 @@
                 <td>Maximum number of options to show at the same time.</td>
             </tr>
         </table>
+
     </div>
 </section>

@@ -1,6 +1,7 @@
 <section id="browser">
     <h1 class="line">Browser</h1>
     <div class="section-contents">
+
         <p>
             UXF also provides an easy way to check what browser and OS is being used.
             This information is added to the <span class="highlight">body</span> element both as

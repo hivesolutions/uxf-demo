@@ -1,6 +1,7 @@
 <section id="chart">
     <h1 class="line">Chart</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div class="chart">
                 <div class="bar bar-orange" data-percentage="11.3" data-linear="1">First</div>

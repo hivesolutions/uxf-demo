@@ -1,6 +1,7 @@
 <section id="progress-bar">
     <h1 class="line">Progress Bar</h1>
-        <div class="section-contents">
+    <div class="section-contents">
+
         <div class="box box-white">
             <div id="progress-bar-row" class="progress-bar field-margin" data-percentage="20" data-right_bar="true"></div>
             <div id="button-progress" class="button button-solid">Start</div>
@@ -28,5 +29,6 @@ $("#progress-bar-row").uxprogressbar("change", {
                 <td>If a second / right bar should appear containing the remaining percentage value.</td>
             </tr>
         </table>
+
     </div>
 </section>

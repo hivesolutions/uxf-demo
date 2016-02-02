@@ -1,6 +1,7 @@
 <section id="form">
     <h1 class="line">Form</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <form action="/form" method="post" class="form form-refresh" data-message="Submit Form">
                 <div class="label field-margin">
@@ -51,6 +52,7 @@
                 <td>If the form's text fields should be trimmed by removing the leading and trailing spaces.</td>
             </tr>
         </table>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">pre_submit( )</span></td>
@@ -73,7 +75,9 @@
                 <td>Raised when there is an error submitting the form.</td>
             </tr>
         </table>
+
         <p>Add the following classes to include different behaviours:</p>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">form-confirm</span></td>
@@ -96,5 +100,6 @@
                 <td>The confirmation message to show when the form is confirmed. Shown if the form has the class <span class="highlight">form-confirm</span></td>
             </tr>
         </table>
+
     </div>
 </section>

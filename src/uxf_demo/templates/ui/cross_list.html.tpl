@@ -1,6 +1,7 @@
 <section id="cross-list">
     <h1  class="line">Cross List</h1>
     <div class="section-contents">
+
         <p>
             This element may be used to move or select elements from one list to other.
             Uses <a href="#source-list">Source Lists</a> as child elements.

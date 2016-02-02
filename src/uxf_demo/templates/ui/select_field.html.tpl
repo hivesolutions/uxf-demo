@@ -1,7 +1,9 @@
 <section id="select-field">
     <h1 class="line">Select Field</h1>
     <div class="section-contents">
+
         <p>To have a <span class="highlight">&lt;select&gt;</span> element that consumes a data source use this component.</p>
+
         <div class="box box-white">
             <div class="select-field" data-value="name">
                 <select class="text-field"></select>
@@ -36,5 +38,6 @@
                 <td>The name of the item's attribute to display to the user. If not set is equal to <span class="highlight">data-value</span></td>
             </tr>
         </table>
+
     </div>
 </section>

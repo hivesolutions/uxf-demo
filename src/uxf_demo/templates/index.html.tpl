@@ -28,7 +28,7 @@
         {% include "ui/form.html.tpl" %}
         {% include "ui/form_elements.html.tpl" %}
         {% include "ui/name_change.html.tpl" %}
-        {% include "ui/toogle_field.html.tpl" %}
+        {% include "ui/toggle_field.html.tpl" %}
         {% include "ui/progress_bar.html.tpl" %}
         {% include "ui/eval.html.tpl" %}
         {% include "ui/date_time.html.tpl" %}

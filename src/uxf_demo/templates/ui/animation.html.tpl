@@ -1,6 +1,7 @@
 <section id="animation">
     <h1 class="line">Animation</h1>
     <div class="section-contents">
+
         <p>
             To have an animated background image add the <span class="highlight">animation</span>
             class and set a background image and the animation duration.

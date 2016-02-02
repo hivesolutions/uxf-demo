@@ -1,6 +1,7 @@
 <section id="datetime">
     <h1 class="line">Date Time</h1>
     <div class="section-contents">
+
         <p>
             Parses the value of two inputs with date and time to a timestamp value on form submit.
             Add the class <span class="highlight">utc</span> to use UTC time zone.

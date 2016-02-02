@@ -1,6 +1,7 @@
 <section id="notification">
     <h1 class="line">Notification</h1>
     <div class="section-contents">
+
     <div class="box box-white">
         <div id="button-notification" class="button button-solid">Button with Notification Event</div>
     </div>

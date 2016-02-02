@@ -1,7 +1,9 @@
 <section id="overlay-panel">
     <h1 class="line">Overlay Panel</h1>
     <div class="section-contents">
+
         <p>This component extends the overlay to be triggable by a key press event.</p>
+
         <div class="box box-white">
             <p>Press Ctrl + Enter key to trigger the overlay.</p>
         </div>
@@ -29,5 +31,6 @@
                 <td>The vertical offset of the overlay.</td>
             </tr>
         </table>
+
     </div>
 </section>

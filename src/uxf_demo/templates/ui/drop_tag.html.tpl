@@ -1,6 +1,7 @@
 <section id="drop-tag">
     <h1  class="line">Drop Tag</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div class="drop-tag" data-title="I am a:">
                 <ul class="items">
@@ -41,5 +42,6 @@
                 <td class="description">Raised when the drop tag is closed with no item selected.</td>
             </tr>
         </table>
+
     </div>
 </section>

@@ -1,6 +1,7 @@
 <section id="changer">
     <h1 class="line">Changer</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <div id="changer-trigger" class="changer" data-section_count="2" data-timeout="2000">Change</div>
             <div class="content-changer" data-trigger="#changer-trigger">
@@ -34,6 +35,7 @@
                 <td>The selector for the changer element. The change can also be triggered by setting <span class="highlight">data-timeout</span> in the <span class="highlight">.content-changer</span> element.</td>
             </tr>
         </table>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">change( )</span></td>

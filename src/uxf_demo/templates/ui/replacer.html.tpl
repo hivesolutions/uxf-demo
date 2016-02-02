@@ -1,6 +1,7 @@
 <section id="replacer">
     <h1 class="line">Replacer</h1>
     <div class="section-contents">
+
         <div class="box box-white">
             <a class="link link-blue replacer" data-target="#replacer-target" data-no_auto="1">Replace</a>
             <span id="replacer-target" class="replacer-target">Replaced</span>
@@ -23,5 +24,6 @@
                 <td>Prevents the auto replacement from occuring when the replacer target contains a initial value.</td>
             </tr>
         </table>
+
     </div>
 </section>

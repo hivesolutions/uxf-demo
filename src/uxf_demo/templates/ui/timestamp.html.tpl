@@ -1,12 +1,15 @@
 <section id="timestamp">
     <h1 class="line">Timestamp</h1>
     <div class="section-contents">
-        <p>When communicating between the client side and the server side it's important
-        to remaining dependent on the client's local data. The best way to do it is transferring
-        a utc timestmap representing the specified time and then converting it to local data using
-        the timestamp component.</p>
 
-        <div class="box">
+        <p>
+            When communicating between the client side and the server side it's
+            important to remaining dependent on the client's local data. The best
+            way to do it is  transferring a utc timestmap representing the specified
+            time and then converting  it to local data using the timestamp component.
+        </p>
+
+        <div class="box box-white">
             <div class="timestamp">1317118297</div>
         </div>
 
@@ -28,5 +31,6 @@
                 timezone..</td>
             </tr>
         </table>
+
     </div>
 </section>
