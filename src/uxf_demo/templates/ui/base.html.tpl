@@ -3,8 +3,10 @@
     <div class="section-contents">
         <div class="section-function">
             <h2>uxcontent</h2>
-            <p>Changes the text contents of an element without changing
-               any of its child elements (only textual part).</p>
+            <p>
+                Changes the text contents of an element without changing
+               any of its child elements (only textual part).
+            </p>
 <pre class="code language-javascript">
 jQuery("div.target").uxcontent("Hello World");
 </pre>
@@ -38,15 +40,20 @@ jQuery.uxcountry("PT", "iso2");
         </div>
         <div class="section-function">
             <h2>uxalert</h2>
-            <p>Presents an alert box with the specified message and a confirm button.
-            The <span class="highlight">callback</span> is called when the user confirms.</p>
+            <p>
+                Presents an alert box with the specified message and a confirm button.
+                The <span class="highlight">callback</span> is called when the user confirms.
+            </p>
 <pre class="code language-javascript">
 alert("Hello World", callback);
 </pre>
         </div>
         <div class="section-function">
             <h2>uxinfo</h2>
-            <p>Presents an info box with the specified message, title and type (which will be added to the title element as a class).
+            <p>
+                Presents an info box with the specified message, title and type (which will
+                be added to the title element as a class).
+            </p>
 <pre class="code language-javascript">
 jQuery("body").uxinfo("There was an error.", "Warning", "warning");
 </pre>
