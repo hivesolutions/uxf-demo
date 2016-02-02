@@ -1,15 +1,11 @@
 <section id="overlay">
     <h1 class="line">Overlay</h1>
     <div class="section-contents">
-        <p>This component provides a togglable window level overlay with content.</p>
-        <div class="overlay" id="overlay-element">
-            <h1>Overlay Content</h1>
-        </div>
+        <p>This component provides a togglable window level overlay (mask) to highlight other elements.</p>
+        <div class="overlay" id="overlay-element"></div>
 
 <pre class="code language-markup">
-&lt;div class=&quot;overlay&quot; id=&quot;overlay-element&quot;&gt;
-    &lt;h1&gt;Overlay Content&lt;/h1&gt;
-&lt;/div&gt;
+&lt;div class=&quot;overlay&quot; id=&quot;overlay-element&quot;&gt;&lt;/div&gt;
 </pre>
 
 <pre class="code language-javascript">
