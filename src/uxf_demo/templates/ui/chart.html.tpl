@@ -3,17 +3,17 @@
     <div class="section-contents">
         <div class="box box-white">
             <div class="chart">
-                <div class="bar" data-percentage="11.3" data-linear="1"></div>
-                <div class="bar" data-percentage="57.0" data-linear="1"></div>
-                <div class="bar" data-percentage="84.6" data-linear="1"></div>
+                <div class="bar bar-orange" data-percentage="11.3" data-linear="1">First</div>
+                <div class="bar bar-blue" data-percentage="57.0" data-linear="1">Second</div>
+                <div class="bar bar-green" data-percentage="84.6" data-linear="1">Third</div>
             </div>
         </div>
 
 <pre class="code language-markup">
 &lt;div class=&quot;chart&quot;&gt;
-    &lt;div class=&quot;bar&quot; data-percentage=&quot;11.3&quot; data-linear=&quot;1&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;bar&quot; data-percentage=&quot;57.0&quot; data-linear=&quot;1&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;bar&quot; data-percentage=&quot;84.6&quot; data-linear=&quot;1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar bar-orange&quot; data-percentage=&quot;11.3&quot; data-linear=&quot;1&quot;&gt;First&lt;/div&gt;
+    &lt;div class=&quot;bar bar-blue&quot; data-percentage=&quot;57.0&quot; data-linear=&quot;1&quot;&gt;Second&lt;/div&gt;
+    &lt;div class=&quot;bar bar-green&quot; data-percentage=&quot;84.6&quot; data-linear=&quot;1&quot;&gt;Third&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 

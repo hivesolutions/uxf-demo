@@ -7,11 +7,11 @@
         </p>
 
         <div class="box box-white">
-            <p class="code language-python">print "Hello World!";</p>
+            <pre class="code language-python">print("Hello World!")</pre>
         </div>
 
 <pre class="code language-markup">
-&lt;p class=&quot;code language-python&quot;&gt;print &quot;Hello World!&quot;&lt;/p&gt;
+&lt;pre class=&quot;code language-python&quot;&gt;print(&quot;Hello World!&quot;)&lt;/pre&gt;
 </pre>
 
     </div>
