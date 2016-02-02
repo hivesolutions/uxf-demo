@@ -3,7 +3,7 @@
     <div class="section-contents">
         <p>May be used to list dynamic content in a table like environment.
         Queries a data source and has support for filtering with a text field and drop fields.
-        You can also call the <span class="highlight">update</span> event to trigger an update.</p>
+        You can also trigger the <span class="highlight">update</span> event to refresh the filter.</p>
         <div class="box box-white">
             <ul class="filter" data-number_records="2">
                 <ul class="data-source" data-type="local">

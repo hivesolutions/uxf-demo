@@ -1,6 +1,9 @@
 <section id="drop-down">
     <h1  class="line">Dropdown</h1>
     <div class="section-contents">
+        <p>This component allows the user to select a value from several options.
+        It can be used as a menu as when expanded it will trigger the <span class="highlight">hide</span> event on all active menus (with the selector <span class="highlight">.menu.active</span>).
+        This also means that only one dropdown will be expanded at the same time.</p>
         <div class="box box-white">
             <ul class="drop-down drop-down-form" data-name="Select one">
                 <li data-value="student">Student</li>

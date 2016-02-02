@@ -1,7 +1,9 @@
 <section id="eval">
     <h1 class="line">Eval</h1>
     <div class="section-contents">
-        <div class="box">
+        <p>If you add the <span class="highlight">eval</span> class to an element its <span class="highlight">data-eval</span>
+        attribute (or html content) will be evaluated as a Javascript expression and replace its content.</p>
+        <div class="box box-white">
             <p class="eval">2+2</p>
         </div>
 
