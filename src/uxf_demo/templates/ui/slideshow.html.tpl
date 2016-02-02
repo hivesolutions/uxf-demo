@@ -1,7 +1,6 @@
 <section id="slideshow">
     <h1 class="line">Slideshow</h1>
     <div class="section-contents">
-        <p></p>
         <div class="box box-white">
             <div class="slideshow" data-window="true">
                 <ul class="items">
