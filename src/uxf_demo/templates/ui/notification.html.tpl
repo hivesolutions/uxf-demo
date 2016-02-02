@@ -15,13 +15,15 @@ $("body").uxnotification({
 
     <div class="box box-white">
         <div class="header-notification">
-            <p class="link-close">Click to close this Header Notification</p>
+            <span>This is a dummy notification</span>
+            <a class="link link-close">Click to close</a>
         </div>
     </div>
 
 <pre class="code language-markup">
 &lt;div class=&quot;header-notification&quot;&gt;
-    &lt;p class=&quot;link-close&quot;&gt;Click to close this Header Notification&lt;/p&gt;
+    &lt;span&gt;This is a dummy notification&lt;/span&gt;
+    &lt;a class=&quot;link link-close&quot;&gt;Click to close&lt;/a&gt;
 &lt;/div&gt;
 </pre>
 

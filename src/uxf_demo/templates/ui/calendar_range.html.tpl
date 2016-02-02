@@ -2,7 +2,7 @@
     <h1 class="line">Calendar Range</h1>
     <div class="section-contents">
         <div class="box box-white">
-            <div class="calendar-range" data-start_name="Departure" data-end_name="Return"></div>
+            <div class="calendar-range"></div>
         </div>
 
 <pre class="code language-markup">
