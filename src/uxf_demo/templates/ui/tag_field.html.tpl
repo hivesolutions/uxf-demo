@@ -1,6 +1,7 @@
 <section id="tag-field">
     <h1 class="line">Tag Field</h1>
     <div class="section-contents">
+        <p>With this component you can select tags retrieved from a data source with autocomplete.
         <div class="box box-white">
             <div class="tag-field" data-no_duplicates="true">
                 <ul class="data-source" data-type="countries"></ul>
