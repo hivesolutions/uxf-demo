@@ -4,18 +4,10 @@
         <div class="box box-white">
             <div class="drop-tag" data-title="I am a:">
                 <ul class="items">
-                    <li>
-                        <span>Student</span>
-                    </li>
-                    <li>
-                        <span>Software Developer</span>
-                    </li>
-                    <li>
-                        <span>Mechanical Engineer</span>
-                    </li>
-                    <li>
-                        <span>Doctor</span>
-                    </li>
+                    <li>Student</li>
+                    <li>Software Developer</li>
+                    <li>Mechanical Engineer</li>
+                    <li>Doctor</li>
                 </ul>
             </div>
         </div>
@@ -23,18 +15,10 @@
 <pre class="code language-markup">
 &lt;div class=&quot;drop-tag&quot; data-title=&quot;I am a:&quot;&gt;
     &lt;ul class=&quot;items&quot;&gt;
-        &lt;li&gt;
-            &lt;span&gt;Student&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;span&gt;Software Developer&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;span&gt;Mechanical Engineer&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;span&gt;Doctor&lt;/span&gt;
-        &lt;/li&gt;
+        &lt;li&gt;Student&lt;/li&gt;
+        &lt;li&gt;Software Developer&lt;/li&gt;
+        &lt;li&gt;Mechanical Engineer&lt;/li&gt;
+        &lt;li&gt;Doctor&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
 </pre>

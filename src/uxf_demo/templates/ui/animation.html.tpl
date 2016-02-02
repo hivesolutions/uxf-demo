@@ -8,11 +8,6 @@
                  style="height: 200px; animation-duration: 200ms; background-image: url(../static/images/banner.jpg);">
             </div>
         </div>
-        <div class="box box-white center">
-            <div class="animation"
-                 style="height: 200px; animation-duration: 200ms; background-image: url(../static/images/banner.jpg);">
-            </div>
-        </div>
 
 <pre class="code language-markup">
 &lt;div class=&quot;animation&quot;
