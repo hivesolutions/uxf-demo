@@ -49,6 +49,31 @@ var INITIAL_STYLE = "omni-style";
 })(jQuery);
 
 (function(jQuery) {
+    jQuery.fn.udemoslider = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the various elements that are going to be used
+        // in the extension for event registration
+        var sliderButton = jQuery("#button-slider", matchedObject);
+
+        // registers for the click event for the slider
+        // button so that the slidder can be triggered
+        sliderButton.click(function() {
+            var element = jQuery(this);
+            var _body = element.parent("body");
+            var slider = jQuery("#slider", _body);
+            slider.uxslider("show");
+        });
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
     jQuery.fn.udemoprogress = function(options) {
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -159,7 +184,6 @@ var INITIAL_STYLE = "omni-style";
         var searchField = jQuery("> .drop-field", search);
         var searchSource = jQuery(".data-source", search);
         var searchItems = searchSource.data("items");
-        var sliderButton = jQuery("#button-slider", matchedObject);
 
         // converts the complete set of links present in the container
         // into the appropriate layout and converts them into smooth
@@ -247,18 +271,10 @@ var INITIAL_STYLE = "omni-style";
             }
         });
 
-        // registers for the click event for the slider
-        // button so that the slidder can be triggered
-        sliderButton.click(function() {
-            var element = jQuery(this);
-            var body = element.parent("body");
-            var slider = jQuery("#slider", body);
-            slider.uxslider("show");
-        });
-
         // runs the various domain specific extensions so that
         // all of the demo logic is correctly loaded
         matchedObject.udemobutton();
+        matchedObject.udemoslider();
         matchedObject.udemoprogress();
         matchedObject.udemonotification();
 
