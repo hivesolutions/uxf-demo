@@ -2,7 +2,7 @@
     <h1 class="line">Select Field</h1>
     <div class="section-contents">
 
-        <p>To have a <span class="highlight">&lt;select&gt;</span> element that consumes a data source use this component.</p>
+        <p>To have a <span class="highlight">&lt;select&gt;</span> element consume a data source use this component.</p>
 
         <div class="box box-white">
             <div class="select-field" data-value="name">

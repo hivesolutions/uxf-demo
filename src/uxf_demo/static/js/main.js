@@ -28,6 +28,37 @@
 var INITIAL_STYLE = "omni-style";
 
 (function(jQuery) {
+    jQuery.fn.udemosidemenu = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the various elements that are going to be used
+        // in the extension for event registration
+        var _window = jQuery(window);
+        var content = jQuery("> .container", matchedObject);
+        var menu = jQuery(".side-menu", matchedObject);
+        var menuButton = jQuery(".button-side-menu", matchedObject);
+        var overlay = jQuery(".overlay", matchedObject);
+
+        if (!content || content.length == 0) {
+            return;
+        }
+
+        // registers for the click event on button
+        menuButton.click(function() {
+
+            menu.toggleClass("open");
+            overlay.triggerHandler("toggle");
+        });
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
     jQuery.fn.udemobutton = function(options) {
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -280,6 +311,7 @@ var INITIAL_STYLE = "omni-style";
 
         // runs the various domain specific extensions so that
         // all of the demo logic is correctly loaded
+        matchedObject.udemosidemenu();
         matchedObject.udemobutton();
         matchedObject.udemoslider();
         matchedObject.udemoprogress();

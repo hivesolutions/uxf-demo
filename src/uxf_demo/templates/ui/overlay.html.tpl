@@ -4,14 +4,12 @@
 
         <p>This component provides a togglable window level overlay (mask) to highlight other elements.</p>
 
-        <div class="overlay" id="overlay-element"></div>
-
 <pre class="code language-markup">
-&lt;div class=&quot;overlay&quot; id=&quot;overlay-element&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
 </pre>
 
 <pre class="code language-javascript">
-jQuery(&quot;#overlay-element&quot;).triggerHandler(&quot;toggle&quot;, [250]);
+jQuery(&quot;.overlay&quot;).triggerHandler(&quot;toggle&quot;, [250]);
 </pre>
 
         <p>This component responds to the following events:</p>
