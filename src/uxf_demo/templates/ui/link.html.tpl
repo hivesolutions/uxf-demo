@@ -32,7 +32,7 @@
             <tr>
                 <td><span class="highlight">data-hash</span></td>
                 <td><span class="highlight">string</span></td>
-                <td>The offset to the target element in pixels, the value may be positive or negative.</td>
+                <td>Hash value to be added to the location hash.</td>
             </tr>
         </table>
 

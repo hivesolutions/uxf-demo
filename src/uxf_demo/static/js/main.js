@@ -61,10 +61,17 @@ var INITIAL_STYLE = "omni-style";
         // registers for the click event for the slider
         // button so that the slidder can be triggered
         sliderButton.click(function() {
+            // shows the slider
             var element = jQuery(this);
             var _body = element.parents("body");
             var slider = jQuery("#slider", _body);
             slider.uxslider("show");
+
+            // scrolls to the slider
+            var settings = {
+                offset: -42
+            };
+            _body.uxscrollto("#slider", 500, settings);
         });
 
         // returns the matched object to the caller function so
