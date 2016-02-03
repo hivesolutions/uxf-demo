@@ -35,21 +35,26 @@ var INITIAL_STYLE = "omni-style";
 
         // retrieves the various elements that are going to be used
         // in the extension for event registration
-        var _window = jQuery(window);
-        var content = jQuery("> .container", matchedObject);
+        var _body = jQuery("body");
         var menu = jQuery(".side-menu", matchedObject);
         var menuButton = jQuery(".button-side-menu", matchedObject);
         var overlay = jQuery(".overlay", matchedObject);
-
-        if (!content || content.length == 0) {
-            return;
-        }
-
+        
         // registers for the click event on button
         menuButton.click(function() {
+            // shows the menu with an overlay
+            menu.addClass("open");
+            _body.addClass("menu-open");
+            overlay.triggerHandler("show");
 
-            menu.toggleClass("open");
-            overlay.triggerHandler("toggle");
+            // registers for the click event on
+            // the overlay to close the menu
+            overlay.one("click", function() {
+                menu.removeClass("open");
+                _body.removeClass("menu-open");
+                overlay.triggerHandler("hide");
+            });
+
         });
 
         // returns the matched object to the caller function so
