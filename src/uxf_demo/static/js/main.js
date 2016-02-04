@@ -39,7 +39,8 @@ var INITIAL_STYLE = "omni-style";
         var menu = jQuery(".side-menu", matchedObject);
         var menuButton = jQuery(".button-side-menu", matchedObject);
         var overlay = jQuery(".overlay", matchedObject);
-        
+        var menuLinks = jQuery(".link", menu);
+
         // registers for the click event on button
         menuButton.click(function() {
             // shows the menu with an overlay
@@ -50,11 +51,181 @@ var INITIAL_STYLE = "omni-style";
             // registers for the click event on
             // the overlay to close the menu
             overlay.one("click", function() {
-                menu.removeClass("open");
-                _body.removeClass("menu-open");
-                overlay.triggerHandler("hide");
+                menu.triggerHandler("hide");
             });
 
+        });
+
+        // converts the links present in the
+        // side menu into smooth based links
+        // that respect the offset to the top
+        menuLinks.attr("data-duration", "500");
+        menuLinks.attr("data-offset", "-42");
+        menuLinks.uxlink();
+
+        // hides the menu when
+        // a menu link is clicked
+        menuLinks.click(function() {
+            menu.triggerHandler("hide");
+        });
+
+        // binds the hide event
+        menu.bind("hide", function() {
+            menu.removeClass("open");
+            _body.removeClass("menu-open");
+            overlay.triggerHandler("hide");
+        });
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
+    jQuery.fn.udemostack = function() {
+        var matchedObject = jQuery(this);
+        var _window = jQuery(window);
+
+
+        var init = function() {
+            if (!matchedObject || matchedObject.length == 0) {
+                return;
+            }
+
+            // adds to extra elements to the stack representing the items
+            // that are inside the stack and the ones that are outside it
+            matchedObject.append("<div class=\"stack-in\"></div>");
+            matchedObject.append("<div class=\"stack-out\"></div>");
+
+            // iterates over each of the selected elements to start the
+            // stack structure for each of them
+            matchedObject.each(function(index, element) {
+                var _element = jQuery(this);
+                var stackOut = jQuery("> .stack-out", _element);
+                var stackItems = jQuery("> .stack-item", _element);
+                var stackTop = jQuery("> .stack-item.stack-top",
+                    _element);
+                stackTop = stackTop.length == 0 ? jQuery(
+                    "> .stack-item:first", _element) : stackTop;
+                stackOut.append(stackItems);
+                push(_element, stackTop, false);
+            });
+        };
+
+        var push = function(element, target, animated) {
+            if (!target || target.length == 0) {
+                return;
+            }
+            var stackIn = jQuery("> .stack-in", element);
+            var inStack = jQuery("> .stack-item", stackIn);
+            inStack.removeClass("stack-top");
+            inStack.addClass("stack-bottom");
+            target.addClass("stack-top");
+            target.removeClass("stack-bottom");
+            stackIn.append(target);
+            _reposition(element);
+        };
+
+        var pop = function(element) {
+            var stackIn = jQuery("> .stack-in", element);
+            var stackOut = jQuery("> .stack-out", element);
+            var stackItems = jQuery("> .stack-item", stackIn);
+            var stackTop = jQuery("> .stack-item.stack-top", stackIn);
+            if (stackItems.length == 1) {
+                return;
+            }
+            var stackNext = stackTop.prev();
+            var transition = stackIn.css("transition-duration");
+            transition = transition ? parseFloat(transition) : 0;
+            stackTop.addClass("stack-gc");
+            stackTop.removeClass("stack-top");
+            stackNext.addClass("stack-top");
+            stackNext.removeClass("stack-bottom");
+            _reposition(element);
+            setTimeout(function() {
+                _gc(element);
+            }, transition * 1000);
+        };
+
+        var _reposition = function(element) {
+            var stackIn = jQuery("> .stack-in", element);
+            var stackItems = jQuery("> .stack-item", stackIn);
+            var stackTop = jQuery("> .stack-item.stack-top", stackIn);
+            var itemsWidth = 0;
+            var itemsOffset = 0;
+            var stackTopWidth = stackTop.outerWidth(true);
+            stackItems.each(function(index, element) {
+                var _element = jQuery(this);
+                var isGarbage = _element.hasClass("stack-gc");
+                var elementWidth = _element.outerWidth(true);
+                itemsWidth += elementWidth;
+                itemsOffset += isGarbage ? 0 : elementWidth;
+            });
+            stackIn.width(itemsWidth);
+            stackIn.css("left", String((itemsOffset * -1) + stackTopWidth) + "px");
+        };
+
+        var _gc = function(element) {
+            var stackIn = jQuery("> .stack-in", element);
+            var stackOut = jQuery("> .stack-out", element);
+            var garbage = jQuery("> .stack-item.stack-gc", stackIn);
+            garbage.removeClass("stack-gc");
+            stackOut.append(garbage);
+        };
+
+        // registers for the push event with the proper target
+        // parameter that should push a stack item into the
+        // curent included stack
+        matchedObject.bind("push", function(event, target) {
+            var element = jQuery(this);
+            push(element, target);
+        });
+
+        // registers for the pop operation in the matched
+        // object so that it's possible to remote an item
+        // from the current "included" sequence
+        matchedObject.bind("pop", function() {
+            var element = jQuery(this);
+            pop(element);
+        });
+        _window.bind("size", function() {
+            matchedObject.each(function(index, value) {
+                var _element = jQuery(this);
+                _reposition(_element);
+            });
+        });
+        init();
+        return this;
+    };
+})(jQuery);
+
+(function(jQuery) {
+    jQuery.fn.udemostacknavigation = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the stack navigation buttons
+        var itemButton = jQuery(".stack-item-button", matchedObject);
+        var popButton = jQuery(".stack-pop-button", matchedObject);
+
+        // registers for the click event on button
+        itemButton.click(function(event) {
+            var element = jQuery(this);
+
+            // retrieves the parent stack
+            // and pushes the target item
+            var stack = element.parents(".stack");
+            var stackTarget = element.attr("data-target");
+            stackTarget = jQuery(stackTarget);
+            stack.triggerHandler("push", [stackTarget]);
+        });
+
+        popButton.click(function() {
+            var element = jQuery(this);
+            var stack = element.parents(".stack");
+            stack.triggerHandler("pop");
         });
 
         // returns the matched object to the caller function so
@@ -227,6 +398,7 @@ var INITIAL_STYLE = "omni-style";
         var searchField = jQuery("> .drop-field", search);
         var searchSource = jQuery(".data-source", search);
         var searchItems = searchSource.data("items");
+        var stack = jQuery(".stack", matchedObject);
 
         // converts the complete set of links present in the container
         // into the appropriate layout and converts them into smooth
@@ -314,6 +486,9 @@ var INITIAL_STYLE = "omni-style";
             }
         });
 
+        // initializes the demo stack
+        stack.udemostack();
+
         // runs the various domain specific extensions so that
         // all of the demo logic is correctly loaded
         matchedObject.udemosidemenu();
@@ -321,6 +496,7 @@ var INITIAL_STYLE = "omni-style";
         matchedObject.udemoslider();
         matchedObject.udemoprogress();
         matchedObject.udemonotification();
+        matchedObject.udemostacknavigation();
 
         // changes the style to the initial style so that the contents
         // of the current page are changed accordingly
