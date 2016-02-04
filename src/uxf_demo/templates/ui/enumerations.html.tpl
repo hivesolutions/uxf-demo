@@ -1,4 +1,4 @@
-<section id="number-formatter">
+<section id="enumeration">
     <h1 class="line">Enumeration</h1>
     <div class="section-contents">
 
