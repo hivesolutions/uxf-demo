@@ -87,7 +87,6 @@ var INITIAL_STYLE = "omni-style";
         var matchedObject = jQuery(this);
         var _window = jQuery(window);
 
-
         var init = function() {
             if (!matchedObject || matchedObject.length == 0) {
                 return;
