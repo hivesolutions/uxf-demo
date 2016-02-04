@@ -16,7 +16,7 @@ jQuery(&quot;.overlay:first&quot;).triggerHandler(&quot;toggle&quot;, [250]);
 
         <table class="table-data">
             <tr>
-                <td><span class="highlight">show( duration )</span></td>
+                <td><span class="highlight">show( duration, extra )</span></td>
                 <td>Presents the overlay with a transition. The <span class="highlight">duration</span> parameter is the transition duration in milliseconds.</td>
             </tr>
             <tr>
@@ -24,12 +24,36 @@ jQuery(&quot;.overlay:first&quot;).triggerHandler(&quot;toggle&quot;, [250]);
                 <td>Dismisses the overlay.</td>
             </tr>
             <tr>
-                <td><span class="highlight">toggle( duration )</span></td>
+                <td><span class="highlight">toggle( duration, extra )</span></td>
                 <td>Shows/hides the overlay depending on its current state.</td>
             </tr>
             <tr>
                 <td><span class="highlight">resize( )</span></td>
                 <td>Resizes the overlay to fill the window.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">pre_show( )</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span class="highlight">post_show( )</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span class="highlight">after_show( )</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span class="highlight">pre_hide( )</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span class="highlight">post_hide( )</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span class="highlight">after_hide( )</span></td>
+                <td></td>
             </tr>
         </table>
 
