@@ -1,4 +1,4 @@
-<section id="overlay">
+<section id="overlay-sec">
     <h1 class="line">Overlay</h1>
     <div class="section-contents">
 
@@ -9,7 +9,7 @@
 </pre>
 
 <pre class="code language-javascript">
-jQuery(&quot;.overlay&quot;).triggerHandler(&quot;toggle&quot;, [250]);
+jQuery(&quot;.overlay:first&quot;).triggerHandler(&quot;toggle&quot;, [250]);
 </pre>
 
         <p>This component responds to the following events:</p>

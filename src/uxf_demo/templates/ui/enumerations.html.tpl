@@ -1,4 +1,4 @@
-<section id="enumeration">
+<section id="enumeration-sec">
     <h1 class="line">Enumeration</h1>
     <div class="section-contents">
 

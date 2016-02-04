@@ -1,4 +1,4 @@
-<section id="timestamp">
+<section id="timestamp-sec">
     <h1 class="line">Timestamp</h1>
     <div class="section-contents">
 

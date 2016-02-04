@@ -1,4 +1,4 @@
-<section id="notification">
+<section id="notification-sec">
     <h1 class="line">Notification</h1>
     <div class="section-contents">
 

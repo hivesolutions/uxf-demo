@@ -1,4 +1,4 @@
-<section id="tabs">
+<section id="tabs-sec">
     <h1 class="line">Tabs</h1>
     <div class="section-contents">
 

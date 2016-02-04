@@ -1,4 +1,4 @@
-<section id="key">
+<section id="key-sec">
     <h1 class="line">Key</h1>
     <div class="section-contents">
 

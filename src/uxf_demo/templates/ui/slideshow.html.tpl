@@ -1,4 +1,4 @@
-<section id="slideshow">
+<section id="slideshow-sec">
     <h1 class="line">Slideshow</h1>
     <div class="section-contents">
 

@@ -1,4 +1,4 @@
-<section id="menu">
+<section id="menu-sec">
     <h1 class="line">Menu</h1>
     <div class="section-contents">
 

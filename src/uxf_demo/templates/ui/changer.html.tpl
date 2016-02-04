@@ -1,4 +1,4 @@
-<section id="changer">
+<section id="changer-sec">
     <h1 class="line">Changer</h1>
     <div class="section-contents">
 
