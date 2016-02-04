@@ -263,10 +263,10 @@ h1.line {
 .overlay,
 .side-menu-movable {
     padding-left: 0px;
-    transition: padding-left 0.25s ease-in-out;
-    -o-transition: padding-left 0.25s ease-in-out;
-    -moz-transition: padding-left 0.25s ease-in-out;
-    -webkit-transition: padding-left 0.25s ease-in-out;
+    transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
 }
 
 body.menu-open {
@@ -288,10 +288,10 @@ body.menu-open .side-menu-movable {
     position: fixed;
     text-align: center;
     top: 0px;
-    transition: left 0.25s ease-in-out;
-    -o-transition: left 0.25s ease-in-out;
-    -moz-transition: left 0.25s ease-in-out;
-    -webkit-transition: left 0.25s ease-in-out;
+    transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     width: 300px;
     z-index: 30;
 }
@@ -302,10 +302,10 @@ body.menu-open .side-menu-movable {
 
 .side-menu > * {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -o-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -moz-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -webkit-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
 }
 
 .side-menu.open > * {
@@ -320,11 +320,11 @@ body.menu-open .side-menu-movable {
     height: 100%;
     position: absolute;
     text-align: left;
-    transition: left 0.25s ease-in-out;
-    -o-transition: left 0.25s ease-in-out;
-    -ms-transition: left 0.25s ease-in-out;
-    -moz-transition: left 0.25s ease-in-out;
-    -webkit-transition: left 0.25s ease-in-out;
+    transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
 }
 
 .side-menu > .stack > .stack-out {
@@ -357,15 +357,13 @@ body.menu-open .side-menu-movable {
     display: inline-block;
     list-style: none;
     margin: 0px 0px 0px 0px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 78px;
+    padding: 20px 30px 20px 30px;
     width: 100%;
 }
 
 .side-menu .links-container li {
     display: block;
-    font-size: 16px;
-    line-height: 16px;
-    padding: 8px 0px 8px 0px;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 6px 0px 6px 0px;
 }
