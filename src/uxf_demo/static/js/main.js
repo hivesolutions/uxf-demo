@@ -93,123 +93,6 @@ var INITIAL_STYLE = "omni-style";
 })(jQuery);
 
 (function(jQuery) {
-    jQuery.fn.udemostack = function() {
-        var matchedObject = jQuery(this);
-        var _window = jQuery(window);
-
-        var init = function() {
-            if (!matchedObject || matchedObject.length == 0) {
-                return;
-            }
-
-            // adds to extra elements to the stack representing the items
-            // that are inside the stack and the ones that are outside it
-            matchedObject.append("<div class=\"stack-in\"></div>");
-            matchedObject.append("<div class=\"stack-out\"></div>");
-
-            // iterates over each of the selected elements to start the
-            // stack structure for each of them
-            matchedObject.each(function(index, element) {
-                var _element = jQuery(this);
-                var stackOut = jQuery("> .stack-out", _element);
-                var stackItems = jQuery("> .stack-item", _element);
-                var stackTop = jQuery("> .stack-item.stack-top",
-                    _element);
-                stackTop = stackTop.length == 0 ? jQuery(
-                    "> .stack-item:first", _element) : stackTop;
-                stackOut.append(stackItems);
-                push(_element, stackTop, false);
-            });
-        };
-
-        var push = function(element, target, animated) {
-            if (!target || target.length == 0) {
-                return;
-            }
-            var stackIn = jQuery("> .stack-in", element);
-            var inStack = jQuery("> .stack-item", stackIn);
-            inStack.removeClass("stack-top");
-            inStack.addClass("stack-bottom");
-            target.addClass("stack-top");
-            target.removeClass("stack-bottom");
-            stackIn.append(target);
-            _reposition(element);
-        };
-
-        var pop = function(element) {
-            var stackIn = jQuery("> .stack-in", element);
-            var stackOut = jQuery("> .stack-out", element);
-            var stackItems = jQuery("> .stack-item", stackIn);
-            var stackTop = jQuery("> .stack-item.stack-top", stackIn);
-            if (stackItems.length == 1) {
-                return;
-            }
-            var stackNext = stackTop.prev();
-            var transition = stackIn.css("transition-duration");
-            transition = transition ? parseFloat(transition) : 0;
-            stackTop.addClass("stack-gc");
-            stackTop.removeClass("stack-top");
-            stackNext.addClass("stack-top");
-            stackNext.removeClass("stack-bottom");
-            _reposition(element);
-            setTimeout(function() {
-                _gc(element);
-            }, transition * 1000);
-        };
-
-        var _reposition = function(element) {
-            var stackIn = jQuery("> .stack-in", element);
-            var stackItems = jQuery("> .stack-item", stackIn);
-            var stackTop = jQuery("> .stack-item.stack-top", stackIn);
-            var itemsWidth = 0;
-            var itemsOffset = 0;
-            var stackTopWidth = stackTop.outerWidth(true);
-            stackItems.each(function(index, element) {
-                var _element = jQuery(this);
-                var isGarbage = _element.hasClass("stack-gc");
-                var elementWidth = _element.outerWidth(true);
-                itemsWidth += elementWidth;
-                itemsOffset += isGarbage ? 0 : elementWidth;
-            });
-            stackIn.width(itemsWidth);
-            stackIn.css("left", String((itemsOffset * -1) + stackTopWidth) + "px");
-        };
-
-        var _gc = function(element) {
-            var stackIn = jQuery("> .stack-in", element);
-            var stackOut = jQuery("> .stack-out", element);
-            var garbage = jQuery("> .stack-item.stack-gc", stackIn);
-            garbage.removeClass("stack-gc");
-            stackOut.append(garbage);
-        };
-
-        // registers for the push event with the proper target
-        // parameter that should push a stack item into the
-        // curent included stack
-        matchedObject.bind("push", function(event, target) {
-            var element = jQuery(this);
-            push(element, target);
-        });
-
-        // registers for the pop operation in the matched
-        // object so that it's possible to remote an item
-        // from the current "included" sequence
-        matchedObject.bind("pop", function() {
-            var element = jQuery(this);
-            pop(element);
-        });
-        _window.bind("size", function() {
-            matchedObject.each(function(index, value) {
-                var _element = jQuery(this);
-                _reposition(_element);
-            });
-        });
-        init();
-        return this;
-    };
-})(jQuery);
-
-(function(jQuery) {
     jQuery.fn.udemostacknavigation = function(options) {
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -407,7 +290,6 @@ var INITIAL_STYLE = "omni-style";
         var searchField = jQuery("> .drop-field", search);
         var searchSource = jQuery(".data-source", search);
         var searchItems = searchSource.data("items");
-        var stack = jQuery(".stack", matchedObject);
 
         // converts the complete set of links present in the container
         // into the appropriate layout and converts them into smooth
@@ -494,9 +376,6 @@ var INITIAL_STYLE = "omni-style";
                 sectionContents.slideDown(500);
             }
         });
-
-        // initializes the demo stack
-        stack.udemostack();
 
         // runs the various domain specific extensions so that
         // all of the demo logic is correctly loaded
