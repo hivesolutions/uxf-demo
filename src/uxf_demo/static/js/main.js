@@ -46,14 +46,24 @@ var INITIAL_STYLE = "omni-style";
             // shows the menu with an overlay
             menu.addClass("open");
             _body.addClass("menu-open");
-            overlay.triggerHandler("show");
 
             // registers for the click event on
             // the overlay to close the menu
             overlay.one("click", function() {
-                menu.triggerHandler("hide");
+                menu.triggerHandler("hide", [500]);
             });
 
+            // registers for the post hide event on
+            // overlay to be able to hide the menu
+            // whenever the overlay is hidden
+            overlay.one("post_hide", function() {
+                menu.triggerHandler("hide", [500]);
+            });
+
+            // triggers the "initial" show operation/event
+            // an ensures that the dark version of the overlay
+            // is displayed to have the proper layout
+            overlay.triggerHandler("show", [500, "dark"]);
         });
 
         // converts the links present in the
@@ -73,7 +83,7 @@ var INITIAL_STYLE = "omni-style";
         menu.bind("hide", function() {
             menu.removeClass("open");
             _body.removeClass("menu-open");
-            overlay.triggerHandler("hide");
+            overlay.triggerHandler("hide", [500]);
         });
 
         // returns the matched object to the caller function so
