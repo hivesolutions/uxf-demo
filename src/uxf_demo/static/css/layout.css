@@ -37,7 +37,6 @@ body {
     color: #444444;
     font-family: Arial, "Lucida Grande", sans-serif;
     font-size: 13px;
-    overflow-x: hidden;
 }
 
 body.opensans {
@@ -261,6 +260,24 @@ h1.line {
     -webkit-border-radius: 0px 0px 4px 0px;
 }
 
+.overlay,
+.side-menu-movable {
+    padding-left: 0px;
+    transition: padding-left 0.25s ease-in-out;
+    -o-transition: padding-left 0.25s ease-in-out;
+    -moz-transition: padding-left 0.25s ease-in-out;
+    -webkit-transition: padding-left 0.25s ease-in-out;
+}
+
+body.menu-open {
+    overflow-x: hidden;
+}
+
+body.menu-open .overlay,
+body.menu-open .side-menu-movable {
+    padding-left: 300px;
+}
+
 .side-menu {
     background-color: #4d4d4d;
     color: #ffffff;
@@ -293,31 +310,6 @@ h1.line {
 
 .side-menu.open > * {
     opacity: 1;
-}
-
-body > .container {
-    padding-left: 0px;
-    transition: padding-left 0.25s ease-in-out;
-    -o-transition: padding-left 0.25s ease-in-out;
-    -moz-transition: padding-left 0.25s ease-in-out;
-    -webkit-transition: padding-left 0.25s ease-in-out;
-}
-
-body.menu-open > .container,
-body.menu-open > .overlay {
-    padding-left: 300px;
-}
-
-body > .top-bar > .container-960 {
-    padding-left: 0px;
-    transition: padding-left 0.25s ease-in-out;
-    -o-transition: padding-left 0.25s ease-in-out;
-    -moz-transition: padding-left 0.25s ease-in-out;
-    -webkit-transition: padding-left 0.25s ease-in-out;
-}
-
-body.menu-open > .top-bar > .container-960 {
-    padding-left: 300px;
 }
 
 .side-menu > .stack {

@@ -1,5 +1,5 @@
 <div class="content-bar top-bar">
-    <div class="container-960">
+    <div class="container-960 side-menu-movable">
         <img class="logo" src="{{ url_for('static', filename = 'libs/uxf/images/ux-logo.png') }}" />
         <ul class="navigation">
             <li><a class="button-side-menu link link-blue">Menu</a></li>

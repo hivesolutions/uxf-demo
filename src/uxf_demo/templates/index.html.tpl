@@ -6,7 +6,7 @@
     {% include "parts/slider.html.tpl" %}
     {% include "parts/window.html.tpl" %}
 
-    <div class="container container-960 shortcuts">
+    <div class="container container-960 shortcuts side-menu-movable">
         {% include "ui/overview.html.tpl" %}
         {% include "ui/base.html.tpl" %}
         {% include "ui/mobile.html.tpl" %}
