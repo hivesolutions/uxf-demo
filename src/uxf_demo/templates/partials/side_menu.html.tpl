@@ -18,8 +18,6 @@
                 <li class="link" href="#source-list">Source List</li>
                 <li class="link" href="#cross-list">Cross List</li>
                 <li class="link" href="#data-source">Data Source</li>
-                <li class="link" href="#links">links</li>
-                <li class="link" href="#link-group">link Group</li>
                 <li class="link" href="#form">Form</li>
                 <li class="button stack-item-button" data-target="#stack-item-form_elements">Form Elements</li>
                 <li class="link" href="#name-change">Name Change</li>
