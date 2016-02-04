@@ -1,4 +1,4 @@
-<section id="hightlight-box">
+<section id="hightlight-box-sec">
     <h1 class="line">Hightlight Box</h1>
     <div class="section-contents">
 

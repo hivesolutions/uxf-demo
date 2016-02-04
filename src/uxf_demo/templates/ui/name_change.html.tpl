@@ -1,4 +1,4 @@
-<section id="name-change">
+<section id="name-change-sec">
     <h1 class="line">Name Change</h1>
     <div class="section-contents">
 

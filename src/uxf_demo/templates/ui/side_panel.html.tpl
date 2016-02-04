@@ -1,4 +1,4 @@
-<section id="side-panel">
+<section id="side-panel-sec">
     <h1 class="line">Side Panel</h1>
     <div class="section-contents">
 

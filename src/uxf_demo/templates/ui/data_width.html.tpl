@@ -1,4 +1,4 @@
-<section id="data-width">
+<section id="data-width-sec">
     <h1  class="line">Data Width</h1>
     <div class="section-contents">
 

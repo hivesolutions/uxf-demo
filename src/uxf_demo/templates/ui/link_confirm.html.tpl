@@ -1,4 +1,4 @@
-<section id="link-confirm">
+<section id="link-confirm-sec">
     <h1 class="line">Link Confirm</h1>
     <div class="section-contents">
 

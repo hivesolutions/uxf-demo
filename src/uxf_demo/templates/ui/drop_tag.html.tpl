@@ -1,4 +1,4 @@
-<section id="drop-tag">
+<section id="drop-tag-sec">
     <h1  class="line">Drop Tag</h1>
     <div class="section-contents">
 
