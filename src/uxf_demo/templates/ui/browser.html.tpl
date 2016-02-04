@@ -1,4 +1,4 @@
-<section id="browser">
+<section id="browser-sec">
     <h1 class="line">Browser</h1>
     <div class="section-contents">
 

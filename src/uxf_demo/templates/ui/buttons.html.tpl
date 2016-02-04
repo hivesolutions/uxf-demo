@@ -1,4 +1,4 @@
-<section id="buttons">
+<section id="buttons-sec">
     <h1 class="line">Buttons</h1>
     <div class="section-contents">
 

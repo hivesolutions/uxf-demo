@@ -1,4 +1,4 @@
-<section id="center">
+<section id="center-sec">
     <h1 class="line">Center</h1>
     <div class="section-contents">
 
