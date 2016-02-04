@@ -33,7 +33,7 @@
                 <li class="link" href="#changer">Changer</li>
                 <li class="link" href="#link">Link</li>
                 <li class="link" href="#link-confirm">Link Confirm</li>
-                <li class="link" href="#windows">WindowWindow Title</li>
+                <li class="link" href="#windows">Window</li>
                 <li class="link" href="#sliders">Slider</li>
                 <li class="link" href="#key">Key</li>
                 <li class="link" href="#data-width">Data Width</li>
@@ -68,7 +68,9 @@
                 <li class="button stack-pop-button">Previous</li>
                 <li class="link" href="#uxcontent">uxcontent</li>
                 <li class="link" href="#uxdecimal">uxdecimal</li>
-                <li class="link" href="#browser">Browser</li>
+                <li class="link" href="#uxcountry">uxcountry</li>
+                <li class="link" href="#uxalert">uxalert</li>
+                <li class="link" href="#uxinfo">uxinfo</li>
             </ul>
         </div>
         <div class="stack-item" id="stack-item-form_elements">
