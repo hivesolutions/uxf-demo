@@ -50,29 +50,35 @@ var INITIAL_STYLE = "omni-style";
         stack.append(stackItem);
 
         var _createSectionLink = function(id, name, target) {
+            // if neither an id or a target and a
+            // name are provided then does nothing
             if (!(id || target) || !name) {
                 return;
             }
-            var sectionElement = jQuery("<li class=\"link\"></li>");
-            sectionElement.text(name);
 
-            // checks if the section has subsections
+            // creates the link element with the name as text
+            var sectionElement = jQuery("<li></li>");
+            var sectionLink = jQuery("<a class=\"link\"></a>");
+            sectionElement.append(sectionLink);
+            sectionLink.text(name);
+
+            // if no target is set then the section has no subsections
+            // so the link should point to its corresponding element
             if (!target) {
-                // if it doesn't then creates a link to its element with
-                // smooth scrolling and that respects the offset to the top
-                sectionElement.attr("href", "#" + id);
-                sectionElement.attr("data-duration", "500");
-                sectionElement.attr("data-offset", "-42");
-                sectionElement.uxlink();
+                // adds smooth scrolling to the link and
+                // takes into account the offset to the top
+                sectionLink.attr("href", "#" + id);
+                sectionLink.attr("data-duration", "500");
+                sectionLink.attr("data-offset", "-42");
+                sectionLink.uxlink();
             } else {
-                // if there are subsections then set's the
-                // link target to the respective stack item
-                sectionElement.addClass("stack-item-link");
-                sectionElement.attr("data-target", "#" + target);
+                // if there are subsections then the link should
+                // point to a stack item that will list them
+                sectionLink.addClass("stack-item-link");
+                sectionLink.attr("data-target", "#" + target);
             }
             return sectionElement;
-        }
-
+        };
 
         // iterates over the complete set of sections in
         // order to add a link to them in the side menu

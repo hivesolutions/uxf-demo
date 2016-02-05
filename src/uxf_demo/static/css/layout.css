@@ -361,9 +361,13 @@ body.menu-open .side-menu-movable {
     width: 100%;
 }
 
-.side-menu .links-container li {
+.side-menu .links-container li  {
     display: block;
     font-size: 13px;
     line-height: 13px;
     padding: 6px 0px 6px 0px;
+}
+
+.side-menu .links-container .link {
+    color: white;
 }
