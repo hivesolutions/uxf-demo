@@ -32,7 +32,7 @@ var INITIAL_STYLE = "omni-style";
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
         var matchedObject = this;
-        
+
         // retrieves the various elements that are going to be used
         // in the extension for event registration
         var _body = jQuery("body");
@@ -44,7 +44,7 @@ var INITIAL_STYLE = "omni-style";
         // creates the necessary elements for
         // the stack and the top stack item
         var stack = jQuery("<div class=\"stack\"></div>");
-        var stackItem = jQuery("<div class=\"stack-item\"></div>")
+        var stackItem = jQuery("<div class=\"stack-item\"></div>");
         var linksContainer = jQuery("<ul class=\"links-container\"></ul>");
         stackItem.append(linksContainer);
         stack.append(stackItem);
@@ -53,22 +53,22 @@ var INITIAL_STYLE = "omni-style";
         // order to add a link to them in the side menu
         sections.each(function(index, element) {
             // retrieves the current element (section) in iteration
-            // and uses it to retrieve its title value
+            // and uses it to retrieve its title value and subsections
             var _element = jQuery(this);
             var title = jQuery("> h1", _element);
             var subSections = jQuery(".sub-section", _element);
 
-            // retrieves the identifier of the section from the
-            // the id attribute of it, the name of it as the
-            // text of the title and the target id that may be
-            // used by a subsection stack item
+            // retrieves the identifier of the section from
+            // its id attribute, the name as the text of the
+            // title and the target id that may be used by
+            // a subsection's stack item
             var id = _element.attr("id");
             var name = title.text();
             var target = "stack-item-" + id;
 
             // validates that both the id and the name of the section
             // are valid an in case they are not valid returns immediately
-            // because there's nothing to be done in iteration
+            // because there's nothing to be done in this iteration
             if (!id || !name) {
                 return;
             }
@@ -111,10 +111,10 @@ var INITIAL_STYLE = "omni-style";
             subLinksContainer.append(popButton);
 
             // iterates over the subsections to add their
-            // the respective link to the stack item
+            // respective link to the stack item
             subSections.each(function(index, element) {
                 // retrieves the current element (subsection) in iteration
-                // and uses it to retrieve its title value and id
+                // and uses it to retrieve its name and id
                 var _element = jQuery(this);
                 var title = jQuery("> h2", _element);
                 var id = _element.attr("id");
@@ -125,8 +125,8 @@ var INITIAL_STYLE = "omni-style";
                     return;
                 }
 
-                // creates the link to of the subsections
-                // and adds to the stack item
+                // creates the link of the subsections
+                // and adds it to the stack item
                 var subSectionElement = jQuery("<li class=\"link\"></li>");
                 subSectionElement.text(name);
                 subSectionElement.attr("href", "#" + id);
@@ -141,8 +141,8 @@ var INITIAL_STYLE = "omni-style";
             stack.append(subStackItem);
         });
 
-        // adds the stack to the menu
-        // and applies the stack plugin
+        // adds the stack to the side menu
+        // and applies the stack plugin to it
         menu.append(stack);
         stack.uxstack();
 
