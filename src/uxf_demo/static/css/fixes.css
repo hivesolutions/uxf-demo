@@ -30,13 +30,3 @@
     height: 30px;
     line-height: 30px;
 }
-
-#stack-sec > .section-contents > .box {
-    overflow: hidden;
-    padding-bottom: 24px;
-    position: relative;
-}
-
-#stack-sec > .section-contents > .box .stack-item {
-    padding-left: 10px;
-}
