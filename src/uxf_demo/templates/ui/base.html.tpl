@@ -2,7 +2,7 @@
     <h1 class="line">Base</h1>
     <div class="section-contents">
 
-        <div class="section-function" id="uxcontent">
+        <div class="section-function sub-section" id="uxcontent">
             <h2>uxcontent</h2>
             <p>
                 Changes the text contents of an element without changing
@@ -13,7 +13,7 @@ jQuery("div.target").uxcontent("Hello World");
 </pre>
         </div>
 
-        <div class="section-function" id="uxdecimal">
+        <div class="section-function sub-section" id="uxdecimal">
             <h2>uxdecimal</h2>
             <p>
                 Creates a floating point value with possible precision
@@ -29,7 +29,7 @@ jQuery.uxdecimal(38.55 * 3.5);
 </pre>
         </div>
 
-        <div class="section-function" id="uxcountry">
+        <div class="section-function sub-section" id="uxcountry">
             <h2>uxcountry</h2>
             <p>
                 Converts a standard representation of a country (ISO) into a visual
@@ -42,7 +42,7 @@ jQuery.uxcountry("PT", "iso2");
 </pre>
         </div>
 
-        <div class="section-function" id="uxalert">
+        <div class="section-function sub-section" id="uxalert">
             <h2>uxalert</h2>
             <p>
                 Presents an alert box with the specified message and a confirm button.
@@ -53,7 +53,7 @@ alert("Hello World", callback);
 </pre>
         </div>
 
-        <div class="section-function" id="uxinfo">
+        <div class="section-function sub-section" id="uxinfo">
             <h2>uxinfo</h2>
             <p>
                 Presents an info box with the specified message, title and type (which will
