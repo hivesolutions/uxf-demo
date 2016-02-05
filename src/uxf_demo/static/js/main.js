@@ -99,7 +99,7 @@ var INITIAL_STYLE = "omni-style";
                 return;
             }
 
-            // creates the link element correspondent to the section
+            // creates the link element for the section
             var sectionElement = _createSectionLink(id, name, target);
 
             // appends the link to the stack item and
