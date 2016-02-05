@@ -312,11 +312,11 @@ body.menu-open .side-menu-movable {
     opacity: 1;
 }
 
-.side-menu > .stack {
+.stack {
     height: 100%;
 }
 
-.side-menu > .stack > .stack-in {
+.stack > .stack-in {
     height: 100%;
     position: absolute;
     text-align: left;
@@ -327,27 +327,27 @@ body.menu-open .side-menu-movable {
     -webkit-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
 }
 
-.side-menu > .stack > .stack-out {
+.stack > .stack-out {
     display: none;
 }
 
-.side-menu > .stack .stack-item {
+.stack .stack-item {
     display: inline-block;
     vertical-align: top;
 }
 
-.side-menu > .stack .stack-item.stack-bottom {
+.stack .stack-item.stack-bottom {
     overflow: hidden;
 }
 
-.side-menu > .stack .stack-item {
+.stack .stack-item {
     height: 100%;
     line-height: 14px;
     overflow: auto;
     width: 300px;
 }
 
-.side-menu > .stack .stack-pop-button {
+.side-menu .stack .stack-pop-button {
     font-size: 18px;
     font-weight: 600;
 }

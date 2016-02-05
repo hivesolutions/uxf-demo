@@ -158,6 +158,17 @@ var INITIAL_STYLE = "omni-style";
 
         // registers for the click event on button
         menuButton.click(function() {
+            menu.triggerHandler("show");
+        });
+
+        // hides the menu when
+        // a menu link is clicked
+        var menuLinks = jQuery(".link:not(.stack-item-link)", menu);
+        menuLinks.click(function() {
+            menu.triggerHandler("hide");
+        });
+
+        menu.bind("show", function() {
             // shows the menu with an overlay
             menu.addClass("open");
             _body.addClass("menu-open");
@@ -179,13 +190,6 @@ var INITIAL_STYLE = "omni-style";
             // an ensures that the dark version of the overlay
             // is displayed to have the proper layout
             overlay.triggerHandler("show", [500, "dark"]);
-        });
-
-        // hides the menu when
-        // a menu link is clicked
-        var menuLinks = jQuery(".link:not(.stack-item-link)", menu);
-        menuLinks.click(function() {
-            menu.triggerHandler("hide");
         });
 
         // binds the hide event
