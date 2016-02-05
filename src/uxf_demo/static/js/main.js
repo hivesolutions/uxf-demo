@@ -49,6 +49,31 @@ var INITIAL_STYLE = "omni-style";
         stackItem.append(linksContainer);
         stack.append(stackItem);
 
+        var _createSectionLink = function(id, name, target) {
+            if (!(id || target) || !name) {
+                return;
+            }
+            var sectionElement = jQuery("<li class=\"link\"></li>");
+            sectionElement.text(name);
+
+            // checks if the section has subsections
+            if (!target) {
+                // if it doesn't then creates a link to its element with
+                // smooth scrolling and that respects the offset to the top
+                sectionElement.attr("href", "#" + id);
+                sectionElement.attr("data-duration", "500");
+                sectionElement.attr("data-offset", "-42");
+                sectionElement.uxlink();
+            } else {
+                // if there are subsections then set's the
+                // link target to the respective stack item
+                sectionElement.addClass("stack-item-link");
+                sectionElement.attr("data-target", "#" + target);
+            }
+            return sectionElement;
+        }
+
+
         // iterates over the complete set of sections in
         // order to add a link to them in the side menu
         sections.each(function(index, element) {
@@ -64,7 +89,8 @@ var INITIAL_STYLE = "omni-style";
             // a subsection's stack item
             var id = _element.attr("id");
             var name = title.text();
-            var target = "stack-item-" + id;
+            var hasSubSections = subSections && subSections.length > 0;
+            var target = hasSubSections && "stack-item-" + id;
 
             // validates that both the id and the name of the section
             // are valid an in case they are not valid returns immediately
@@ -74,24 +100,7 @@ var INITIAL_STYLE = "omni-style";
             }
 
             // creates the link element correspondent to the section
-            var sectionElement = jQuery("<li class=\"link\"></li>");
-            sectionElement.text(name);
-
-            // checks if the section has subsections
-            var hasSubSections = subSections && subSections.length > 0;
-            if (!hasSubSections) {
-                // if it doesn't then creates a link to its element with
-                // smooth scrolling and that respects the offset to the top
-                sectionElement.attr("href", "#" + id);
-                sectionElement.attr("data-duration", "500");
-                sectionElement.attr("data-offset", "-42");
-                sectionElement.uxlink();
-            } else {
-                // if there are subsections then set's the
-                // link target to the respective stack item
-                sectionElement.addClass("stack-item-link");
-                sectionElement.attr("data-target", "#" + target);
-            }
+            var sectionElement = _createSectionLink(id, name, target);
 
             // appends the link to the stack item and
             // returns if there are no subsections
@@ -127,12 +136,7 @@ var INITIAL_STYLE = "omni-style";
 
                 // creates the link of the subsections
                 // and adds it to the stack item
-                var subSectionElement = jQuery("<li class=\"link\"></li>");
-                subSectionElement.text(name);
-                subSectionElement.attr("href", "#" + id);
-                subSectionElement.attr("data-duration", "500");
-                subSectionElement.attr("data-offset", "-42");
-                subSectionElement.uxlink();
+                var subSectionElement = _createSectionLink(id, name);
                 subLinksContainer.append(subSectionElement);
             });
 
