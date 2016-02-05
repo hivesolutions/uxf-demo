@@ -1,4 +1,4 @@
-<section id="wizard">
+<section id="wizard-sec">
     <h1 class="line">Wizard</h1>
     <div class="section-contents">
 

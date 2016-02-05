@@ -1,4 +1,4 @@
-<section id="tags">
+<section id="tags-sec">
     <h1 class="line">Tags</h1>
     <div class="section-contents">
 

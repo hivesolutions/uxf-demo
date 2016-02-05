@@ -1,4 +1,4 @@
-<section id="sliders">
+<section id="sliders-sec">
     <h1 class="line">Slider</h1>
     <div class="section-contents">
 
@@ -8,7 +8,7 @@
         </p>
 
         <div class="box box-white">
-            <a id="button-slider" class="link link-blue">Show Slider</a>
+            <div id="button-slider" class="button button-solid">Show Slider</div>
         </div>
 
 <pre class="code language-markup">

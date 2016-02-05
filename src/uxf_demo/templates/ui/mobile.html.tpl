@@ -1,4 +1,4 @@
-<section id="mobile">
+<section id="mobile-sec">
     <h1 class="line">Mobile</h1>
     <div class="section-contents">
 

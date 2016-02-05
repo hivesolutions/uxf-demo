@@ -1,4 +1,4 @@
-<section id="image">
+<section id="image-sec">
     <h1 class="line">Image</h1>
     <div class="section-contents">
 

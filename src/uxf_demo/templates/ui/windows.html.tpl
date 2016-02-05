@@ -1,4 +1,4 @@
-<section id="windows">
+<section id="windows-sec">
     <h1 class="line">Window</h1>
     <div class="section-contents">
         <div id="window" class="window window-hide">

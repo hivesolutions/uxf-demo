@@ -1,4 +1,4 @@
-<section id="button-group">
+<section id="button-group-sec">
     <h1 class="line">Button Group</h1>
     <div class="section-contents">
 

@@ -1,4 +1,4 @@
-<section id="progress-bar">
+<section id="progress-bar-sec">
     <h1 class="line">Progress Bar</h1>
     <div class="section-contents">
 

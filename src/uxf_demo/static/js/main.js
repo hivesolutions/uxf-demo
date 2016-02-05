@@ -28,6 +28,218 @@
 var INITIAL_STYLE = "omni-style";
 
 (function(jQuery) {
+    jQuery.fn.udemosidemenu = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the various elements that are going to be used
+        // in the extension for event registration
+        var _body = jQuery("body");
+        var sections = jQuery("section", _body);
+        var menu = jQuery(".side-menu", matchedObject);
+        var menuButton = jQuery(".button-side-menu", matchedObject);
+        var overlay = jQuery(".overlay", matchedObject);
+
+        // creates the necessary elements for
+        // the stack and the top stack item
+        var stack = jQuery("<div class=\"stack\"></div>");
+        var stackItem = jQuery("<div class=\"stack-item\"></div>");
+        var linksContainer = jQuery("<ul class=\"links-container\"></ul>");
+        stackItem.append(linksContainer);
+        stack.append(stackItem);
+
+        var _createSectionLink = function(id, name, target) {
+            // if neither an id or a target and a
+            // name are provided then does nothing
+            if (!(id || target) || !name) {
+                return;
+            }
+
+            // creates the link element with the name as text
+            var sectionElement = jQuery("<li></li>");
+            var sectionLink = jQuery("<a class=\"link\"></a>");
+            sectionElement.append(sectionLink);
+            sectionLink.text(name);
+
+            // if no target is set then the section has no subsections
+            // so the link should point to its corresponding element
+            if (!target) {
+                // adds smooth scrolling to the link and
+                // takes into account the offset to the top
+                sectionLink.attr("href", "#" + id);
+                sectionLink.attr("data-duration", "500");
+                sectionLink.attr("data-offset", "-42");
+                sectionLink.uxlink();
+            } else {
+                // if there are subsections then the link should
+                // point to a stack item that will list them
+                sectionLink.addClass("stack-item-link");
+                sectionLink.attr("data-target", "#" + target);
+            }
+            return sectionElement;
+        };
+
+        // iterates over the complete set of sections in
+        // order to add a link to them in the side menu
+        sections.each(function(index, element) {
+            // retrieves the current element (section) in iteration
+            // and uses it to retrieve its title value and subsections
+            var _element = jQuery(this);
+            var title = jQuery("> h1", _element);
+            var subSections = jQuery(".sub-section", _element);
+
+            // retrieves the identifier of the section from
+            // its id attribute, the name as the text of the
+            // title and the target id that may be used by
+            // a subsection's stack item
+            var id = _element.attr("id");
+            var name = title.text();
+            var hasSubSections = subSections && subSections.length > 0;
+            var target = hasSubSections && "stack-item-" + id;
+
+            // validates that both the id and the name of the section
+            // are valid an in case they are not valid returns immediately
+            // because there's nothing to be done in this iteration
+            if (!id || !name) {
+                return;
+            }
+
+            // creates the link element for the section
+            var sectionElement = _createSectionLink(id, name, target);
+
+            // appends the link to the stack item and
+            // returns if there are no subsections
+            linksContainer.append(sectionElement);
+            if (!hasSubSections) {
+                return;
+            }
+
+            // creates the element for the stack item
+            // that will have this section's subsections
+            var subStackItem = jQuery("<div class=\"stack-item\"></div>");
+            subStackItem.attr("id", target);
+            var subLinksContainer = jQuery("<ul class=\"links-container\"></ul>");
+
+            // adds a button to pop the stack item
+            var popButton = jQuery("<li class=\"button stack-pop-button\">Previous</li>");
+            subLinksContainer.append(popButton);
+
+            // iterates over the subsections to add their
+            // respective link to the stack item
+            subSections.each(function(index, element) {
+                // retrieves the current element (subsection) in iteration
+                // and uses it to retrieve its name and id
+                var _element = jQuery(this);
+                var title = jQuery("> h2", _element);
+                var id = _element.attr("id");
+                var name = title.text();
+
+                // returns if one of the values is not set
+                if (!id || !name) {
+                    return;
+                }
+
+                // creates the link of the subsections
+                // and adds it to the stack item
+                var subSectionElement = _createSectionLink(id, name);
+                subLinksContainer.append(subSectionElement);
+            });
+
+            // appends the subsection stack item to the stack
+            subStackItem.append(subLinksContainer);
+            stack.append(subStackItem);
+        });
+
+        // adds the stack to the side menu
+        // and applies the stack plugin to it
+        menu.append(stack);
+        stack.uxstack();
+
+        // registers for the click event on button
+        menuButton.click(function() {
+            menu.triggerHandler("show");
+        });
+
+        // hides the menu when
+        // a menu link is clicked
+        var menuLinks = jQuery(".link:not(.stack-item-link)", menu);
+        menuLinks.click(function() {
+            menu.triggerHandler("hide");
+        });
+
+        menu.bind("show", function() {
+            // shows the menu with an overlay
+            menu.addClass("open");
+            _body.addClass("menu-open");
+
+            // registers for the click event on
+            // the overlay to close the menu
+            overlay.one("click", function() {
+                menu.triggerHandler("hide", [500]);
+            });
+
+            // registers for the post hide event on
+            // overlay to be able to hide the menu
+            // whenever the overlay is hidden
+            overlay.one("post_hide", function() {
+                menu.triggerHandler("hide", [500]);
+            });
+
+            // triggers the "initial" show operation/event
+            // an ensures that the dark version of the overlay
+            // is displayed to have the proper layout
+            overlay.triggerHandler("show", [500, "dark"]);
+        });
+
+        // binds the hide event
+        menu.bind("hide", function() {
+            menu.removeClass("open");
+            _body.removeClass("menu-open");
+            overlay.triggerHandler("hide", [500]);
+        });
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
+    jQuery.fn.udemostacknavigation = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+
+        // retrieves the stack navigation buttons
+        var itemButton = jQuery(".stack-item-link", matchedObject);
+        var popButton = jQuery(".stack-pop-button", matchedObject);
+
+        // registers for the click event on button
+        itemButton.click(function(event) {
+            var element = jQuery(this);
+
+            // retrieves the parent stack
+            // and pushes the target item
+            var stack = element.parents(".stack");
+            var stackTarget = element.attr("data-target");
+            stackTarget = jQuery(stackTarget);
+            stack.triggerHandler("push", [stackTarget]);
+        });
+
+        popButton.click(function() {
+            var element = jQuery(this);
+            var stack = element.parents(".stack");
+            stack.triggerHandler("pop");
+        });
+
+        // returns the matched object to the caller function so
+        // that it may be used in chained actions
+        return matchedObject;
+    };
+})(jQuery);
+
+(function(jQuery) {
     jQuery.fn.udemobutton = function(options) {
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -61,10 +273,17 @@ var INITIAL_STYLE = "omni-style";
         // registers for the click event for the slider
         // button so that the slidder can be triggered
         sliderButton.click(function() {
+            // shows the slider
             var element = jQuery(this);
             var _body = element.parents("body");
             var slider = jQuery("#slider", _body);
             slider.uxslider("show");
+
+            // scrolls to the slider
+            var settings = {
+                offset: -42
+            };
+            _body.uxscrollto("#slider", 500, settings);
         });
 
         // returns the matched object to the caller function so
@@ -273,10 +492,12 @@ var INITIAL_STYLE = "omni-style";
 
         // runs the various domain specific extensions so that
         // all of the demo logic is correctly loaded
+        matchedObject.udemosidemenu();
         matchedObject.udemobutton();
         matchedObject.udemoslider();
         matchedObject.udemoprogress();
         matchedObject.udemonotification();
+        matchedObject.udemostacknavigation();
 
         // changes the style to the initial style so that the contents
         // of the current page are changed accordingly

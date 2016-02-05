@@ -1,4 +1,4 @@
-<section id="video">
+<section id="video-sec">
     <h1 class="line">Video</h1>
     <div class="section-contents">
 

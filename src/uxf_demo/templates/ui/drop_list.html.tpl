@@ -1,4 +1,4 @@
-<section id="drop-list">
+<section id="drop-list-sec">
     <h1 class="line">Drop List</h1>
     <div class="section-contents">
 

@@ -1,10 +1,12 @@
-<section id="name-change">
+<section id="name-change-sec">
     <h1 class="line">Name Change</h1>
     <div class="section-contents">
 
         <p>
-            Add the class <span class="highlight">name-change</span> to an
-            input to change its name if it is submitted without a value
+            Add the class <span class="highlight">name-change</span>
+            to a form field to change its name to the name defined
+            with <span clas="highlight">data-name_empty</span>
+            if it is submitted without a value.
         </p>
 
         <div class="box box-white">

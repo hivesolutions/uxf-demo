@@ -1,4 +1,4 @@
-<section id="filter">
+<section id="filter-sec">
     <h1  class="line">Filter</h1>
     <div class="section-contents">
 

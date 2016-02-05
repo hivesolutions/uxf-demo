@@ -1,4 +1,4 @@
-<section id="animation">
+<section id="animation-sec">
     <h1 class="line">Animation</h1>
     <div class="section-contents">
 

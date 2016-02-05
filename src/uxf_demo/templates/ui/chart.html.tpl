@@ -1,4 +1,4 @@
-<section id="chart">
+<section id="chart-sec">
     <h1 class="line">Chart</h1>
     <div class="section-contents">
 

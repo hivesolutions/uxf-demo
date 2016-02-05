@@ -7,6 +7,7 @@
     {% endblock %}
 </head>
 <body class="ux wait-load">
+    {% include "partials/side_menu.html.tpl" %}
     {% block content %}{% endblock %}
     {% include "partials/footer.html.tpl" %}
 </body>

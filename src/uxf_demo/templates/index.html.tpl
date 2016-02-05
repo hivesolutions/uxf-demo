@@ -6,7 +6,7 @@
     {% include "parts/slider.html.tpl" %}
     {% include "parts/window.html.tpl" %}
 
-    <div class="container container-960 shortcuts">
+    <div class="container container-960 shortcuts side-menu-movable">
         {% include "ui/overview.html.tpl" %}
         {% include "ui/base.html.tpl" %}
         {% include "ui/mobile.html.tpl" %}
@@ -63,8 +63,10 @@
         {% include "ui/tabs.html.tpl" %}
         {% include "ui/menu.html.tpl" %}
         {% include "ui/wizard.html.tpl" %}
+        {% include "ui/stack.html.tpl" %}
         {% include "ui/overlay.html.tpl" %}
         {% include "ui/overlay_panel.html.tpl" %}
+        {% include "ui/side_menu.html.tpl" %}
         {% include "ui/image.html.tpl" %}
         {% include "ui/animation.html.tpl" %}
         {% include "ui/slideshow.html.tpl" %}

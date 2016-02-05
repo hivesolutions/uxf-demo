@@ -1,4 +1,4 @@
-<section id="responsive">
+<section id="responsive-sec">
     <h1 class="line">Responsive</h1>
     <div class="section-contents">
 

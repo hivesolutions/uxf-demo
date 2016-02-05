@@ -1,4 +1,4 @@
-<section id="number-formatter">
+<section id="number-formatter-sec">
     <h1 class="line">Number Formatter</h1>
     <div class="section-contents">
 

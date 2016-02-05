@@ -259,3 +259,125 @@ h1.line {
     -moz-border-radius: 0px 0px 4px 0px;
     -webkit-border-radius: 0px 0px 4px 0px;
 }
+
+.overlay,
+.side-menu-movable {
+    padding-left: 0px;
+    transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+}
+
+body.menu-open {
+    overflow-x: hidden;
+}
+
+body.menu-open .overlay,
+body.menu-open .side-menu-movable {
+    padding-left: 300px;
+}
+
+.side-menu {
+    background-color: #4d4d4d;
+    color: #ffffff;
+    height: 100%;
+    left: -300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    text-align: center;
+    top: 0px;
+    transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    width: 300px;
+    z-index: 30;
+}
+
+.side-menu.open {
+    left: 0px;
+}
+
+.side-menu > * {
+    opacity: 0;
+    transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -o-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -moz-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -webkit-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+}
+
+.side-menu.open > * {
+    opacity: 1;
+}
+
+.side-menu .stack {
+	height: 100%;
+}
+
+.side-menu .stack > .stack-in {
+	height: 100%;
+}
+
+.side-menu .stack .stack-item {
+	height: 100%;
+    width: 300px;
+}
+
+.side-menu .stack .stack-pop-button {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.side-menu .links-container {
+    box-sizing: border-box;
+    display: inline-block;
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 20px 30px 20px 30px;
+    width: 100%;
+}
+
+.side-menu .links-container li  {
+    display: block;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 6px 0px 6px 0px;
+}
+
+.side-menu .links-container .link {
+    color: white;
+}
+
+.stack {
+    overflow: hidden;
+}
+
+.stack > .stack-in {
+    font-size: 0px;
+    position: relative;
+    text-align: left;
+    transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+}
+
+.stack > .stack-out {
+    display: none;
+}
+
+.stack .stack-item {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    overflow: auto;
+    vertical-align: middle;
+    width: 934px;
+}
+
+.stack .stack-item.stack-bottom {
+    overflow: hidden;
+}

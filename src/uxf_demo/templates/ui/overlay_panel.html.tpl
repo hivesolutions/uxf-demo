@@ -1,4 +1,4 @@
-<section id="overlay-panel">
+<section id="overlay-panel-sec">
     <h1 class="line">Overlay Panel</h1>
     <div class="section-contents">
 

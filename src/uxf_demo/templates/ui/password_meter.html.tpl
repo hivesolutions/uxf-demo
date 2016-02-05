@@ -1,4 +1,4 @@
-<section id="password-meter">
+<section id="password-meter-sec">
     <h1 class="line">Password Meter</h1>
     <div class="section-contents">
 

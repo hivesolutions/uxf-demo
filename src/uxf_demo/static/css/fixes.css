@@ -26,7 +26,7 @@
  __license__   = Hive Solutions Confidential Usage License (HSCUL)
 */
 
-#changer > .section-contents > .box:first-child {
+#changer-sec > .section-contents > .box:first-child {
     height: 30px;
     line-height: 30px;
 }

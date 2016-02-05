@@ -1,4 +1,4 @@
-<section id="rating">
+<section id="rating-sec">
     <h1 class="line">Rating</h1>
     <div class="section-contents">
 
