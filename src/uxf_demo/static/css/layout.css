@@ -313,15 +313,15 @@ body.menu-open .side-menu-movable {
 }
 
 .side-menu .stack {
-	height: 100%;
+    height: 100%;
 }
 
 .side-menu .stack > .stack-in {
-	height: 100%;
+    height: 100%;
 }
 
 .side-menu .stack .stack-item {
-	height: 100%;
+    height: 100%;
     width: 300px;
 }
 
