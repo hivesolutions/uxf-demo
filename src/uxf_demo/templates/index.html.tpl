@@ -68,6 +68,7 @@
         {% include "ui/overlay_panel.html.tpl" %}
         {% include "ui/side_menu.html.tpl" %}
         {% include "ui/image.html.tpl" %}
+        {% include "ui/image_lazy.html.tpl" %}
         {% include "ui/animation.html.tpl" %}
         {% include "ui/slideshow.html.tpl" %}
         {% include "ui/video.html.tpl" %}
