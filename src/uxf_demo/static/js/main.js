@@ -39,6 +39,9 @@ var INITIAL_STYLE = "omni-style";
         var FOREGROUND_COLOR = "#4d4d4d";
         var TRANSPARENT_COLOR = "rgba(0, 0, 0, 0)";
 
+        var FRAME_RATE = 20;
+        var FRAME_DELAY = 1 / FRAME_RATE;
+
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
         var matchedObject = this;
@@ -75,8 +78,6 @@ var INITIAL_STYLE = "omni-style";
                 y += VIRTUAL_PIXEL;
             }
 
-            context.fillStyle = "#aaaaaa";
-
             for (var name in sprites) {
                 drawSpriteCanvas(name);
             }
@@ -105,11 +106,11 @@ var INITIAL_STYLE = "omni-style";
 
         var addSprite = function(name, x, y, width, height, data) {
             var sprite = {
-                data: data,
-                x: x,
-                y: y,
-                width: width,
-                height: height
+                data : data,
+                x : x,
+                y : y,
+                width : width,
+                height : height
             };
             sprites[name] = sprite;
             return sprite;
@@ -121,10 +122,19 @@ var INITIAL_STYLE = "omni-style";
 
         var scaleSprite = function(name, scale) {
             var sprite = sprites[name];
-            /*
-             * should be able to scale the sprite by changing it's internal data
-             * and the width and height values
-             */
+            var data = [];
+            for (var y = 0; y < sprite.height * scale; y++) {
+                for (var x = 0; x < sprite.width * scale; x++) {
+                    var originalX = Math.floor(x / scale);
+                    var originalY = Math.floor(y / scale);
+                    var color = sprite.data[originalY * sprite.width
+                            + originalX];
+                    data.push(color)
+                }
+            }
+            sprite.width *= scale;
+            sprite.height *= scale;
+            sprite.data = data;
         };
 
         var moveSprite = function(name, x, y) {
@@ -141,40 +151,33 @@ var INITIAL_STYLE = "omni-style";
             return base;
         };
 
-        var bee = [
-            [1, 1, 1, 1],
-            [1, 1, 1, 1],
-            [0, 1, 1, 1],
-            [0, 0, 1, 1]
-        ];
+        var bee = [[1, 1, 1, 1], [1, 1, 1, 1], [0, 1, 1, 1], [0, 0, 1, 1]];
 
-        var beeColor = [
-            ["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
-            ["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
-            ["#f6f6f6", "#3668c6", "#dddddd", "#dddddd"],
-            ["#f6f6f6", "#f6f6f6", "#dddddd", "#dddddd"]
-        ];
+        var beeColor = [["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
+                ["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
+                ["#f6f6f6", "#3668c6", "#dddddd", "#dddddd"],
+                ["#f6f6f6", "#f6f6f6", "#dddddd", "#dddddd"]];
 
-        var sprite = addSprite("test", 2, 3, 4, 4, toLinear(beeColor));
-        scaleSprite("test", 2);
+        var sprite = addSprite("bee", 2, 3, 4, 4, toLinear(beeColor));
+        scaleSprite("bee", 2);
         setTimeout(function() {
-            moveSprite("test", 0, 0);
-        }, 400);
+                    moveSprite("bee", 0, 0);
+                }, 400);
         setTimeout(function() {
-            moveSprite("test", 100, 0);
-        }, 800);
+                    moveSprite("bee", 100, 0);
+                }, 800);
         setTimeout(function() {
-            moveSprite("test", 120, 0);
-        }, 1200);
+                    moveSprite("bee", 120, 0);
+                }, 1200);
         setTimeout(function() {
-            moveSprite("test", 80, 0);
-        }, 1600);
+                    moveSprite("bee", 80, 0);
+                }, 1600);
         setTimeout(function() {
-            moveSprite("test", 120, 10);
-        }, 2000);
+                    moveSprite("bee", 120, 10);
+                }, 2000);
         setTimeout(function() {
-            moveSprite("test", 70, 20);
-        }, 2400);
+                    moveSprite("bee", 70, 20);
+                }, 2400);
 
         init();
     };
@@ -279,23 +282,23 @@ var INITIAL_STYLE = "omni-style";
             // iterates over the subsections to add their
             // respective link to the stack item
             subSections.each(function(index, element) {
-                // retrieves the current element (subsection) in iteration
-                // and uses it to retrieve its name and id
-                var _element = jQuery(this);
-                var title = jQuery("> h2", _element);
-                var id = _element.attr("id");
-                var name = title.text();
+                        // retrieves the current element (subsection) in iteration
+                        // and uses it to retrieve its name and id
+                        var _element = jQuery(this);
+                        var title = jQuery("> h2", _element);
+                        var id = _element.attr("id");
+                        var name = title.text();
 
-                // returns if one of the values is not set
-                if (!id || !name) {
-                    return;
-                }
+                        // returns if one of the values is not set
+                        if (!id || !name) {
+                            return;
+                        }
 
-                // creates the link of the subsections
-                // and adds it to the stack item
-                var subSectionElement = _createSectionLink(id, name);
-                subLinksContainer.append(subSectionElement);
-            });
+                        // creates the link of the subsections
+                        // and adds it to the stack item
+                        var subSectionElement = _createSectionLink(id, name);
+                        subLinksContainer.append(subSectionElement);
+                    });
 
             // appends the subsection stack item to the stack
             subStackItem.append(subLinksContainer);
@@ -309,46 +312,46 @@ var INITIAL_STYLE = "omni-style";
 
         // registers for the click event on button
         menuButton.click(function() {
-            menu.triggerHandler("show");
-        });
+                    menu.triggerHandler("show");
+                });
 
         // hides the menu when
         // a menu link is clicked
         var menuLinks = jQuery(".link:not(.stack-item-link)", menu);
         menuLinks.click(function() {
-            menu.triggerHandler("hide");
-        });
+                    menu.triggerHandler("hide");
+                });
 
         menu.bind("show", function() {
-            // shows the menu with an overlay
-            menu.addClass("open");
-            _body.addClass("menu-open");
+                    // shows the menu with an overlay
+                    menu.addClass("open");
+                    _body.addClass("menu-open");
 
-            // registers for the click event on
-            // the overlay to close the menu
-            overlay.one("click", function() {
-                menu.triggerHandler("hide", [500]);
-            });
+                    // registers for the click event on
+                    // the overlay to close the menu
+                    overlay.one("click", function() {
+                                menu.triggerHandler("hide", [500]);
+                            });
 
-            // registers for the post hide event on
-            // overlay to be able to hide the menu
-            // whenever the overlay is hidden
-            overlay.one("post_hide", function() {
-                menu.triggerHandler("hide", [500]);
-            });
+                    // registers for the post hide event on
+                    // overlay to be able to hide the menu
+                    // whenever the overlay is hidden
+                    overlay.one("post_hide", function() {
+                                menu.triggerHandler("hide", [500]);
+                            });
 
-            // triggers the "initial" show operation/event
-            // an ensures that the dark version of the overlay
-            // is displayed to have the proper layout
-            overlay.triggerHandler("show", [500, "dark"]);
-        });
+                    // triggers the "initial" show operation/event
+                    // an ensures that the dark version of the overlay
+                    // is displayed to have the proper layout
+                    overlay.triggerHandler("show", [500, "dark"]);
+                });
 
         // binds the hide event
         menu.bind("hide", function() {
-            menu.removeClass("open");
-            _body.removeClass("menu-open");
-            overlay.triggerHandler("hide", [500]);
-        });
+                    menu.removeClass("open");
+                    _body.removeClass("menu-open");
+                    overlay.triggerHandler("hide", [500]);
+                });
 
         // returns the matched object to the caller function so
         // that it may be used in chained actions
@@ -368,21 +371,21 @@ var INITIAL_STYLE = "omni-style";
 
         // registers for the click event on button
         itemButton.click(function(event) {
-            var element = jQuery(this);
+                    var element = jQuery(this);
 
-            // retrieves the parent stack
-            // and pushes the target item
-            var stack = element.parents(".stack");
-            var stackTarget = element.attr("data-target");
-            stackTarget = jQuery(stackTarget);
-            stack.triggerHandler("push", [stackTarget]);
-        });
+                    // retrieves the parent stack
+                    // and pushes the target item
+                    var stack = element.parents(".stack");
+                    var stackTarget = element.attr("data-target");
+                    stackTarget = jQuery(stackTarget);
+                    stack.triggerHandler("push", [stackTarget]);
+                });
 
         popButton.click(function() {
-            var element = jQuery(this);
-            var stack = element.parents(".stack");
-            stack.triggerHandler("pop");
-        });
+                    var element = jQuery(this);
+                    var stack = element.parents(".stack");
+                    stack.triggerHandler("pop");
+                });
 
         // returns the matched object to the caller function so
         // that it may be used in chained actions
@@ -402,8 +405,8 @@ var INITIAL_STYLE = "omni-style";
 
         // registers for the click event on button
         button.click(function() {
-            alert("Button Clicked");
-        });
+                    alert("Button Clicked");
+                });
 
         // returns the matched object to the caller function so
         // that it may be used in chained actions
@@ -424,18 +427,18 @@ var INITIAL_STYLE = "omni-style";
         // registers for the click event for the slider
         // button so that the slidder can be triggered
         sliderButton.click(function() {
-            // shows the slider
-            var element = jQuery(this);
-            var _body = element.parents("body");
-            var slider = jQuery("#slider", _body);
-            slider.uxslider("show");
+                    // shows the slider
+                    var element = jQuery(this);
+                    var _body = element.parents("body");
+                    var slider = jQuery("#slider", _body);
+                    slider.uxslider("show");
 
-            // scrolls to the slider
-            var settings = {
-                offset: -42
-            };
-            _body.uxscrollto("#slider", 500, settings);
-        });
+                    // scrolls to the slider
+                    var settings = {
+                        offset : -42
+                    };
+                    _body.uxscrollto("#slider", 500, settings);
+                });
 
         // returns the matched object to the caller function so
         // that it may be used in chained actions
@@ -456,33 +459,33 @@ var INITIAL_STYLE = "omni-style";
 
         // registers for the click event on button progress
         buttonProgress.click(function() {
-            // sets the initial percentage value
-            var percentage = progressBar.attr("data-percentage") || "0";
-            percentage = parseInt(percentage);
+                    // sets the initial percentage value
+                    var percentage = progressBar.attr("data-percentage") || "0";
+                    percentage = parseInt(percentage);
 
-            var _updatePercentage = function() {
-                // increments the percentage value
-                percentage += 1;
+                    var _updatePercentage = function() {
+                        // increments the percentage value
+                        percentage += 1;
 
-                // in case the percentage overflows returns
-                // immediately as there's nothing else
-                // remaining to be done in this function
-                if (percentage > 100) {
-                    return;
-                }
+                        // in case the percentage overflows returns
+                        // immediately as there's nothing else
+                        // remaining to be done in this function
+                        if (percentage > 100) {
+                            return;
+                        }
 
-                // sets the new percentage in the progress bar
-                progressBar.uxprogressbar("change", {
-                    percentage: percentage
+                        // sets the new percentage in the progress bar
+                        progressBar.uxprogressbar("change", {
+                                    percentage : percentage
+                                });
+
+                        // sets a timeout to update the percentage
+                        setTimeout(_updatePercentage, 10);
+                    };
+
+                    // calls the initial update percentage
+                    _updatePercentage();
                 });
-
-                // sets a timeout to update the percentage
-                setTimeout(_updatePercentage, 10);
-            };
-
-            // calls the initial update percentage
-            _updatePercentage();
-        });
         // returns the matched object to the caller function so
         // that it may be used in chained actions
         return matchedObject;
@@ -502,9 +505,9 @@ var INITIAL_STYLE = "omni-style";
         // registers for the click event on button notification
         buttonNotification.click(function() {
             jQuery("body").uxnotification({
-                title: "Notification Test",
-                message: "Don't read this dummy text, it's a waste of your time.",
-                timeout: 50000
+                title : "Notification Test",
+                message : "Don't read this dummy text, it's a waste of your time.",
+                timeout : 50000
             });
         });
 
@@ -546,7 +549,7 @@ var INITIAL_STYLE = "omni-style";
         // in the extension for event registration
         var contents = matchedObject.filter("body");
         var links = jQuery(".container a:not(.tab-selector, .calendar-arrow)",
-            matchedObject);
+                matchedObject);
         var headers = jQuery("h1.line", matchedObject);
         var styleField = jQuery("#drop-field-style", matchedObject);
         var sections = jQuery("section", matchedObject);
@@ -567,79 +570,79 @@ var INITIAL_STYLE = "omni-style";
         // iterates over the complete set of sections in order to be able
         // to index them under the search items in the data source
         sections.each(function(index, element) {
-            // retrieves the current element (section) in iteration
-            // and uses it to retrieve its title value
-            var _element = jQuery(this);
-            var title = jQuery("> h1", _element);
+                    // retrieves the current element (section) in iteration
+                    // and uses it to retrieve its title value
+                    var _element = jQuery(this);
+                    var title = jQuery("> h1", _element);
 
-            // retrieves the identifier of the section from the
-            // the id attribute of it and the name of it as the
-            // text of the title
-            var id = _element.attr("id");
-            var name = title.text();
+                    // retrieves the identifier of the section from the
+                    // the id attribute of it and the name of it as the
+                    // text of the title
+                    var id = _element.attr("id");
+                    var name = title.text();
 
-            // validates that both the id and the name of the section
-            // are valid an in case they are not valid returns immediately
-            // because there's nothing to be done in iteration
-            if (!id || !name) {
-                return;
-            }
+                    // validates that both the id and the name of the section
+                    // are valid an in case they are not valid returns immediately
+                    // because there's nothing to be done in iteration
+                    if (!id || !name) {
+                        return;
+                    }
 
-            // creats the link value be prepending the cardinal value to
-            // the idetifier of the section and uses it together with the
-            // name of the section to create the item map and adds it to
-            // the list of search items in the data source
-            var link = "#" + id;
-            searchItems.push({
-                link: link,
-                name: name
-            });
-        });
+                    // creats the link value be prepending the cardinal value to
+                    // the idetifier of the section and uses it together with the
+                    // name of the section to create the item map and adds it to
+                    // the list of search items in the data source
+                    var link = "#" + id;
+                    searchItems.push({
+                                link : link,
+                                name : name
+                            });
+                });
 
         // registers for the value selection changed in the style field
         // so that it's possible to change the style of the current page
         styleField.bind("value_select", function(event, value, valueLogic) {
-            // retrieves the current style field that has just been
-            // triggered and resets it to the original value (as expected)
-            var element = jQuery(this);
-            element.uxreset();
+                    // retrieves the current style field that has just been
+                    // triggered and resets it to the original value (as expected)
+                    var element = jQuery(this);
+                    element.uxreset();
 
-            // triggers a new alert window indicating the chaning of the
-            // style and changes the style on confirmation
-            alert("Changing value to <b>" + value + "</b>", function() {
-                changeStyle(valueLogic);
-            });
-        });
+                    // triggers a new alert window indicating the chaning of the
+                    // style and changes the style on confirmation
+                    alert("Changing value to <b>" + value + "</b>", function() {
+                                changeStyle(valueLogic);
+                            });
+                });
 
         // registers for the show event in the search overlay panel
         // so that the text field is restored to the original value
         search.bind("shown", function() {
-            var element = jQuery(this);
-            var textField = jQuery(".text-field", element);
-            textField.uxreset();
-        });
+                    var element = jQuery(this);
+                    var textField = jQuery(".text-field", element);
+                    textField.uxreset();
+                });
 
         // registers for the value selection changed in the search field
         // in search field to be able to close the search field
         searchField.bind("value_select", function() {
-            var element = jQuery(this);
-            var search = element.parents("#search");
-            search.triggerHandler("hide");
-        });
+                    var element = jQuery(this);
+                    var search = element.parents("#search");
+                    search.triggerHandler("hide");
+                });
 
         // registers for the click event in the complete set of headers
         // so that it's possible to toggle it's visibility
         headers.click(function() {
-            var element = jQuery(this);
-            var section = element.parents("section");
-            var sectionContents = jQuery(".section-contents", section);
-            var isVisible = sectionContents.is(":visible");
-            if (isVisible) {
-                sectionContents.slideUp(350);
-            } else {
-                sectionContents.slideDown(500);
-            }
-        });
+                    var element = jQuery(this);
+                    var section = element.parents("section");
+                    var sectionContents = jQuery(".section-contents", section);
+                    var isVisible = sectionContents.is(":visible");
+                    if (isVisible) {
+                        sectionContents.slideUp(350);
+                    } else {
+                        sectionContents.slideDown(500);
+                    }
+                });
 
         // runs the various domain specific extensions so that
         // all of the demo logic is correctly loaded
@@ -674,8 +677,8 @@ var INITIAL_STYLE = "omni-style";
 })(jQuery);
 
 jQuery(document).ready(function() {
-    var _body = jQuery("body");
-    _body.bind("applied", function(event, base) {
-        base.uapply();
-    });
-});
+            var _body = jQuery("body");
+            _body.bind("applied", function(event, base) {
+                        base.uapply();
+                    });
+        });
