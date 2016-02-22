@@ -29,13 +29,15 @@ var INITIAL_STYLE = "omni-style";
 
 (function(jQuery) {
     jQuery.fn.udemopixels = function(options) {
-        var PIXEL_SPACING = 1;
-        var VIRTUAL_PIXEL = 5;
+        var PIXEL_SPACING = 2;
+        var VIRTUAL_PIXEL = 4;
 
         var BOARD_WIDTH = 160;
         var BOARD_HEIGHT = 60;
 
-        var PIXEL_COLOR = "#cccccc";
+        var BACKGROUND_COLOR = "#f6f6f6";
+        var FOREGROUND_COLOR = "#4d4d4d";
+        var TRANSPARENT_COLOR = "rgba(0, 0, 0, 0)";
 
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -58,7 +60,7 @@ var INITIAL_STYLE = "omni-style";
         };
 
         var drawCanvas = function() {
-            context.fillStyle = PIXEL_COLOR;
+            context.fillStyle = BACKGROUND_COLOR;
             context.clearRect(0, 0, _canvas.width, _canvas.height);
 
             var y = 0;
@@ -73,8 +75,9 @@ var INITIAL_STYLE = "omni-style";
                 y += VIRTUAL_PIXEL;
             }
 
+            context.fillStyle = "#aaaaaa";
+
             for (var name in sprites) {
-                var sprite = sprites[name];
                 drawSpriteCanvas(name);
             }
 
@@ -82,24 +85,20 @@ var INITIAL_STYLE = "omni-style";
         };
 
         var drawSpriteCanvas = function(name) {
-            // for each pixel of the sprite put the pixel color in canvas
             var sprite = sprites[name];
             for (var y = 0; y < sprite.height; y++) {
                 for (var x = 0; x < sprite.width; x++) {
-                    var index = ((sprite.width * y) + x) * 4;
-                    var red = sprite.data[index];
-                    var green = sprite.data[index + 1];
-                    var blue = sprite.data[index + 2];
-                    var alpha = sprite.data[index + 3];
-                    var color = "rgba(" + red + ", " + green + ", " + blue + ", " + alpha + ")";
+                    var color = sprite.data[y * sprite.width + x];
                     putPixelCanvas(sprite.x + x, sprite.y + y, color);
                 }
             }
         };
 
         var putPixelCanvas = function(x, y, color) {
-            var realX = PIXEL_SPACING + x * (PIXEL_SPACING + VIRTUAL_PIXEL);
-            var realY = PIXEL_SPACING + y * (PIXEL_SPACING + VIRTUAL_PIXEL);
+            var realX = x * (PIXEL_SPACING + VIRTUAL_PIXEL) + PIXEL_SPACING;
+            var realY = y * (PIXEL_SPACING + VIRTUAL_PIXEL) + PIXEL_SPACING;
+            color = color == 0 ? TRANSPARENT_COLOR : color;
+            color = color == 1 ? FOREGROUND_COLOR : color;
             context.fillStyle = color;
             context.fillRect(realX, realY, VIRTUAL_PIXEL, VIRTUAL_PIXEL);
         };
@@ -126,27 +125,47 @@ var INITIAL_STYLE = "omni-style";
             sprite.y = y;
         };
 
-        var data = [
-            255, 255, 255, 50,
-            255, 255, 255, 50,
-            33, 75, 142, 255,
-            33, 75, 142, 255,
-            255, 255, 255, 255,
-            255, 255, 255, 255,
-            33, 75, 142, 255,
-            33, 75, 142, 255,
-            0, 0, 0, 0,
-            33, 75, 142, 255,
-            255, 255, 255, 255,
-            255, 255, 255, 255,
-            0, 0, 0, 0,
-            0, 0, 0, 0,
-            255, 255, 255, 255,
-            255, 255, 255, 255,
-            255, 255, 255, 255,
-            255, 255, 255, 255,
+        var toLinear = function(value) {
+            var base = [];
+            for (var index = 0; index < value.length; index++) {
+                base = base.concat(value[index]);
+            }
+            return base;
+        };
+
+        var bee = [
+            [1, 1, 1, 1],
+            [1, 1, 1, 1],
+            [0, 1, 1, 1],
+            [0, 0, 1, 1]
         ];
-        addSprite("test", 20, 20, 4, 4, data);
+        
+        var beeColor = [
+            [1, 1, 1, 1],
+            [1, 1, 1, 1],
+            [0, 1, 1, 1],
+            [0, 0, 1, 1]
+        ];
+
+        var sprite = addSprite("test", 2, 3, 4, 4, toLinear(bee));
+        setTimeout(function() {
+            moveSprite("test", 0, 0);
+        }, 400);
+        setTimeout(function() {
+            moveSprite("test", 100, 0);
+        }, 800);
+        setTimeout(function() {
+            moveSprite("test", 120, 0);
+        }, 1200);
+        setTimeout(function() {
+            moveSprite("test", 80, 0);
+        }, 1600);
+        setTimeout(function() {
+            moveSprite("test", 120, 10);
+        }, 2000);
+        setTimeout(function() {
+            moveSprite("test", 70, 20);
+        }, 2400);
 
         init();
     };
