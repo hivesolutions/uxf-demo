@@ -20,8 +20,8 @@
         if (matchedObject == null || matchedObject.length == 0) {
             return;
         }
-        var _canvas = matchedObject[0];
-        var context = _canvas.getContext("2d");
+        var canvasElement = matchedObject[0];
+        var context = canvasElement.getContext("2d");
         var sprites = {};
         var animations = {}
 
@@ -77,8 +77,15 @@
         };
 
         var drawCanvas = function(timestamp) {
+            drawBackCanvas();
+            for (var name in sprites) {
+                drawSpriteCanvas(name);
+            }
+        };
+
+        var drawBackCanvas = function() {
             context.fillStyle = BACKGROUND_COLOR;
-            context.clearRect(0, 0, _canvas.width, _canvas.height);
+            context.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
             var y = 0;
             for (var line = 0; line < BOARD_HEIGHT; line++) {
@@ -90,10 +97,6 @@
                     x += VIRTUAL_PIXEL;
                 }
                 y += VIRTUAL_PIXEL;
-            }
-
-            for (var name in sprites) {
-                drawSpriteCanvas(name);
             }
         };
 
