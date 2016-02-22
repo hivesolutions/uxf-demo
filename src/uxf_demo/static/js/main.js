@@ -40,7 +40,7 @@ var INITIAL_STYLE = "omni-style";
         var TRANSPARENT_COLOR = "rgba(0, 0, 0, 0)";
 
         var FRAME_RATE = 20;
-        var FRAME_DELAY = 1 / FRAME_RATE;
+        var FRAME_DELAY = 1 / FRAME_RATE * 1000;
 
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -62,7 +62,13 @@ var INITIAL_STYLE = "omni-style";
             window.requestAnimationFrame(drawCanvas);
         };
 
-        var drawCanvas = function() {
+        var drawCanvas = function(timestamp) {
+        	var next = canvas.data("next") || 0;
+        	if(timestamp < next) {
+        		window.requestAnimationFrame(drawCanvas);
+        		return;
+        	}
+        	
             context.fillStyle = BACKGROUND_COLOR;
             context.clearRect(0, 0, _canvas.width, _canvas.height);
 
@@ -81,7 +87,8 @@ var INITIAL_STYLE = "omni-style";
             for (var name in sprites) {
                 drawSpriteCanvas(name);
             }
-
+            
+            canvas.data("next", timestamp + FRAME_DELAY);
             window.requestAnimationFrame(drawCanvas);
         };
 
