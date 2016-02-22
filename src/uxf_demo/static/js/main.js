@@ -33,9 +33,9 @@ var INITIAL_STYLE = "omni-style";
         var VIRTUAL_PIXEL = 4;
 
         var BOARD_WIDTH = 160;
-        var BOARD_HEIGHT = 60;
+        var BOARD_HEIGHT = 80;
 
-        var BACKGROUND_COLOR = "#f6f6f6";
+        var BACKGROUND_COLOR = "#f8f8f8";
         var FOREGROUND_COLOR = "#4d4d4d";
         var TRANSPARENT_COLOR = "rgba(0, 0, 0, 0)";
 
@@ -149,10 +149,10 @@ var INITIAL_STYLE = "omni-style";
         ];
 
         var beeColor = [
-            ["#e0e0e0", "#e0e0e0", "#214b8e", "#214b8e"],
-            ["#e0e0e0", "#e0e0e0", "#214b8e", "#214b8e"],
-            ["#f6f6f6", "#214b8e", "#e0e0e0", "#e0e0e0"],
-            ["#f6f6f6", "#f6f6f6", "#e0e0e0", "#e0e0e0"]
+            ["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
+            ["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
+            ["#f6f6f6", "#3668c6", "#dddddd", "#dddddd"],
+            ["#f6f6f6", "#f6f6f6", "#dddddd", "#dddddd"]
         ];
 
         var sprite = addSprite("test", 2, 3, 4, 4, toLinear(beeColor));
