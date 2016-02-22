@@ -10,7 +10,7 @@
         var FOREGROUND_COLOR = "#4d4d4d";
         var TRANSPARENT_COLOR = "rgba(0, 0, 0, 0)";
 
-        var FRAME_RATE = 20;
+        var FRAME_RATE = 60;
         var FRAME_DELAY = 1 / FRAME_RATE * 1000;
 
         // retrieves the reference to the currently matched object
@@ -26,12 +26,14 @@
 
         var init = function() {
             initCanvas();
+            requestAnimationFrame(draw);
         };
 
         var bind = function() {
-            matchedObject.bind("add", function(event, name, x, y, width, height, data) {
-                addSprite(name, x, y, width, height, data);
-            });
+            matchedObject.bind("add",
+                function(event, name, x, y, width, height, data) {
+                    addSprite(name, x, y, width, height, data);
+                });
 
             matchedObject.bind("remove", function(event, name) {
                 removeSprite(name);
@@ -42,21 +44,28 @@
             });
 
             matchedObject.bind("move", function(event, name, x, y) {
-                moveSprite(name, x, y);
+                moveSpriteAnimated(name, x, y);
             });
         };
 
-        var initCanvas = function() {
-            window.requestAnimationFrame(drawCanvas);
-        };
+        var initCanvas = function() {};
 
-        var drawCanvas = function(timestamp) {
+        var draw = function(timestamp) {
+            requestAnimationFrame(draw);
+
             var next = matchedObject.data("next") || 0;
             if (timestamp < next) {
-                window.requestAnimationFrame(drawCanvas);
                 return;
             }
 
+            updateState(timestamp);
+            drawCanvas(timestamp);
+
+            matchedObject.data("timestamp", timestamp);
+            matchedObject.data("next", timestamp + FRAME_DELAY);
+        };
+
+        var drawCanvas = function(timestamp) {
             context.fillStyle = BACKGROUND_COLOR;
             context.clearRect(0, 0, _canvas.width, _canvas.height);
 
@@ -75,9 +84,6 @@
             for (var name in sprites) {
                 drawSpriteCanvas(name);
             }
-
-            matchedObject.data("next", timestamp + FRAME_DELAY);
-            window.requestAnimationFrame(drawCanvas);
         };
 
         var drawSpriteCanvas = function(name) {
@@ -105,7 +111,8 @@
                 x: x,
                 y: y,
                 width: width,
-                height: height
+                height: height,
+                animations: []
             };
             sprites[name] = sprite;
             return sprite;
@@ -138,6 +145,69 @@
             sprite.y = y;
         };
 
+        var moveSpriteAnimated = function(name, x, y, duration, easing) {
+            duration = duration || 300;
+            easing = easing || "linear";
+            animateSprite(name, "x", x, duration, easing);
+            animateSprite(name, "y", y, duration, easing);
+        };
+
+        var animateSprite = function(name, key, value, duration, easing) {
+            var timestamp = matchedObject.data("timestamp") || 0;
+            duration = duration || 0;
+            easing = easing || "linear";
+            var sprite = sprites[name];
+            var current = sprite[key];
+            var animation = {
+                property: key,
+                original: current,
+                target: value,
+                start: timestamp,
+                end: timestamp + duration,
+                easing: easing
+            };
+            sprite.animations.push(animation);
+        };
+
+        var updateState = function(timestamp) {
+            for (var name in sprites) {
+                updateAnimations(name, timestamp);
+            }
+        };
+
+        var updateAnimations = function(name, timestamp) {
+            var sprite = sprites[name];
+            var removal = [];
+
+            for (var index = 0; index < sprite.animations.length; index++) {
+                var animation = sprite.animations[index];
+                updateAnimation(sprite, animation, timestamp);
+                if (timestamp < animation.end) {
+                    continue;
+                }
+                removal.push(animation);
+            }
+
+            for (var index = 0; index < removal.length; index++) {
+                var target = sprite.animations.indexOf(removal[index]);
+                sprite.animations.splice(target, 1);
+            }
+        };
+
+        var updateAnimation = function(sprite, animation, timestamp) {
+            var next = linearAnimation(animation.original, animation.target,
+                animation.start, animation.end, timestamp);
+            sprite[animation.property] = next;
+        };
+
+        var linearAnimation = function(original, target, start, end, timestamp) {
+            var delta = target - original;
+            var deltaTotal = end - start;
+            var deltaCurrent = timestamp - start;
+            var percent = deltaCurrent / deltaTotal;
+            return original + (delta * percent);
+        };
+
         // runs the initialization process for the pixels
         // plugin under the current context
         init();
@@ -167,14 +237,12 @@
             var beeColor = [
                 ["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
                 ["#dddddd", "#dddddd", "#3668c6", "#3668c6"],
-                ["#f6f6f6", "#3668c6", "#dddddd", "#dddddd"],
-                ["#f6f6f6", "#f6f6f6", "#dddddd", "#dddddd"]
+                ["rgba(0,0,0,0)", "#3668c6", "#dddddd", "#dddddd"],
+                ["rgba(0,0,0,0)", "rgba(0,0,0,0)", "#dddddd", "#dddddd"]
             ];
 
-            target.triggerHandler("add", ["bee", 2, 3, 4, 4,
-                toLinear(beeColor)
-            ]);
-            target.triggerHandler("scale", ["bee", 2]);
+            target.triggerHandler("add", ["bee", 2, 3, 4, 4, toLinear(beeColor)]);
+            target.triggerHandler("scale", ["bee", 6]);
             setTimeout(function() {
                 target.triggerHandler("move", ["bee", 0, 0]);
             }, 400);
