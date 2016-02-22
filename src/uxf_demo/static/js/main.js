@@ -139,15 +139,15 @@ var INITIAL_STYLE = "omni-style";
             [0, 1, 1, 1],
             [0, 0, 1, 1]
         ];
-        
+
         var beeColor = [
-            [1, 1, 1, 1],
-            [1, 1, 1, 1],
-            [0, 1, 1, 1],
-            [0, 0, 1, 1]
+            ["#e0e0e0", "#e0e0e0", "#214b8e", "#214b8e"],
+            ["#e0e0e0", "#e0e0e0", "#214b8e", "#214b8e"],
+            ["#f6f6f6", "#214b8e", "#e0e0e0", "#e0e0e0"],
+            ["#f6f6f6", "#f6f6f6", "#e0e0e0", "#e0e0e0"]
         ];
 
-        var sprite = addSprite("test", 2, 3, 4, 4, toLinear(bee));
+        var sprite = addSprite("test", 2, 3, 4, 4, toLinear(beeColor));
         setTimeout(function() {
             moveSprite("test", 0, 0);
         }, 400);
