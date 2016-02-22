@@ -29,11 +29,13 @@ var INITIAL_STYLE = "omni-style";
 
 (function(jQuery) {
     jQuery.fn.udemopixels = function(options) {
-        var PIXEL_SPACING = 1;
+        var PIXEL_SPACING = 2;
         var VIRTUAL_PIXEL = 4;
 
-        var BOARD_WIDTH = 100
-        var BOARD_HEIGHT = 20
+        var BOARD_WIDTH = 100;
+        var BOARD_HEIGHT = 20;
+        
+        var PIXEL_COLOR = "#cccccc";
 
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -48,7 +50,7 @@ var INITIAL_STYLE = "omni-style";
         var sprites = {};
 
         var init = function() {
-
+            initCanvas();
         };
 
         var initCanvas = function() {
@@ -56,7 +58,7 @@ var INITIAL_STYLE = "omni-style";
         };
 
         var drawCanvas = function() {
-            context.fillStyle = "#aaaaaa";
+            context.fillStyle = PIXEL_COLOR;
             context.clearRect(0, 0, _canvas.width, _canvas.height);
 
             var y = 0;
@@ -72,7 +74,6 @@ var INITIAL_STYLE = "omni-style";
             }
 
             context.fillStyle = "#aaaaaa";
-            context.clearRect(0, 0, _canvas.width, _canvas.height);
 
             for (var name in sprites) {
                 var sprite = sprites[name];
@@ -136,6 +137,8 @@ var INITIAL_STYLE = "omni-style";
         setTimeout(function() {
             moveSprite("test", 500, 200);
         }, 2400);
+
+        init();
     };
 
     jQuery.fn.udemosidemenu = function(options) {
