@@ -32,8 +32,8 @@ var INITIAL_STYLE = "omni-style";
         var PIXEL_SPACING = 2;
         var VIRTUAL_PIXEL = 4;
 
-        var BOARD_WIDTH = 100;
-        var BOARD_HEIGHT = 20;
+        var BOARD_WIDTH = 160;
+        var BOARD_HEIGHT = 60;
         
         var PIXEL_COLOR = "#cccccc";
 
