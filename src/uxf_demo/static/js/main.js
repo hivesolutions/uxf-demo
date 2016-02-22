@@ -117,7 +117,7 @@ var INITIAL_STYLE = "omni-style";
             sprite.y = y;
         };
 
-        var sprite = createSprite("test", 100, 100, 100, 100);
+        var sprite = addSprite("test", 100, 100, 100, 100);
         setTimeout(function() {
             moveSprite("test", 0, 0);
         }, 400);
