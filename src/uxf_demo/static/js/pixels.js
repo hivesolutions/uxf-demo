@@ -23,10 +23,15 @@
         var _canvas = matchedObject[0];
         var context = _canvas.getContext("2d");
         var sprites = {};
+        var animations = {}
 
         var init = function() {
             initCanvas();
             requestAnimationFrame(draw);
+            animations = {
+                linear: linearAnimation,
+                easeInOut: easeInOutAnimation
+            };
         };
 
         var bind = function() {
@@ -44,11 +49,17 @@
             });
 
             matchedObject.bind("move", function(event, name, x, y) {
+                moveSprite(name, x, y);
+            });
+
+            matchedObject.bind("move_animated", function(event, name, x, y) {
                 moveSpriteAnimated(name, x, y);
             });
         };
 
-        var initCanvas = function() {};
+        var initCanvas = function() {
+            context.imageSmoothingEnabled = false;
+        };
 
         var draw = function(timestamp) {
             requestAnimationFrame(draw);
@@ -147,7 +158,7 @@
 
         var moveSpriteAnimated = function(name, x, y, duration, easing) {
             duration = duration || 300;
-            easing = easing || "linear";
+            easing = easing || "easeInOut";
             animateSprite(name, "x", x, duration, easing);
             animateSprite(name, "y", y, duration, easing);
         };
@@ -155,7 +166,7 @@
         var animateSprite = function(name, key, value, duration, easing) {
             var timestamp = matchedObject.data("timestamp") || 0;
             duration = duration || 0;
-            easing = easing || "linear";
+            easing = easing || "easeInOut";
             var sprite = sprites[name];
             var current = sprite[key];
             var animation = {
@@ -195,17 +206,29 @@
         };
 
         var updateAnimation = function(sprite, animation, timestamp) {
-            var next = linearAnimation(animation.original, animation.target,
+            var sequence = animations[animation.easing];
+            var next = sequence(animation.original, animation.target,
                 animation.start, animation.end, timestamp);
             sprite[animation.property] = next;
         };
 
         var linearAnimation = function(original, target, start, end, timestamp) {
             var delta = target - original;
-            var deltaTotal = end - start;
-            var deltaCurrent = timestamp - start;
-            var percent = deltaCurrent / deltaTotal;
-            return original + (delta * percent);
+            var duration = end - start;
+            var current = timestamp - start;
+            return delta * current / duration + original;
+        };
+
+        var easeInOutAnimation = function(original, target, start, end, timestamp) {
+            var delta = target - original;
+            var duration = end - start;
+            var current = timestamp - start;
+            current /= duration / 2;
+            if (current < 1) {
+                return delta / 2 * current * current + original;
+            }
+            current--;
+            return delta * -1 / 2 * (current * (current - 2) - 1) + original;
         };
 
         // runs the initialization process for the pixels
@@ -244,22 +267,22 @@
             target.triggerHandler("add", ["bee", 2, 3, 4, 4, toLinear(beeColor)]);
             target.triggerHandler("scale", ["bee", 6]);
             setTimeout(function() {
-                target.triggerHandler("move", ["bee", 0, 0]);
+                target.triggerHandler("move_animated", ["bee", 0, 0]);
             }, 400);
             setTimeout(function() {
-                target.triggerHandler("move", ["bee", 100, 0]);
+                target.triggerHandler("move_animated", ["bee", 100, 0]);
             }, 800);
             setTimeout(function() {
-                target.triggerHandler("move", ["bee", 120, 0]);
+                target.triggerHandler("move_animated", ["bee", 120, 0]);
             }, 1200);
             setTimeout(function() {
-                target.triggerHandler("move", ["bee", 80, 0]);
+                target.triggerHandler("move_animated", ["bee", 80, 0]);
             }, 1600);
             setTimeout(function() {
-                target.triggerHandler("move", ["bee", 120, 10]);
+                target.triggerHandler("move_animated", ["bee", 120, 10]);
             }, 2000);
             setTimeout(function() {
-                target.triggerHandler("move", ["bee", 70, 20]);
+                target.triggerHandler("move_animated", ["bee", 70, 20]);
             }, 2400);
         };
 
