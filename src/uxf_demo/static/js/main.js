@@ -27,7 +27,102 @@
 // begining of the page loading
 var INITIAL_STYLE = "omni-style";
 
+
+var PIXEL_SPACING = 1;
+var VIRTUAL_PIXEL = 4;
+
 (function(jQuery) {
+    jQuery.fn.udemopixels = function(options) {
+        // retrieves the reference to the currently matched object
+        // that is going to be used in the function
+        var matchedObject = this;
+        var canvas = jQuery(".pixels", matchedObject);
+        if (canvas == null || canvas.length == 0) {
+            return;
+        }
+
+        var _canvas = canvas[0];
+        var context = _canvas.getContext("2d");
+        var sprites = {};
+
+        var createSprite = function(name, x, y, width, height, data) {
+            var imageData = data != null ? new ImageData(data, width, height) : new ImageData(width, height);
+            for (var index = 3; index < imageData.data.length; index += 4) {
+                imageData.data[index] = 255;
+            }
+            context.putImageData(imageData, x, y);
+            var sprite = {
+                "data": imageData.data,
+                "x": x,
+                "y": y,
+                "width": width,
+                "height": height
+            };
+            sprites[name] = sprite;
+            return sprite;
+        };
+
+        var clearSprite = function(name) {
+            var sprite = sprites[name];
+            if (sprite == null) {
+                return;
+            }
+            context.clearRect(sprite.x, sprite.y, sprite.width, sprite.height);
+        };
+
+        var moveSprite = function(name, x, y) {
+            var sprite = sprites[name];
+            if (sprite == null) {
+                return;
+            }
+            var imageData = context.getImageData(sprite.x, sprite.y, sprite.width, sprite.height);
+            clearSprite(name);
+            context.putImageData(imageData, x, y);
+            sprite.x = x;
+            sprite.y = y;
+            sprites[name] = sprite;
+        };
+
+        var changeSprite = function(name, data) {
+            var sprite = sprites[name];
+            var imageData = new ImageData(data, data.width, sprite.y);
+            clearSprite(name);
+            context.putImageData(imageData, sprite.x, sprite.y);
+            sprite.data = imageData.data;
+            sprite.width = imageData.width;
+            sprite.height = imageData.height;
+            sprites[name] = sprite;
+        };
+
+        var squareData = function(width, height) {
+            var data = new Uint8ClampedArray(width * height * 4);
+            for (var index = 3; index < data.length; index += 4) {
+                data[index] = 255;
+            }
+            return data;
+        };
+
+        var sprite = createSprite("test", 100, 100, 100, 100);
+        setTimeout(function() {
+            moveSprite("test", 0, 0);
+        }, 400);
+        setTimeout(function() {
+            moveSprite("test", 100, 0);
+        }, 800);
+        setTimeout(function() {
+            moveSprite("test", 200, 0);
+        }, 1200);
+        setTimeout(function() {
+            moveSprite("test", 300, 0);
+        }, 1600);
+        setTimeout(function() {
+            moveSprite("test", 400, 100);
+        }, 2000);
+        setTimeout(function() {
+            moveSprite("test", 500, 200);
+        }, 2400);
+    };
+
     jQuery.fn.udemosidemenu = function(options) {
         // retrieves the reference to the currently matched object
         // that is going to be used in the function
@@ -498,6 +593,7 @@ var INITIAL_STYLE = "omni-style";
         matchedObject.udemoprogress();
         matchedObject.udemonotification();
         matchedObject.udemostacknavigation();
+        matchedObject.udemopixels();
 
         // changes the style to the initial style so that the contents
         // of the current page are changed accordingly

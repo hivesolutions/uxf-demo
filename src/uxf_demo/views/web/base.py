@@ -61,3 +61,10 @@ def form_action():
             age = ["Invalid age"]
         )
     )
+
+@app.route("/pixels", methods = ("GET",))
+def pixels():
+    return flask.render_template(
+        "pixels.html.tpl",
+        link = "pixels"
+    )
