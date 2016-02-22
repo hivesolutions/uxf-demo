@@ -119,6 +119,14 @@ var INITIAL_STYLE = "omni-style";
             delete sprites[name];
         };
 
+        var scaleSprite = function(name, scale) {
+            var sprite = sprites[name];
+            /*
+             * should be able to scale the sprite by changing it's internal data
+             * and the width and height values
+             */
+        };
+
         var moveSprite = function(name, x, y) {
             var sprite = sprites[name];
             sprite.x = x;
@@ -148,6 +156,7 @@ var INITIAL_STYLE = "omni-style";
         ];
 
         var sprite = addSprite("test", 2, 3, 4, 4, toLinear(beeColor));
+        scaleSprite("test", 2);
         setTimeout(function() {
             moveSprite("test", 0, 0);
         }, 400);
