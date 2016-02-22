@@ -117,8 +117,6 @@ var INITIAL_STYLE = "omni-style";
             sprite.y = y;
         };
 
-        window.requestAnimationFrame(callback);
-
         var sprite = createSprite("test", 100, 100, 100, 100);
         setTimeout(function() {
             moveSprite("test", 0, 0);
