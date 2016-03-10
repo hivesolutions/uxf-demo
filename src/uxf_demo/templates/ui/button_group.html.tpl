@@ -47,7 +47,7 @@
         </table>
         <table class="table-data">
             <tr>
-                <td><span class="highlight">unselect(  )</span></td>
+                <td><span class="highlight">unselect( )</span></td>
                 <td>Removes the current selection.</td>
             </tr>
         </table>
