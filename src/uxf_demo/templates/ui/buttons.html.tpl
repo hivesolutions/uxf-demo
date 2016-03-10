@@ -70,6 +70,11 @@
                 <td><span class="highlight">string</span></td>
                 <td>Opens the window selected with the provided selector on click.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-one_shot</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If the button action should be triggered only once and then the button should be disabled.</td>
+            </tr>
         </table>
 
     </div>
