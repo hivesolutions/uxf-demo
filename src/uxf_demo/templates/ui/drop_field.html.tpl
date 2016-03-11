@@ -19,6 +19,15 @@
 &lt;/div&gt;
 </pre>
 
+        <p>
+            To select a value programmatically use the <span class="highlight">set</span>
+            function like in the following example:
+        </p>
+
+<pre class="code language-javascript">
+jQuery(".drop-field").uxdropfield("set", { value: "Portugal", valueLogic: "PT" });
+</pre>
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">data-submit</span></td>
