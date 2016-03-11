@@ -4,7 +4,7 @@
 
         <p>
             This element adds autocomplete to a text field using a
-			data source. It supports all text field data attributes.
+            data source. It supports all text field data attributes.
         </p>
 
         <div class="box box-white">
@@ -18,12 +18,12 @@
     &lt;ul class=&quot;data-source&quot; data-type=&quot;countries&quot;&gt;&lt;/ul&gt;
 &lt;/div&gt;
 </pre>
-		
-		<p>
-			To select a value programmatically use the <span class="highlight">set</span>
-			function like in the following example:
-		</p>
-		
+
+        <p>
+            To select a value programmatically use the <span class="highlight">set</span>
+            function like in the following example:
+        </p>
+
 <pre class="code language-javascript">
 jQuery(".drop-field").uxdropfield("set", { value: "Portugal", valueLogic: "PT" });
 </pre>
@@ -81,7 +81,7 @@ jQuery(".drop-field").uxdropfield("set", { value: "Portugal", valueLogic: "PT" }
                 <td class="description">Raised when a value is unselected from the drop field.</td>
             </tr>
         </table>
-        
+
         <table class="table-data">
             <tr>
                 <td><span class="highlight">set( )</span></td>
