@@ -82,12 +82,5 @@ jQuery(".drop-field").uxdropfield("set", { value: "Portugal", valueLogic: "PT" }
             </tr>
         </table>
 
-        <table class="table-data">
-            <tr>
-                <td><span class="highlight">set( )</span></td>
-                <td class="description">Raised when a value is selected in the drop field.</td>
-            </tr>
-        </table>
-
     </div>
 </section>
