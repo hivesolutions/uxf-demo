@@ -13,11 +13,11 @@
         </p>
 
         <div class="box box-white">
-            <div class="video">http://www.youtube.com/watch?v=4XpnKHJAok8&feature=feedlik</div>
+            <div class="video">//www.youtube.com/watch?v=4XpnKHJAok8&feature=feedlik</div>
         </div>
 
 <pre class="code language-markup">
-&lt;div class=&quot;video&quot;&gt;http://www.youtube.com/watch?v=5nt3gE9dGHQ&lt;/div&gt;
+&lt;div class=&quot;video&quot;&gt;http//www.youtube.com/watch?v=4XpnKHJAok8&lt;/div&gt;
 </pre>
 
         <table class="table-data">
