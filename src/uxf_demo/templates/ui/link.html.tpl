@@ -34,6 +34,11 @@
                 <td><span class="highlight">string</span></td>
                 <td>Hash value to be added to the location hash.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-no_action</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If the link should be considered a no operation one and no action performed.</td>
+            </tr>
         </table>
 
         <p>
