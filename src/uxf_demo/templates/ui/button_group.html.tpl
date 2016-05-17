@@ -38,7 +38,17 @@
         <table class="table-data">
             <tr>
                 <td><span class="highlight">index_changed( index, element )</span></td>
-                <td>Triggered when one of the buttons is selected.</td>
+                <td>Triggered when one of the buttons has been clicked. If the last handler of this event returns false then the button is not selected.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">index_selected( index, element )</span></td>
+                <td>Notifies that one of the buttons has been selected.</td>
+            </tr>
+        </table>
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">unselect( )</span></td>
+                <td>Removes the current selection.</td>
             </tr>
             <tr>
                 <td><span class="highlight">index_selected( index, element )</span></td>
