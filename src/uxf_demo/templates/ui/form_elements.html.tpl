@@ -158,7 +158,6 @@
 
 <pre class="code language-markup">
 &lt;input type=&quot;text&quot; class=&quot;text-field&quot; data-type=&quot;float&quot; data-decimal_places=&quot;2&quot; /&gt;
-&lt;input type=&quot;text&quot; class=&quot;incremental-field&quot; data-type=&quot;integer&quot; /&gt;
 </pre>
 
             <table class="table-data">
@@ -166,6 +165,44 @@
                     <td><span class="highlight">data-decimal_places</span></td>
                     <td><span class="highlight">integer</span></td>
                     <td>The maximum number of decimal cases allowed for the text field's value. Only valid in case the data type is set to float.</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="section-function sub-section" id="incremental-field">
+
+            <h2>Incremental Field</h2>
+
+            <div class="box box-white">
+                <input type="text" class="incremental-field" data-type="integer" />
+            </div>
+
+<pre class="code language-markup">
+&lt;input type=&quot;text&quot; class=&quot;incremental-field&quot; data-type=&quot;integer&quot; /&gt;
+</pre>
+
+            <table class="table-data">
+                <tr>
+                    <td><span class="highlight">data-increment_url</span></td>
+                    <td><span class="highlight">string</span></td>
+                    <td>A URL to redirect the user when the field is incremented.</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">data-decrement_url</span></td>
+                    <td><span class="highlight">string</span></td>
+                    <td>A URL to redirect the user when the field is decremented.</td>
+                </tr>
+            </table>
+
+            <table class="table-data">
+                <tr>
+                    <td><span class="highlight">incremented( value )</span></td>
+                    <td>Triggered when the field is incremented.</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">decremented( value )</span></td>
+                    <td>Triggered when the field is decremented.</td>
                 </tr>
             </table>
 
