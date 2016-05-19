@@ -51,6 +51,11 @@
                 <td><span class="highlight">boolean</span></td>
                 <td>If the form's text fields should be trimmed by removing the leading and trailing spaces.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-no_reset</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If the form should be reset after a submission is successful.</td>
+            </tr>
         </table>
 
         <table class="table-data">
