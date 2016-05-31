@@ -87,6 +87,10 @@
                 <td class="description">Raised for each of the elements (lines) once they are selected.</td>
             </tr>
             <tr>
+                <td><span class="highlight">update( filterValue )</span></td>
+                <td class="description">Triggers the reloading of the filter data (search query can be optionally provided).</td>
+            </tr>
+            <tr>
                 <td><span class="highlight">update_start( )</span></td>
                 <td class="description">Triggered when a new remote query is started.</td>
             </tr>
