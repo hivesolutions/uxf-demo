@@ -7,19 +7,19 @@
                 <ul class="items">
                     <li class="item">
                         <span data-name="name">UXF</span>
-                        <span data-name="image">http://uxf.hive.pt/res/logo.png</span>
+                        <span data-name="image">//uxf.hive.pt/res/logo.png</span>
                         <span data-name="url">http://uxf.hive.pt/</span>
                         <span data-name="description">Simple client side framework for people who want fast results.</span>
                     </li>
                     <li class="item">
                         <span data-name="name">Appier</span>
-                        <span data-name="image">http://appier.hive.pt/res/logo.png</span>
+                        <span data-name="image">//appier.hive.pt/res/logo.png</span>
                         <span data-name="url">http://appier.hive.pt/</span>
                         <span data-name="description">Joyful Python Web App development.</span>
                     </li>
                     <li class="item">
                         <span data-name="name">Netius</span>
-                        <span data-name="image">http://netius.hive.pt/res/logo.png</span>
+                        <span data-name="image">//netius.hive.pt/res/logo.png</span>
                         <span data-name="url">http://netius.hive.pt/</span>
                         <span data-name="description">Fast and readable async non-blocking network apps.</span>
                     </li>
@@ -35,7 +35,7 @@
     &lt;ul class=&quot;items&quot;&gt;
         &lt;li class=&quot;item&quot;&gt;
             &lt;span data-name=&quot;name&quot;&gt;UXF&lt;/span&gt;
-            &lt;span data-name=&quot;image&quot;&gt;http://uxf.hive.pt/res/logo.png&lt;/span&gt;
+            &lt;span data-name=&quot;image&quot;&gt;//uxf.hive.pt/res/logo.png&lt;/span&gt;
             &lt;span data-name=&quot;url&quot;&gt;http://uxf.hive.pt/&lt;/span&gt;
             &lt;span data-name=&quot;description&quot;&gt;Simple client side framework for people who want fast results.&lt;/span&gt;
         &lt;/li&gt;
