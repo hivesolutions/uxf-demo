@@ -41,13 +41,13 @@
         &lt;/li&gt;
         &lt;li class=&quot;item&quot;&gt;
             &lt;span data-name=&quot;name&quot;&gt;Appier&lt;/span&gt;
-            &lt;span data-name=&quot;image&quot;&gt;http://appier.hive.pt/res/logo.png&lt;/span&gt;
+            &lt;span data-name=&quot;image&quot;&gt;//appier.hive.pt/res/logo.png&lt;/span&gt;
             &lt;span data-name=&quot;url&quot;&gt;http://appier.hive.pt/&lt;/span&gt;
             &lt;span data-name=&quot;description&quot;&gt;Joyful Python Web App development.&lt;/span&gt;
         &lt;/li&gt;
         &lt;li class=&quot;item&quot;&gt;
             &lt;span data-name=&quot;name&quot;&gt;Netius&lt;/span&gt;
-            &lt;span data-name=&quot;image&quot;&gt;http://netius.hive.pt/res/logo.png&lt;/span&gt;
+            &lt;span data-name=&quot;image&quot;&gt;//netius.hive.pt/res/logo.png&lt;/span&gt;
             &lt;span data-name=&quot;url&quot;&gt;http://netius.hive.pt/&lt;/span&gt;
             &lt;span data-name=&quot;description&quot;&gt;Fast and readable async non-blocking network apps.&lt;/span&gt;
         &lt;/li&gt;
