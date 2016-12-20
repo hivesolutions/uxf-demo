@@ -18,7 +18,7 @@
             <div id="button-confirm" class="button button-confirm button-solid"
                  data-message="Confirmation message">Button with Confirm Event</div>
             <div id="button-link" class="button button-solid" data-link="http://hive.pt">Button with Link</div>
-            <form action="http://hive.pt" method="post" style="display:inline-block;">
+            <form action="//hive.pt" method="post" style="display:inline-block;">
                 <div id="button-form" class="button button-solid" data-submit="true">Button submit Form</div>
             </form>
         </div>
@@ -34,7 +34,7 @@
 </pre>
 
 <pre class="code language-markup">
-&lt;form action=&quot;http://hive.pt&quot; method=&quot;post&quot; style=&quot;display:inline-block;&quot;&gt;
+&lt;form action=&quot;//hive.pt&quot; method=&quot;post&quot; style=&quot;display:inline-block;&quot;&gt;
     &lt;div id=&quot;button-form&quot; class=&quot;button&quot; data-submit=&quot;true&quot;&gt;Button submit Form&lt;/div&gt;
 &lt;/form&gt;
 </pre>
