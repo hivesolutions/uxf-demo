@@ -55,3 +55,5 @@ import uxf_demo.views #@UnusedImport
 
 if __name__ == "__main__":
     quorum.run(server = "netius")
+else:
+    __path__ = []
