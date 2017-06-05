@@ -22,6 +22,11 @@
                 <td><span class="highlight">string</span></td>
                 <td>The url of the image to load.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-url_retina</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>The url of the retina (2x) image to be load for retina (high density) screens.</td>
+            </tr>
         </table>
 
     </div>
