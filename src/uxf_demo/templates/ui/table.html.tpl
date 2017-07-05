@@ -46,6 +46,11 @@
                 <td><span class="highlight">integer</span></td>
                 <td>The maximum number of rows of the table.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-no_paste</span></td>
+                <td><span class="highlight">boolean</span></td>
+                <td>If the paste feature should be disabled for the table.</td>
+            </tr>
         </table>
 
         <table class="table-data">
