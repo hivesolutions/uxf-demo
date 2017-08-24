@@ -43,11 +43,11 @@ $("#window").uxwindow("show");
 
         <table class="table-data">
             <tr>
-                <td><span class="highlight">show( )</span></td>
+                <td><span class="highlight">shown( )</span></td>
                 <td>Triggered when the window is presented.</td>
             </tr>
             <tr>
-                <td><span class="highlight">hide( )</span></td>
+                <td><span class="highlight">hidden( )</span></td>
                 <td>Triggered when the window is dismissed.</td>
             </tr>
             <tr>
