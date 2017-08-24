@@ -27,7 +27,7 @@
 $("#slider").uxslider("show");
 </pre>
 
-        <p>The slider supports the following methdods:</p>
+        <p>The slider supports the following methods:</p>
 
         <table class="table-data">
             <tr>
