@@ -36,6 +36,7 @@ body {
     -o-animation: fade-in 0.25s ease-in-out;
     -ms-animation: fade-in 0.25s ease-in-out;
     -moz-animation: fade-in 0.25s ease-in-out;
+    -khtml-animation: fade-in 0.25s ease-in-out;
     -webkit-animation: fade-in 0.25s ease-in-out;
     color: #444444;
     font-family: Arial, "Lucida Grande", sans-serif;
@@ -61,7 +62,10 @@ code {
     background-color: #fefefe;
     border: 1px solid #cccccc;
     box-shadow: 0px 1px 2px #dddddd;
+    -o-box-shadow: 0px 1px 2px #dddddd;
+    -ms-box-shadow: 0px 1px 2px #dddddd;
     -moz-box-shadow: 0px 1px 2px #dddddd;
+    -khtml-box-shadow: 0px 1px 2px #dddddd;
     -webkit-box-shadow: 0px 1px 2px #dddddd;
     font-family: Monaco, "Andale Mono", "Courier New", monospace;
     font-size: 12px;
@@ -120,7 +124,10 @@ h1.line {
     background-color: #f0f0f0;
     border-bottom: 1px solid #dddddd;
     box-shadow: 0px 1px 4px #eeeeee;
+    -o-box-shadow: 0px 1px 4px #eeeeee;
+    -ms-box-shadow: 0px 1px 4px #eeeeee;
     -moz-box-shadow: 0px 1px 4px #eeeeee;
+    -khtml-box-shadow: 0px 1px 4px #eeeeee;
     -webkit-box-shadow: 0px 1px 4px #eeeeee;
     height: 32px;
 }
@@ -134,7 +141,10 @@ h1.line {
     background-color: #fafafa;
     border: 1px solid #cccccc;
     box-shadow: 0px 1px 2px #dddddd;
+    -o-box-shadow: 0px 1px 2px #dddddd;
+    -ms-box-shadow: 0px 1px 2px #dddddd;
     -moz-box-shadow: 0px 1px 2px #dddddd;
+    -khtml-box-shadow: 0px 1px 2px #dddddd;
     -webkit-box-shadow: 0px 1px 2px #dddddd;
     margin: 0px 0px 12px 0px;
     padding: 12px 12px 12px 12px;
@@ -241,25 +251,37 @@ h1.line {
 
 .table-data tbody tr:first-child td:first-child {
     border-radius: 4px 0px 0px 0px;
+    -o-border-radius: 4px 0px 0px 0px;
+    -ms-border-radius: 4px 0px 0px 0px;
     -moz-border-radius: 4px 0px 0px 0px;
+    -khtml-border-radius: 4px 0px 0px 0px;
     -webkit-border-radius: 4px 0px 0px 0px;
 }
 
 .table-data tbody tr:first-child td:last-child {
     border-radius: 0px 4px 0px 0px;
+    -o-border-radius: 0px 4px 0px 0px;
+    -ms-border-radius: 0px 4px 0px 0px;
     -moz-border-radius: 0px 4px 0px 0px;
+    -khtml-border-radius: 0px 4px 0px 0px;
     -webkit-border-radius: 0px 4px 0px 0px;
 }
 
 .table-data tbody tr:last-child td:first-child {
     border-radius: 0px 0px 0px 4px;
+    -o-border-radius: 0px 0px 0px 4px;
+    -ms-border-radius: 0px 0px 0px 4px;
     -moz-border-radius: 0px 0px 0px 4px;
+    -khtml-border-radius: 0px 0px 0px 4px;
     -webkit-border-radius: 0px 0px 0px 4px;
 }
 
 .table-data tbody tr:last-child td:last-child {
     border-radius: 0px 0px 4px 0px;
+    -o-border-radius: 0px 0px 4px 0px;
+    -ms-border-radius: 0px 0px 4px 0px;
     -moz-border-radius: 0px 0px 4px 0px;
+    -khtml-border-radius: 0px 0px 4px 0px;
     -webkit-border-radius: 0px 0px 4px 0px;
 }
 
@@ -272,7 +294,9 @@ h1.line {
     padding-left: 0px;
     transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -o-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -moz-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -khtml-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-transition: padding-left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
 }
 
@@ -297,7 +321,9 @@ body.menu-open .side-menu-movable {
     top: 0px;
     transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -o-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -moz-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -khtml-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-transition: left 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     width: 300px;
     z-index: 30;
@@ -309,14 +335,26 @@ body.menu-open .side-menu-movable {
 
 .side-menu > * {
     opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
     transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
     -o-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -ms-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
     -moz-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
+    -khtml-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
     -webkit-transition: opacity 0.50s cubic-bezier(0.645, 0.045, 0.355, 1.0) 0.20s;
 }
 
 .side-menu.open > * {
     opacity: 1;
+    -o-opacity: 1;
+    -ms-opacity: 1;
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    -webkit-opacity: 1;
 }
 
 .side-menu .stack {
@@ -339,6 +377,11 @@ body.menu-open .side-menu-movable {
 
 .side-menu .links-container {
     box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     display: inline-block;
     list-style: none;
     margin: 0px 0px 0px 0px;
