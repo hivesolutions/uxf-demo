@@ -10,6 +10,6 @@
 <link rel="shortcut icon" href="{{ url_for('static', filename = 'libs/uxf/images/ux.ico') }}" />
 
 <!-- javascript inclusion -->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename = 'libs/uxf/js/ux.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename = 'js/main.js') }}"></script>
