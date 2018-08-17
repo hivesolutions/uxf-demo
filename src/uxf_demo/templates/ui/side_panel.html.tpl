@@ -15,6 +15,14 @@
 
         <table class="table-data">
             <tr>
+                <td><span class="highlight">data-timeout</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>The number of seconds to be used to display the side panel (animation time). Set to 350 by default.</td>
+            </tr>
+        </table>
+
+        <table class="table-data">
+            <tr>
                 <td><span class="highlight">show( )</span></td>
                 <td>Called when the panel is presented.</td>
             </tr>
