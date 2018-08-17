@@ -14,6 +14,12 @@
 </pre>
 
         <table class="table-data">
+
+            <tr>
+                <td><span class="highlight">data-side</span></td>
+                <td><span class="highlight">string</span></td>
+                <td>The side in which to place the side panel. Set to right by default.</td>
+            </tr>
             <tr>
                 <td><span class="highlight">data-timeout</span></td>
                 <td><span class="highlight">integer</span></td>
