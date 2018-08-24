@@ -100,8 +100,12 @@
                 <td class="description">Triggered when a new remote query is started.</td>
             </tr>
             <tr>
-                <td><span class="highlight">update_complete( )</span></td>
+                <td><span class="highlight">update_complete( reset, templateItems )</span></td>
                 <td class="description">Called at the end of each refresh operation (remote data received).</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">data( validItems, moreItems )</span></td>
+                <td class="description">Called whenever some remote data is received (before layout update).</td>
             </tr>
         </table>
 
