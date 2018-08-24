@@ -79,6 +79,11 @@
                 <td><span class="highlight">boolean</span></td>
                 <td>If infinite scrolling should be used.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">data-sick</span></td>
+                <td><span class="highlight">integer</span></td>
+                <td>The number of milliseconds in between allowing multiple infinite loading requests (sick time).</td>
+            </tr>
         </table>
 
         <table class="table-data">
