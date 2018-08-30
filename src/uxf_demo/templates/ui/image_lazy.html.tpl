@@ -29,5 +29,19 @@
             </tr>
         </table>
 
+        <table class="table-data">
+            <tr>
+                <td><span class="highlight">load</span></td>
+                <td>Class added by the user to force load even if not visible.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">loading</span></td>
+                <td>Class added while loading of the image.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">loaded</span></td>
+                <td>Class added upon finished loading of the image.</td>
+            </tr>
+        </table>
     </div>
 </section>
