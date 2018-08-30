@@ -9,7 +9,7 @@
             loading the class <span class="highlight">loaded</span> is added.
         </p>
         <div class="box box-white">
-            <img class="image-lazy" src="../static/images/banner.jpg">
+            <img class="image-lazy" src="../static/images/banner.jpg" />
         </div>
 
 <pre class="code language-markup">
