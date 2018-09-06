@@ -47,7 +47,7 @@
 
         <table class="table-data">
             <tr>
-                <td><span class="highlight">value_change( value, text, same )</span></td>
+                <td><span class="highlight">value_change( value, logic, same )</span></td>
                 <td>Triggered when an item is selected.</td>
             </tr>
         </table>
