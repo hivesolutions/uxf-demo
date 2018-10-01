@@ -24,8 +24,11 @@
         <table class="table-data">
             <tr>
                 <td><span class="highlight">mode_change( mode, index )</span></td>
-                <td><span class="highlight">string</span></td>
                 <td>Triggered when the input's mode changes.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">change_mode( mode )</span></td>
+                <td>Allows for the external change of the toggle field's mode.</td>
             </tr>
         </table>
 
