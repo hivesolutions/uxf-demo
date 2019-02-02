@@ -24,6 +24,14 @@
                 <td><span class="highlight">hide( )</span></td>
                 <td>Dismisses the menu.</td>
             </tr>
+            <tr>
+                <td><span class="highlight">post_show( )</span></td>
+                <td>Called after the menu is shown, from a logical point of view.</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">post_hide( )</span></td>
+                <td>Called after the menu is hidden, from a logical point of view.</td>
+            </tr>
         </table>
 
     </div>
