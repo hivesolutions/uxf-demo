@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>uxf_demo</name>
+	<name>uxf-demo</name>
 	<comment></comment>
 	<projects>
 		<project>quorum</project>
