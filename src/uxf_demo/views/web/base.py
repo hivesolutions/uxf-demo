@@ -125,7 +125,10 @@ def _list_json(items):
             reverse = order == "descending"
         )
 
-    # serializes the requested range of items as the response
+    # serializes the requested range of items as the response,
+    # a negative number of records meaning that there's no limit
+    start_record = max(start_record, 0)
+    if number_records < 0: number_records = len(items)
     items = items[start_record:start_record + number_records]
     return flask.Response(
         json.dumps(items),
@@ -137,23 +140,25 @@ def _matches(target, operation, value):
     # it's never considered to be a match
     if target == None: return False
 
-    # runs the text based operations, comparing the
-    # value with the textual representation of the target
-    target_s = str(target).lower()
+    # in case the target is a number the value is converted into
+    # a number and only the number based operations are valid, an
+    # invalid value is never considered to be a match, a day is the
+    # range of seconds that starts in the value (timestamp)
+    if isinstance(target, (int, float)):
+        try: value = float(value)
+        except ValueError: return False
+        if operation == "equals": return target == value
+        if operation == "greater": return target > value
+        if operation == "lesser": return target < value
+        if operation == "in_day": return value <= target < value + 86400
+        return False
+
+    # runs the text based operations, that are the only
+    # ones valid for the remaining (text) targets
+    target = target.lower()
     value = value.lower()
-    if operation == "like": return value in target_s
-    if operation == "rlike": return target_s.startswith(value)
-    if operation == "llike": return target_s.endswith(value)
-    if operation == "equals": return target_s == value
-
-    # converts the value into a number, required by the remaining
-    # operations, an invalid value is never considered to be a match
-    try: value = float(value)
-    except ValueError: return False
-
-    # runs the number based operations, a day is the range
-    # of seconds that starts in the value (timestamp)
-    if operation == "greater": return target > value
-    if operation == "lesser": return target < value
-    if operation == "in_day": return value <= target < value + 86400
+    if operation == "like": return value in target
+    if operation == "rlike": return target.startswith(value)
+    if operation == "llike": return target.endswith(value)
+    if operation == "equals": return target == value
     return False
