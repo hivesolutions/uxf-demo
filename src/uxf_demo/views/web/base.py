@@ -37,8 +37,31 @@ __copyright__ = "Copyright (c) 2008-2020 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
+import json
+
 from uxf_demo.main import app
 from uxf_demo.main import flask
+
+COUNTRIES = (
+    dict(object_id = 1, name = "Portugal"),
+    dict(object_id = 2, name = "Spain"),
+    dict(object_id = 3, name = "France")
+)
+""" The sequence of countries served by the countries
+endpoint, the ones referenced by the users """
+
+USERS = (
+    dict(object_id = 1, name = "Ana Silva", age = 31, country = 1, created = 1767225600),
+    dict(object_id = 2, name = "Bruno Costa", age = 45, country = 1, created = 1767312000),
+    dict(object_id = 3, name = "Carla Dias", age = 28, country = 2, created = 1767398400),
+    dict(object_id = 4, name = "Diogo Faria", age = 52, country = 3, created = 1767484800),
+    dict(object_id = 5, name = "Elena Gomez", age = 37, country = 2, created = 1767571200),
+    dict(object_id = 6, name = "Filipe Lopes", age = 23, country = 1, created = 1767657600),
+    dict(object_id = 7, name = "Gisele Martin", age = 41, country = 3, created = 1767744000),
+    dict(object_id = 8, name = "Hugo Nunes", age = 34, country = 1, created = 1767830400)
+)
+""" The sequence of users served by the users endpoint,
+to be listed by the (advanced) filter example """
 
 @app.route("/", methods = ("GET",))
 @app.route("/index", methods = ("GET",))
@@ -61,3 +84,81 @@ def form_action():
             age = ["Invalid age"]
         )
     )
+
+@app.route("/users.json", methods = ("GET",))
+def users_json():
+    return _list_json(USERS)
+
+@app.route("/countries.json", methods = ("GET",))
+def countries_json():
+    return _list_json(COUNTRIES)
+
+def _list_json(items):
+    # retrieves the various components of the query, using
+    # the names and the syntax of the json data source
+    filter_string = flask.request.args.get("filter_string", "")
+    filters = flask.request.args.getlist("filters[]")
+    sort = flask.request.args.get("sort", "")
+    start_record = flask.request.args.get("start_record", 0, type = int)
+    number_records = flask.request.args.get("number_records", 5, type = int)
+
+    # filters the items by the search string, that
+    # should be the start of the name of the item
+    filter_string = filter_string.lower()
+    items = [item for item in items if item["name"].lower().startswith(filter_string)]
+
+    # iterates over the filters to unpack each of them into the name,
+    # the operation and the value, filtering the items accordingly
+    for filter in filters:
+        parts = filter.split(":", 2)
+        if not len(parts) == 3: continue
+        name, operation, value = parts
+        items = [item for item in items if _matches(item.get(name), operation, value)]
+
+    # unpacks the sort string into the name and the order and sorts
+    # the items in case the name is the one of an attribute of them
+    name, _separator, order = sort.partition(":")
+    if items and name in items[0]:
+        items = sorted(
+            items,
+            key = lambda item: item[name],
+            reverse = order == "descending"
+        )
+
+    # serializes the requested range of items as the response,
+    # a negative number of records meaning that there's no limit
+    start_record = max(start_record, 0)
+    if number_records < 0: number_records = len(items)
+    items = items[start_record:start_record + number_records]
+    return flask.Response(
+        json.dumps(items),
+        mimetype = "application/json"
+    )
+
+def _matches(target, operation, value):
+    # in case the item has no such attribute
+    # it's never considered to be a match
+    if target == None: return False
+
+    # in case the target is a number the value is converted into
+    # a number and only the number based operations are valid, an
+    # invalid value is never considered to be a match, a day is the
+    # range of seconds that starts in the value (timestamp)
+    if isinstance(target, (int, float)):
+        try: value = float(value)
+        except ValueError: return False
+        if operation == "equals": return target == value
+        if operation == "greater": return target > value
+        if operation == "lesser": return target < value
+        if operation == "in_day": return value <= target < value + 86400
+        return False
+
+    # runs the text based operations, that are the only
+    # ones valid for the remaining (text) targets
+    target = target.lower()
+    value = value.lower()
+    if operation == "like": return value in target
+    if operation == "rlike": return target.startswith(value)
+    if operation == "llike": return target.endswith(value)
+    if operation == "equals": return target == value
+    return False
